@@ -309,7 +309,7 @@ i.e25{
 .e28{
   width: 80px;
   font-size: 16px;
-  margin: 50px 0;
+  margin: 50px 15px;
 background-color: rgb(244, 4, 4);
 }
 .e29{
@@ -317,4 +317,9 @@ background-color: rgb(244, 4, 4);
   position: relative;
   top: 48px;
   float: right;
+
 }
+/* .e29 input{
+  border-style: solid;
+  border-bottom-width: thin;
+} */

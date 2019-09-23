@@ -67,10 +67,16 @@
       </div>
       <div>
         <div class="custom-control custom-switch e29">
-          <input type="checkbox" class="custom-control-input" id="switch1" name="example">
+          <input type="button" class="custom-control-input" id="switch1" name="example">
           <label class="custom-control-label" for="switch1">عکس دار</label>
         </div>
     </div>
+    <div>
+      <div class="custom-control custom-switch e29">
+        <input type="button" class="custom-control-input" id="switch1" name="example">
+        <label class="custom-control-label" for="switch1">فوری</label>
+      </div>
+  </div>
     <button type="text" class="btn btn-danger e28">جستجو</button>
     </form>
 
