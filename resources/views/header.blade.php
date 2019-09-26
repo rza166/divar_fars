@@ -1,5 +1,5 @@
-<div class="e1">
-<a href="#"> <img src="../image/1.jpg" class="e2" alt=""></a>
+ <div class="e1">
+<a href="/"> <img src="../image/1.jpg" class="e2" alt=""></a>
 
 
 
@@ -15,13 +15,13 @@
 
   <ul class="u15">
     <li class="">
-      <a class="nav-link" href="#">دیوار من</a>
+     <a class="nav-link" href="/pagei">دیوار من</a>
     </li>
     <li class="">
-      <a class="nav-link" href="#">چت</a>
+      <a class="nav-link" href="">چت</a>
     </li>
     <li class="">
-      <a class="nav-link" href="#">درباره ما</a>
+      <a class="nav-link" href="/about">درباره ما</a>
     </li>
     <li class="">
       <a class="nav-link" href="#">بلاگ</a>
@@ -30,11 +30,11 @@
       <a class="nav-link" href="#">قوانین وپشتیبانی</a>
     </li>
     <li class="">
-      <a class="nav-link" href="#">تماس با ما</a>
+      <a class="nav-link" href="/tamas">تماس با ما</a>
     </li>
-    <li class="">
+    {{-- <li class="">
       <a class="nav-link" href="#">خروج</a>
-    </li>
+    </li> --}}
   </ul>
 
   </div>
@@ -100,9 +100,8 @@
         <!-- Modal footer -->
         <div class="modal-footer">
 
-
-
       </div>
 
     </div>
   </div>
+</div>

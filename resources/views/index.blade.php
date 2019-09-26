@@ -65,18 +65,22 @@
         </ul>
 
       </div>
-      <div>
-        <div class="custom-control custom-switch e29">
-          <input type="button" class="custom-control-input" id="switch1" name="example">
-          <label class="custom-control-label" for="switch1">عکس دار</label>
-        </div>
-    </div>
-    <div>
-      <div class="custom-control custom-switch e29">
-        <input type="button" class="custom-control-input" id="switch1" name="example">
-        <label class="custom-control-label" for="switch1">فوری</label>
+
+
+      <div class="e30">
+        <label for="" class="e31"> عکس دار</label>
+        <input type="checkbox" id="pure-toggle-4" hidden />
+        <label class="pure-toggle brick" for="pure-toggle-4"> <span class="fontawesome-ok"></span><span class="fontawesome-remove"> </span></label>
       </div>
-  </div>
+      <div class="e30">
+        <label for="" class="e31">فوری</label>
+        <input type="checkbox" id="pure-toggle-5" hidden />
+        <label class="pure-togglee brick" for="pure-toggle-5"> <span class="fontawesome-ok"></span><span class="fontawesome-remove"></span></label>
+
+      </div>
+
+
+
     <button type="text" class="btn btn-danger e28">جستجو</button>
     </form>
 

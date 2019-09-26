@@ -26,4 +26,49 @@ public function searchName(Request $request)
   $city1=City::where('show',1)->where('city','like',"%$city%")->get();
   return view('searchName', compact('city','city1'));
 }
+
+public function pagei()
+{
+  if ( !empty($request->city2)) {
+    $city=$request->city2;
+  }
+  else{
+    $city="ارسنجان";
+  }
+
+     $city1=City::where('show',1)->orderby('bazdid', 'DESC')->get();
+
+  return view('pagei',compact('city','city1'));
+
+}
+
+public function about()
+{
+  if ( !empty($request->city2)) {
+    $city=$request->city2;
+  }
+  else{
+    $city="ارسنجان";
+  }
+
+     $city1=City::where('show',1)->orderby('bazdid', 'DESC')->get();
+
+  return view('about',compact('city','city1'));
+
+}
+
+public function tamas()
+{
+  if ( !empty($request->city2)) {
+    $city=$request->city2;
+  }
+  else{
+    $city="ارسنجان";
+  }
+
+     $city1=City::where('show',1)->orderby('bazdid', 'DESC')->get();
+
+  return view('tamas',compact('city','city1'));
+
+}
 }//end class

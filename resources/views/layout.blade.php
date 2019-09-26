@@ -1,6 +1,7 @@
 <!doctype html>
 <html  dir="rtl">
     <head>
+       <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet" type="text/css">
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="_token" content="{{csrf_token()}}" />
@@ -17,6 +18,8 @@
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.5.1/min/dropzone.min.css">
         <link href="\css\main.css" rel="stylesheet" type="text/css">
+        <link href="\css\chekbox.css" rel="stylesheet" type="text/css">
+        <link href="\css\chekbox2.css" rel="stylesheet" type="text/css">
          <link href="\css\header.css" rel="stylesheet" type="text/css">
        <link href="\css\index.css" rel="stylesheet" type="text/css">
        <link href="\css\slider.css" rel="stylesheet" type="text/css">
@@ -27,7 +30,7 @@
 
 
     </head>
-    <body onclick="nsh()">
+    <body >
       {{-- <img src="http://localhost:8000/img_site/210.gif" class="gif_loding" alt="loding" > --}}
        <div class="all_khat">
           <div class="khat1"></div><div class="khat2"></div><div class="khat3"></div>
@@ -38,10 +41,10 @@
         </header>
 <div class="content">
 
-        <div class="search_all" id="search">  </div>
 
 
-          <div class="" id="pjax">
+
+          <div class="">
             @yield('content')
 
           </div>
@@ -53,9 +56,7 @@
 hj
 </div> --}}
        </div>
-        {{-- <footer>
-          @include('layout.footer')
-        </footer> --}}
+        
         </div>
 
         <script type="text/javascript" src="\js\app.js"></script>

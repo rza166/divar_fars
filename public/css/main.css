@@ -23,9 +23,13 @@ body{
 .e1{
   width: 100%;
   height: 70px;
-  margin: 0 auto;
+  line-height: 70px;
   float: right;
   text-align: center;
+  border-bottom: 1px solid rgb(237, 234, 236);
+  position: relative;
+  top:-31px;
+
 }
 .e2{
   margin: 5px 5px;
@@ -138,18 +142,17 @@ body{
 }
 .e15{
   width: 58%;
-  height: 70px;
-  background-color:#fff;
-  border-bottom: 2px solid rgb(255, 255, 255);
+  height: 45px;
+
   margin: 0px 6px;
   float: right;
 }
 .u15{
   width: 100%;
-  height: 70px;
-  line-height: 50px;
+  height: 45px;
+  line-height: 45px;
   float: right;
-  background-color: #fff;
+
 }
 .u15 li{
 
@@ -158,29 +161,29 @@ body{
 }
 .u15 a{color: #000;}
 .e15 li{
-  height: 70px;
-  font-size: 15px;
+  height: 45px;
+  font-size: 16px;
   color: rgb(1, 0, 1);
-  padding: 0 3px;
+  padding: 0 7px;
 }
 .e16{
   width: 10%;
-  height: 70px;
+  height: 45px;
   float: right;
-  margin: 10px 0px 70px;
+  margin: 10px 0px 10px;
   border-radius:3px 3px 3px 3px;
 }
 .e16 button{
 height: 45px;
 background-color: rgb(244, 4, 4);
 font-size: 16px;
-margin: 0px 0px 140px;
+margin: 0px 0px 10px;
 float: right;
 }
 .e17{
   width: 17%;
   height: 500px;
-  margin: 10px 15px;
+  margin: 0px 15px;
   float: right;
 
 }
@@ -192,6 +195,8 @@ float: right;
   padding: 0 30px;
   cursor: pointer;
   color: rgb(248, 252, 237);
+  position: relative;
+  top: -25px;
 }
 .e17 li:hover{
 background-color: rgb(241, 242, 242);
@@ -204,12 +209,12 @@ background-color: rgb(241, 242, 242);
   background-color: rgb(241, 242, 242);
 }
 .e19{
-  width: 65%;
+  width: 67%;
   height: 350px;
   background: rgb(240, 245, 241);
   margin: 5px 25% 5px;
   position: relative;
-  top: 80px;
+  top: 60px;
   border-radius: 5px 4px 5px 4px;
 }
 .e20{
@@ -220,16 +225,18 @@ background-color: rgb(241, 242, 242);
   cursor: pointer;
   margin: 4px 0;
   z-index: 170;
+  padding-left: 5%;
 
 }
 .e22{
-  width: calc(100% - 28px);
+  width: calc(96% - 28px);
   height: 45px;
   float: left;
   border: 1px solid grey;
   border-radius:3px 0 0 3px;
   border-right: none;
   cursor: pointer;
+
 
 }
 .e21{
@@ -240,6 +247,7 @@ background-color: rgb(241, 242, 242);
   background-color: rgb(255, 255, 255);
   border-left: none;
   border-radius:0 3px 3px 0;
+  margin-right: 4%;
 
 
 }
@@ -251,6 +259,7 @@ background-color: rgb(241, 242, 242);
   padding: 15px 8px 12px 0;
   color: rgb(128, 128, 128);
   cursor: pointer;
+  margin-right: 10%;
 }
 i.e25{
   left: 10px !important ;
@@ -311,6 +320,10 @@ i.e25{
   font-size: 16px;
   margin: 50px 15px;
 background-color: rgb(244, 4, 4);
+position: relative;
+top:-150px;
+left:30px;
+float: left;
 }
 .e29{
   width: 100px;
@@ -319,7 +332,60 @@ background-color: rgb(244, 4, 4);
   float: right;
 
 }
-/* .e29 input{
-  border-style: solid;
-  border-bottom-width: thin;
-} */
+.e30{
+position: relative;
+left: 545px;
+top:-30px;
+}
+.e31 {
+  font-size: 15px;
+  color: rgb(77, 76, 78);
+}
+.e32{
+  width: 60%;
+  height: 60px;
+  float: right;
+  margin: 0 20% 20% 0;
+  border-bottom: 1px solid rgb(204, 204, 204);
+  position: relative;
+  top:-41px;
+}
+.e32 span{
+  float: right;
+  padding: 30px 2%;
+  cursor: pointer;
+  color: rgb(148, 148, 148);
+}
+.e33{
+  width: 24%;
+  height: 19px;
+  border-bottom: 1px solid rgb(245, 245, 245);
+  float: right;
+
+}
+.e33:hover{
+  color:rgb(0, 0, 0);
+  border-bottom: 2px solid rgb(191, 16, 227);
+}
+.e34{
+  padding: 30px 5%!important;
+}
+.e35{
+  width: 70%;
+  min-height: 400px;
+  font-size: 16px;
+  margin: 0 15% 30px;
+  float: right;
+  text-align: right;
+}
+.e36{
+  width: 100%;
+  min-height: 200px;
+  float: right;
+  text-align: center;
+}
+.e36-1{
+  width: 95%;
+  margin: 0 2.5% 35px;
+  border-top: 1px solid rgb(221, 218, 220);
+}
