@@ -13,7 +13,6 @@
 }
 body{
   font-family: "b koodak", Arial, Helvetica, sans-serif;
-  z-index: 5;
 }
 
 * {
@@ -22,17 +21,18 @@ body{
 
 .e1{
   width: 100%;
-  height: 70px;
-  line-height: 70px;
+  height: 58px;
+  margin-top: -30px;
   float: right;
   text-align: center;
   border-bottom: 1px solid rgb(237, 234, 236);
-  position: relative;
-  top:-31px;
+
 
 }
 .e2{
   margin: 5px 5px;
+  height: 50px;
+width: 80px;
   float: right;
 }
 .e3{
@@ -40,7 +40,7 @@ body{
   height: 41px;
   line-height: 41px;
   float: right;
-  margin: 12.5px 5px;
+  margin: 8px 5px;
   background-color: #fff;
   cursor: pointer;
   color: rgb(248, 252, 237);
@@ -170,7 +170,7 @@ body{
   width: 10%;
   height: 45px;
   float: right;
-  margin: 10px 0px 10px;
+  margin: 5px 0px;
   border-radius:3px 3px 3px 3px;
 }
 .e16 button{
@@ -181,22 +181,20 @@ margin: 0px 0px 10px;
 float: right;
 }
 .e17{
-  width: 17%;
-  height: 500px;
-  margin: 0px 15px;
+  width: calc(24% - 30px);
+  /* height: 500px; */
+  margin: 0 15px 0 15px;
   float: right;
-
 }
-.e17  li{
-  height: 45.45px;
+
+.e17 li{
+  height: 49.45px;
   border-bottom: 1px solid rgb(223, 226, 223) ;
-  line-height: 45.45px;
+  line-height: 49.45px;
   text-align: right;
-  padding: 0 30px;
-  cursor: pointer;
+  padding: 5px 30px;
   color: rgb(248, 252, 237);
-  position: relative;
-  top: -25px;
+  cursor: pointer;
 }
 .e17 li:hover{
 background-color: rgb(241, 242, 242);
@@ -209,24 +207,19 @@ background-color: rgb(241, 242, 242);
   background-color: rgb(241, 242, 242);
 }
 .e19{
-  width: 67%;
-  height: 350px;
+  width: calc(66% - 10px);
   background: rgb(240, 245, 241);
-  margin: 5px 25% 5px;
-  position: relative;
-  top: 60px;
+  margin: 4px 4.5% 5px 4.5% ;
   border-radius: 5px 4px 5px 4px;
+  float: left;
+
 }
 .e20{
   width: 100%;
   float: right;
-  position: relative;
-  top: -52px;
   cursor: pointer;
-  margin: 4px 0;
-  z-index: 170;
+  margin: 2px 0;
   padding-left: 5%;
-
 }
 .e22{
   width: calc(96% - 28px);
@@ -236,8 +229,9 @@ background-color: rgb(241, 242, 242);
   border-radius:3px 0 0 3px;
   border-right: none;
   cursor: pointer;
-
-
+}
+.e22-1{
+  margin-top: 15px;
 }
 .e21{
   width: 28px;
@@ -248,7 +242,6 @@ background-color: rgb(241, 242, 242);
   border-left: none;
   border-radius:0 3px 3px 0;
   margin-right: 4%;
-
 
 }
 .e21 i{
@@ -265,7 +258,7 @@ i.e25{
   left: 10px !important ;
 }
 
-.e22:focus,.e22:focus + .e21 {
+ .e22:focus,.e22:focus + .e21 {
   border-color: #920a99;
 }
 .e20::selection{
@@ -299,7 +292,7 @@ i.e25{
   display: none;
   position: absolute;
   top: 45px;
-  z-index: 17;
+
 
 }
 
@@ -315,14 +308,8 @@ i.e25{
 .e27 li:hover{
   background-color: #e6dbcc;
 }
-.e28{
-  width: 80px;
-  font-size: 16px;
-  margin: 50px 15px;
+.e28{  width: 80px;  font-size: 16px;  margin: 50px 0 50px 50px;
 background-color: rgb(244, 4, 4);
-position: relative;
-top:-150px;
-left:30px;
 float: left;
 }
 .e29{
@@ -334,8 +321,10 @@ float: left;
 }
 .e30{
 position: relative;
-left: 545px;
-top:-30px;
+float: right;
+width: 70px;
+margin-top: 40px;
+
 }
 .e31 {
   font-size: 15px;
@@ -388,4 +377,61 @@ top:-30px;
   width: 95%;
   margin: 0 2.5% 35px;
   border-top: 1px solid rgb(221, 218, 220);
+}
+.e38{
+  width: 100%;
+min-height: 700px;
+float: right;
+}
+.e39{
+  width: 80%;
+  min-height: 400px;
+  /* margin: 10px 9% 0 9%; */
+  background-color: rgb(240, 240, 240);
+  float: right;
+}
+.e38-1{
+  font-size: 24px;
+  float: right;
+  text-align: right;
+  margin-right: 9%;
+  padding: 15px 0 2px 0;
+}
+.e40{
+  margin: 10px 9% 0 9%;
+font-size: 17px;
+  float: right;
+}
+.e40-1{
+  color: rgb(113, 109, 109);
+  padding: 16.5px 70% 16.5px 0;
+  float: left;
+  font-size: 26px;
+  display: none;
+}
+
+.e40 li{
+  height: 65.45px;
+  border-bottom: 1px solid rgb(223, 226, 223) ;
+  line-height: 65.45px;
+  text-align: right;
+  padding: 5px 25px;
+  color: rgb(248, 252, 237);
+  cursor: pointer;
+}
+.e40 li:hover{
+background-color: rgb(244, 234, 150);
+}
+.e40 li:hover .e40-1{
+display: inline-block;
+}
+.e40 li a{
+  text-decoration: none;
+  color: rgb(39, 40, 38);
+}
+.li_i{
+  position: relative;
+  left: 10px;
+  color: rgb(113, 109, 109);
+  display: none;
 }

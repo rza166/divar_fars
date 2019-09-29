@@ -23,3 +23,9 @@ function  sho() {
     $('#ii').css({"border-color":"#920a99","border-bottom": "none" , 'border-radius':'0 3px 0 0'});
 
 }
+function showMenu(classShow , classI) {
+  $('.li_4').css('display','none');
+  $('.' + classShow ).css('display','block');
+  $('.' + classI ).css('display','inline-block')
+  $('.e40-1').css('display','none');
+}

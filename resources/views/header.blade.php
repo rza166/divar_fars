@@ -38,9 +38,12 @@
   </ul>
 
   </div>
-  <div class="e16">
-  <button type="button" class="btn btn-danger">ثبت رایگان آگهی</button>
-  </div>
+  @isset($agahi)
+    <div class="e16">
+    <button type="button" onclick="window.location='/sabt'" class="btn btn-danger">ثبت رایگان آگهی</button>
+    </div>
+  @endisset
+
 
 </div>
 

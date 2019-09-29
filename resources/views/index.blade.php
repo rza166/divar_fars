@@ -9,13 +9,13 @@
   <div class="e17">
 		<li class="e18"><a href="">همه آگهی ها</a></li>
 		<li><a href="#">املاک</a></li>
-		<li><a href="#">وسایل نقلیه</a>
+		<li><a href="#">وسایل نقلیه</a></li>
     <li><a href="#">لوازم الکتریکی</a></li>
   	<li><a href="#">مربوط به خانه</a></li>
-  	<li><a href="#">خدمات</a>
+  	<li><a href="#">خدمات</a></li>
     <li><a href="#">وسایل شخصی</a></li>
   	<li><a href="#">سرگرمی وفراغت</a></li>
-  	<li><a href="#">اجتماعی</a>
+  	<li><a href="#">اجتماعی</a></li>
     <li><a href="#">برای کسب وکار</a></li>
   	<li><a href="#">استخدام وکاریابی</a></li>
 </div>
@@ -27,27 +27,29 @@
 
     <form >
       <div class=" e20">
-        <input type="text" class=" e22 e23" placeholder="جستجو در همه آگهی ها" id="usr" name="username">
-        <div class=" e21">
-          <i class="material-icons ">&#xe8b6;</i>
+         <input type="text" class=" e22 e23 e22-1" placeholder="جستجو در همه آگهی ها" id="usr" name="username">
+        <div class=" e21 e22-1">
+          <i class="material-icons">&#xe8b6;</i>
         </div >
+
+
       </div>
 
 
-      <div class=" e20">
-          <input type="text" class=" e22 e24 e26" placeholder="همه آگهی ها" id="usr" name="username">
+        <div class=" e20">
+          <input type="text" class=" e22 e24 e26" placeholder="همه آگهی ها" id="usr2" name="username">
         <div class=" e21 ">
           <i class='fas fa-caret-down e25' style='font-size:14px'></i>
         </div >
       </div>
 
 
-      <div class=" e20 ">
+       <div class=" e20 ">
         <input type="text" class=" e22 e23" onclick="sho()" placeholder="همه محله ها " id="sh" name="username">
         <div class=" e21" onclick="sho()" id="ii">
           <i class='fas fa-caret-down e25' style='font-size:14px'></i>
         </div >
-        <ul class="e27">
+         <ul class="e27">
           <li type="button" name="button">1</li>
           <li type="button" name="button">2</li>
           <li type="button" name="button">3</li>
@@ -81,7 +83,7 @@
 
 
 
-    <button type="text" class="btn btn-danger e28">جستجو</button>
+    <button type="text" class="btn btn-danger e28" >جستجو</button>
     </form>
 
 

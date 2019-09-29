@@ -32,9 +32,9 @@
     </head>
     <body >
       {{-- <img src="http://localhost:8000/img_site/210.gif" class="gif_loding" alt="loding" > --}}
-       <div class="all_khat">
+       {{-- <div class="all_khat">
           <div class="khat1"></div><div class="khat2"></div><div class="khat3"></div>
-        </div>
+        </div> --}}
         <div class="">
         <header>
           @include('header')
@@ -56,7 +56,7 @@
 hj
 </div> --}}
        </div>
-        
+
         </div>
 
         <script type="text/javascript" src="\js\app.js"></script>
