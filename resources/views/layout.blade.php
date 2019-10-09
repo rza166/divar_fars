@@ -27,6 +27,7 @@
        <link href="\css\footer.css" rel="stylesheet" type="text/css">
        <link href="\css\sabad_kharid.css" rel="stylesheet" type="text/css">
        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href="\css\agahi.css" rel="stylesheet" type="text/css">
 
 
     </head>

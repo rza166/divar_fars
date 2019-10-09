@@ -414,6 +414,7 @@ float: right;
   padding: 15.5px 2% 15.5px 2%;
   float: right;
   display: none;
+  border-left: 1px solid rgb(126, 126, 126);
 }
 
 
@@ -427,6 +428,7 @@ float: right;
   padding: 5px 25px;
   color: rgb(248, 252, 237);
   cursor: pointer;
+  list-style: none;
 }
 .e40 li:hover{
 background-color: rgb(244, 234, 150);
@@ -444,4 +446,30 @@ display: inline-block;
   top:5px;
   color: rgb(113, 109, 109);
   display: none;
+}
+.ul2{
+  width: 100%;
+  float: right;
+  background-color: rgb(240, 240, 240);
+  color: rgb(15, 15, 13);
+  display: none;
+}
+.e43{
+  float: left;
+  color: rgb(113, 109, 109);
+  padding: 15.5px 2% 15.5px 2%;
+  display: none;
+}
+.ul2 li:hover .e43{
+display: inline-block;
+}
+.ul2 li{
+  color: rgb(24, 24, 24);
+}
+.ul22_s{
+  display: none;
+}
+.maindiv{
+  float: right;
+  width: 100%;
 }
