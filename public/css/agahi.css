@@ -31,3 +31,30 @@
   background-color: rgb(161, 113, 8);
   float: right;
 }
+.a3{
+  width: 40%;
+  height: 50px;
+  float: right;
+  margin: 40px 4% 0 0;
+  cursor: pointer;
+}
+
+.labela1{
+  float: right;
+  font-size: 18px;
+  color: rgb(6, 0, 3);
+  margin: 30px 8% 0 0;
+  padding-bottom: 20px;
+}
+.labela2{
+  font-size: 18px;
+  color: rgb(6, 0, 3);
+  float: right;
+  margin: 30px -3% 0 0;
+}
+.a4{
+  width: 60%;
+  height: 250px;
+  background-color: rgb(135, 135, 135);
+  margin: 180px 10% 0;
+}
