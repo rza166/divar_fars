@@ -1,6 +1,5 @@
 .a1{
   width: 82%;
-  height: 100px;
   float: right;
   border: 1px solid rgb(219, 219, 219);
   background-color: rgb(240, 240, 240);
@@ -20,41 +19,167 @@
   float: left;
   margin: 35px 9%;
   font-size: 18px;
-  color: rgb(0, 0, 0);
+  color: rgb(235, 9, 9);
 }
 .a2{
   width: 82%;
-  min-height: 500px;
   border: 1px solid rgb(219, 219, 219);
   border-radius: 3px;
   margin: 12px 9% 0;
-  background-color: rgb(161, 113, 8);
+  background-color: rgb(240, 240, 240);
   float: right;
 }
-.a3{
+.a2-1{
   width: 40%;
-  height: 50px;
   float: right;
   margin: 40px 4% 0 0;
   cursor: pointer;
 }
 
 .labela1{
+  width: 100%;
   float: right;
   font-size: 18px;
   color: rgb(6, 0, 3);
-  margin: 30px 8% 0 0;
-  padding-bottom: 20px;
+  margin-right: 7%;
+  margin-bottom: 10px;
+  text-align: right;
+
 }
 .labela2{
+  width: 100%;
   font-size: 18px;
   color: rgb(6, 0, 3);
   float: right;
-  margin: 30px -3% 0 0;
+  margin-right: 7%;
+  margin-top: 10px;
+  text-align: right;
 }
-.a4{
-  width: 60%;
-  height: 250px;
-  background-color: rgb(135, 135, 135);
-  margin: 180px 10% 0;
+
+.a2-5{
+  width: 90%;
+  height: 300px;
+  float: right;
+  background-color: rgb(240, 240, 240);
+  margin: 10px 5% 5% 0;
+    background-color: rgb(255, 255, 255);
+}
+
+.a2-2{
+  width: 90%;
+  float: right;
+  background-color: rgb(240, 240, 240);
+  margin: 10px 5% 5% 0;
+  text-align: right;
+}
+.labela3{
+  width: 100%;
+  font-size: 18px;
+  color: rgb(6, 0, 3);
+  float: right;
+  margin-right: 2%;
+  margin-top: 10px;
+  text-align: right;
+}
+.p1{
+  text-align:right;
+  margin-top: 8px;
+  margin-right: 2%;
+  opacity: .4;
+}
+.ia{
+  margin: 47px 48px 0 0;
+}
+.aksa{
+  width: 120px;
+  height: 120px;
+  text-align: right;
+  float: right;
+  margin: 2px;
+  border: 1px dashed rgb(182, 190, 24);
+  background-color:#fff
+  cursor:pointer;
+}
+.a2-3{
+  width: 90%;
+  height: 50px;
+  float: right;
+  background-color: rgb(255, 255, 255);
+  margin: 10px 5% 5% 0;
+  border: 2px solid rgb(219, 219, 219);
+}
+.labela4{
+  width: 100%;
+  font-size: 18px;
+  color: rgb(6, 0, 3);
+  float: right;
+  margin-right: 8%;
+  margin-top: 10px;
+  text-align: right;
+}
+
+.a2-4{
+  width: 90%;
+  height: 50px;
+  float: right;
+  background-color: rgb(240, 240, 240);
+  margin: 10px 5% 5% 0;
+}
+.a2-4input{
+  text-align: right;
+  float: right;
+
+}
+.a2-4input1{
+margin-right: 3%;
+  float: right;
+}
+.a2-4input2{
+margin-right: 3%;
+  float: right;
+}
+.a2-4input3{
+margin-right: 6%;
+float: right;
+}
+.a2-4input4{
+margin-right: 6%;
+}
+.labela5{
+  width: 90%;
+  font-size: 18px;
+  color: rgb(6, 0, 3);
+  float: right;
+  margin-right: 8%;
+  margin-top: 10px;
+  text-align: right;
+}
+.p2{
+  width: 100%;
+  float: right;
+  text-align:right;
+  font-size: 14px;
+  margin-top: 8px;
+  margin-right: 8%;
+  opacity: .4;
+}
+.a2-5{
+  width: 90%;
+  height: 150px;
+  float: right;
+  background-color: rgb(255, 255, 255);
+  margin: 10px 5% 5% 0;
+  border: 2px solid rgb(219, 219, 219);
+}
+.a2-6{
+  width: 100%;
+  height: 45px;
+  float: left;
+  margin: 15px 60px;
+  border-radius:3px 3px 3px 3px;
+}
+.a2-6 button{
+  width: 20%;
+  height: 45px;
+  font-size: 19px;
 }

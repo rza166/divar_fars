@@ -14,5 +14,6 @@ Route::get('/pagei','IndexController@pagei');
 Route::get('/about','IndexController@about');
 Route::get('/tamas','IndexController@tamas');
 Route::get('/sabt','IndexController@sabt');
+Route::post('/uplod_img_pro', 'IndexController@uplod_img_pro');
 Route::get('/{city2?}','IndexController@view');
 Route::post('/searchName','IndexController@searchName');

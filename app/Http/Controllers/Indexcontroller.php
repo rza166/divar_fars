@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 use App\Models\City;
-
+use App\models\Aks;
 use Illuminate\Http\Request;
+use App\Http\Requests\divar;
 
 class Indexcontroller extends Controller
 {
@@ -89,6 +90,24 @@ public function sabt()
 
   return view('sabt',compact('city','city1'));
 
+}
+
+public function uplod_img_pro(Request $request)
+{
+  $this->validate($request, [
+        'file' => 'required|mimes:jpeg,jpg,png|max:3000',
+
+    ]);
+ $file=$request->file('file');
+
+  $name= time() . $file->getClientOriginalName();
+  $file->move('img_pro' , $name);
+  //ذخیره نام عکس در جدول imgpros جهت نمایش هنگام آپلود عکس
+  // $imagpros=new Aks();
+  // $imagpros->name=$name;
+  // $imagpros->show=1;
+  // $imagpros-> save();
+  return "$name";
 }
 
 }//end class

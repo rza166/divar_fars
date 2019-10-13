@@ -86,3 +86,28 @@ function showMenu2( classShow ,classShow2 ,classShow3) {
   }
 
 }
+function showmodal() {
+  $("#aks").modal('show');
+}
+// مربوط به بارگذاری عکس
+Dropzone.options.zabi={
+
+   parallelUploads: 2,
+   acceptedFiles:".png , .jpg , .jpeg",
+   maxFilesize: 3,
+  error:function(){
+
+    $("#imgAddPro1").html('<div id="alarm_red">خطا : عکس آپلود نشد <br>فرمت های مجاز : jpg , png <br> حداکثر حجم 3000 کیلوبایت</div>');
+  },
+  success:function(file , response){
+    this.removeFile(this.files[0]);
+
+    //آرگومان اول یک شی است
+    //آرکومان دوم مقدار بازگشتی از کنترلر است
+    $('.aksa').before('<img src="img_pro/' +response +'" alt="" style="margin:2px" height="120" width="120">');
+      $('#aks').modal('hide');
+    // $("#imgAddPro1").html('<div class="alert alert-success" style="text-align: center; "> عکس با موفقیت آپلود شد </div>');
+    // $("#aks2").val( response );
+  },
+
+}
