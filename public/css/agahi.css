@@ -5,6 +5,7 @@
   background-color: rgb(240, 240, 240);
   border-radius: 3px;
   margin: 0 9%;
+  cursor: pointer;
 }
 .a1:hover{
   background-color: rgb(255, 255, 255);
@@ -31,8 +32,9 @@
 }
 .a2-1{
   width: 40%;
+  height: 42.5px;
   float: right;
-  margin: 40px 4% 0 0;
+  margin: 0px 6% 20px 0;
   cursor: pointer;
 }
 
@@ -41,8 +43,9 @@
   float: right;
   font-size: 18px;
   color: rgb(6, 0, 3);
-  margin-right: 7%;
-  margin-bottom: 10px;
+  margin-right: 6%;
+  margin-top: 50px;
+  margin-bottom: 15px;
   text-align: right;
 
 }
@@ -57,19 +60,20 @@
 }
 
 .a2-5{
-  width: 90%;
+  width: 86%;
   height: 300px;
   float: right;
   background-color: rgb(240, 240, 240);
-  margin: 10px 5% 5% 0;
-    background-color: rgb(255, 255, 255);
+  margin: 10px 7% 20px 0;
+  background-color: rgb(255, 255, 255);
+  border-radius: 3px;
 }
 
 .a2-2{
-  width: 90%;
+  width: 86%;
   float: right;
   background-color: rgb(240, 240, 240);
-  margin: 10px 5% 5% 0;
+  margin: 10px 7% 20px 0;
   text-align: right;
 }
 .labela3{
@@ -85,7 +89,7 @@
   text-align:right;
   margin-top: 8px;
   margin-right: 2%;
-  opacity: .4;
+  opacity: .3;
 }
 .ia{
   margin: 47px 48px 0 0;
@@ -95,17 +99,17 @@
   height: 120px;
   text-align: right;
   float: right;
-  margin: 2px;
+  margin: 2px 2.5%;
   border: 1px dashed rgb(182, 190, 24);
   background-color:#fff
   cursor:pointer;
 }
 .a2-3{
-  width: 90%;
+  width: 86%;
   height: 50px;
   float: right;
   background-color: rgb(255, 255, 255);
-  margin: 10px 5% 5% 0;
+  margin: 5px 7% 20px 0;
   border: 2px solid rgb(219, 219, 219);
 }
 .labela4{
@@ -114,16 +118,16 @@
   color: rgb(6, 0, 3);
   float: right;
   margin-right: 8%;
-  margin-top: 10px;
+  margin-top: 5px;
   text-align: right;
 }
 
 .a2-4{
-  width: 90%;
+  width: 86%;
   height: 50px;
   float: right;
   background-color: rgb(240, 240, 240);
-  margin: 10px 5% 5% 0;
+  margin:10px 7% 20px 0;
 }
 .a2-4input{
   text-align: right;
@@ -163,23 +167,49 @@ margin-right: 6%;
   margin-right: 8%;
   opacity: .4;
 }
-.a2-5{
-  width: 90%;
+.a2-7{
+  width: 86%;
   height: 150px;
   float: right;
   background-color: rgb(255, 255, 255);
-  margin: 10px 5% 5% 0;
+  margin: 10px 7% 20px 0;
   border: 2px solid rgb(219, 219, 219);
 }
 .a2-6{
   width: 100%;
   height: 45px;
   float: left;
-  margin: 15px 60px;
+  margin: 20px 60px;
   border-radius:3px 3px 3px 3px;
 }
 .a2-6 button{
   width: 20%;
   height: 45px;
   font-size: 19px;
+  color: rgb(128, 4, 30);
+}
+.agahi2{
+  width: 100%;
+  float: right;
+
+}
+
+.a2-4input1a{
+margin-right:4.5%;
+  float: right;
+}
+.a2-4input4a{
+margin-right:7%;
+float: right;
+}
+.a2-4input2a{
+margin-right: 2%;
+  float: right;
+}
+.a2-8{
+  width: 50%;
+  height: 40px
+  float: right;
+  margin: 0 25%;
+  text-align: center;
 }

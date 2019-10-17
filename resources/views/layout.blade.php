@@ -36,6 +36,13 @@
        {{-- <div class="all_khat">
           <div class="khat1"></div><div class="khat2"></div><div class="khat3"></div>
         </div> --}}
+        {{-- <div class="" id="loader">
+            <div class="logoSpinner"></div>
+            <div class="logoSpinner2">
+              <div class="spinner-border text-primary "></div>
+            </div>
+       </div> --}}
+
         <div class="">
         <header>
           @include('header')
@@ -69,6 +76,7 @@ hj
          <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
          <script type="text/javascript" src="\js\main.js"></script>
+         <script type="text/javascript" src="\js\agahi.js"></script>
 
 
     </body>

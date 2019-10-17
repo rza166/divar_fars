@@ -1,4 +1,4 @@
-     <?php
+ <?php
 
 return [
 
@@ -12,9 +12,10 @@ return [
     | as the size rules. Feel free to tweak each of these messages here.
     |
     */
-     'captcha' => ' :attribute را صحیح وارد کنید',
-     'codemeli' => ':attribute ده رقمی وارد شود',
-     'seriyal' => ':attribute شش رقمی باید وارد شود',
+     // 'city' => ' :attribute را صحیح وارد کنید',
+     // 'price' => ':attribute را وارد کنید',
+     // 'typeagahi' => ':attribute رامشخص کنید',
+
     'accepted' => 'The :attribute must be accepted.',
     'active_url' => 'The :attribute is not a valid URL.',
     'after' => 'The :attribute must be a date after :date.',
@@ -98,7 +99,7 @@ return [
     'numeric' => 'لطفا :attribute را به عدد وارد کنید',
     'present' => 'The :attribute field must be present.',
     'regex' => 'The :attribute format is invalid.',
-    'required' => 'لطفا :attribute را وازد کنید.',
+    'required' => 'لطفا :attribute را وارد کنید.',
     'required_if' => 'The :attribute field is required when :other is :value.',
     'required_unless' => 'The :attribute field is required unless :other is in :values.',
     'required_with' => 'The :attribute field is required when :values is present.',
@@ -149,11 +150,18 @@ return [
     */
 
     'attributes' => [
-      'amniyat' =>'کد امنیتی',
-      'codemeli'=>'کدملی',
-      'seriyal'=>'سریال شناسنامه',
-      'name'=>'نام',
-      'famil'=>'فامیل',
+      'city' =>'شهر',
+      'price'=>'قیمت',
+      'typeagahi'=>'نوع آگهی',
+      'agahidahande'=>'آگهی دهنده',
+      'meter'=>'متر',
+      'vadie' =>'ودیعه',
+      'ejare'=>'اجاره',
+      'tedadotagh'=>'تعداد اتاق',
+      'salesakht'=>'سال ساخت',
+      'mobile'=>'موبایل',
+      'onvanagahi' =>'عنوان آگهی',
+      'tozihat'=>'توضیحات',
     ],
 
 

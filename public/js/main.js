@@ -1,3 +1,4 @@
+$('#loader').hide();
 // مربوط به انتخاب شهر مورد نظر
 function searchName() {
   $.ajaxSetup({ headers: {'X-CSRF-TOKEN': $('meta[name="_token"]').attr('content')}});
