@@ -162,7 +162,7 @@ return [
       'mobile'=>'موبایل',
       'onvanagahi' =>'عنوان آگهی',
       'tozihat'=>'توضیحات',
+      'moaveze'=>'معاوضه',
     ],
-
 
 ];

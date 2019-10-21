@@ -157,9 +157,8 @@ width: 80px;
   opacity: 0.2;
 }
 .e15{
-  width: 58%;
+  width: 60%;
   height: 45px;
-
   margin: 0px 6px;
   float: right;
 }
@@ -171,22 +170,22 @@ width: 80px;
 
 }
 .u15 li{
-
   float: right;
   list-style: none;
 }
 .u15 a{color: #000;}
+
 .e15 li{
   height: 45px;
   font-size: 16px;
   color: rgb(1, 0, 1);
-  padding: 0 7px;
+  padding: 0 4px;
 }
 .e16{
-  width: 10%;
+  width: 8%;
   height: 45px;
   float: right;
-  margin: 5px 0px;
+  margin: 5px 10px;
   border-radius:3px 3px 3px 3px;
 }
 .e16 button{

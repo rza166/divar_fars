@@ -29,9 +29,7 @@ class CreateAgahisTable extends Migration
             $table->string('mobile',13);
             $table->string('onvanagahi',50);
             $table->string('tozihat',150);
-            $table->tinyInteger('menu1');
-            $table->tinyInteger('menu2');
-            $table->tinyInteger('menu3');
+            $table->tinyInteger('menu');
             $table->integer('date');
         });
     }

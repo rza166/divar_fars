@@ -26,7 +26,7 @@
 
   <span class="labela4" for="">تعداد اتاق</span>
  <select class="a2-3" id="tedadotagh">
-   <option  value="" >انتخاب کنید</option>
+   <option  value="" ></option>
    <option value="100">بدون اتاق</option>
    <option value="1">یک</option>
    <option value="2">دو</option>
@@ -37,7 +37,7 @@
 
  <span class="labela4" for="">سال ساخت</span>
 <select class="a2-3" id="salesakht">
-  <option value="">انتخاب کنید</option>
+  <option value=""></option>
   <option>1398</option>
   <option>1397</option>
   <option>1396</option>

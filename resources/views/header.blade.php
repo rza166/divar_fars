@@ -32,12 +32,12 @@
     <li class="">
       <a class="nav-link" href="/tamas">تماس با ما</a>
     </li>
-    {{-- <li class="">
+    <li class="">
       <a class="nav-link" href="#">خروج</a>
-    </li> --}}
+    </li>
   </ul>
-
   </div>
+
   @isset($agahi)
     <div class="e16">
     <button type="button" onclick="window.location='/sabt'" class="btn btn-danger">ثبت رایگان آگهی</button>

@@ -55,7 +55,7 @@
   color: rgb(6, 0, 3);
   float: right;
   margin-right: 7%;
-  margin-top: 10px;
+  margin-top: 15px;
   text-align: right;
 }
 
@@ -82,7 +82,7 @@
   color: rgb(6, 0, 3);
   float: right;
   margin-right: 2%;
-  margin-top: 10px;
+  margin-top: 15px;
   text-align: right;
 }
 .p1{
@@ -118,7 +118,7 @@
   color: rgb(6, 0, 3);
   float: right;
   margin-right: 8%;
-  margin-top: 5px;
+  margin-top: 15px;
   text-align: right;
 }
 
@@ -155,7 +155,7 @@ margin-right: 6%;
   color: rgb(6, 0, 3);
   float: right;
   margin-right: 8%;
-  margin-top: 10px;
+  margin-top: 15px;
   text-align: right;
 }
 .p2{
@@ -191,7 +191,6 @@ margin-right: 6%;
 .agahi2{
   width: 100%;
   float: right;
-
 }
 
 .a2-4input1a{
@@ -212,4 +211,21 @@ margin-right: 2%;
   float: right;
   margin: 0 25%;
   text-align: center;
+}
+.labela4-1{
+  font-size: 18px;
+  color: rgb(6, 0, 3);
+  float: right;
+  margin-right: 8%;
+  margin-top: 10px;
+  text-align: right;
+}
+
+.labela4-2{
+  font-size: 18px;
+  color: rgb(6, 0, 3);
+  float: right;
+  margin-right: 2.5%;
+  margin-top: 16px;
+  text-align: right;
 }

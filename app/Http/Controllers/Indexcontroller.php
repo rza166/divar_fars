@@ -112,9 +112,7 @@ public function uplod_img_pro(Request $request)
 public function amlak(Request $request)
 {
   $liClass=$request->liClass;
-  $menu1=$request->menu1;
-  $menu2=$request->menu2;
-  $menu3=$request->menu3;
+  $menu=$request->menu;
 $city=$this->city;
 if (!empty($request->kharid)) {
 $kharid='ok';
@@ -124,7 +122,7 @@ else{
 }
 $moavezeC = (!empty($request->moavezeC)) ? 'OK' : NULL ;
 // $kharid='ok';
-  return view('agahi.amlak',compact('liClass','city','kharid','moavezeC','menu1','menu2','menu3'));
+  return view('agahi.amlak',compact('liClass','city','kharid','moavezeC','menu'));
 }
 public function backAgahi(Request $request)
 {
@@ -146,9 +144,7 @@ public function etebar(Agahim  $request)
   $mobile=$request->mobile;
   $onvanagahi=$request->onvanagahi;
   $tozihat=$request->tozihat;
-  $menu1=$request->menu1;
-  $menu2=$request->menu2;
-  $menu3=$request->menu3;
+  $menu=$request->menu;
   $save=new Agahi();
   $save->city=$city;
   $save->map=$map;
@@ -163,12 +159,24 @@ public function etebar(Agahim  $request)
   $save->mobile=$mobile;
   $save->onvanagahi=$onvanagahi;
   $save->tozihat=$tozihat;
-  $save->menu1=$menu1;
-  $save->menu2=$menu2;
-  $save->menu3=$menu3;
+  $save->menu=$menu;
   $save->date=time();
   $save->save();
   $id= $save->id;
   return $id;
+}
+public function sabtnahaei(Request $request)
+{
+  $agahi='ok';
+  if ( !empty($request->city2)) {
+    $city=$request->city2;
+  }
+  else{
+    $city="ارسنجان";
+  }
+
+$city1=City::where('show',1)->orderby('bazdid', 'DESC')->get();  $id=$request->id;
+ $esi=Agahi::find($id);
+return view('agahi.sabtnahaei',compact('esi','agahi','city','city1'));
 }
 }//end class

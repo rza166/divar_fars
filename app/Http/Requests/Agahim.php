@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Requests;
-
+use Illuminate\Http\Request;
 use Illuminate\Foundation\Http\FormRequest;
 
 class Agahim extends FormRequest
@@ -21,16 +21,21 @@ class Agahim extends FormRequest
      *
      * @return array
      */
-    public function rules()
+    public function rules(Request $request)
+
     {
+      // $GLOBALS['menu1']=$request->menu1;
+      // $GLOBALS['menu2']=$request->menu2;
+      // $GLOBALS['menu3']=$request->menu3;
         return [
           'city'=>'required',
           'map'=>'nullable',
           'price'=>'required|numeric',
-          'moaveze'=>'required, function($input){
-    return (($input->menu1 == 1) && ($input->menu2 == 1) && ($input->menu3 == 3))
-}|nullable|numeric', // معاوضه
-// 'moaveze'=>'required|numeric', // معاوضه
+//           'moaveze'=>"required, function($request){
+//
+//     return (($request->menu1 == 1) && ($request->menu2 == 1) && ($request->menu3 == 3))
+// }|nullable|numeric", // معاوضه
+          'moaveze'=>'required_if:menu,113|numeric', // معاوضه
           'typeagahi'=>'required|numeric',
            'agahidahande'=>'required|numeric',
            'meter'=>'required|numeric',
@@ -41,9 +46,7 @@ class Agahim extends FormRequest
             'mobile'=>'required|numeric',
             'onvanagahi'=>'required|alpha_dash',
              'tozihat'=>'required|alpha_dash',
-             'menu1'=>'required|numeric',
-             'menu2'=>'required|numeric',
-             'menu3'=>'required|numeric',
+             'menu'=>'required|numeric',
 
         ];
     }

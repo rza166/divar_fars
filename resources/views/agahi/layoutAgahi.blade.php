@@ -36,8 +36,8 @@
   <span class="labela4" for="">قیمت</span>
   <input  type="text" id="price" class="a2-3" placeholder="قیمت به تومان">
 @if (!empty($moavezeC))
-  <span class="labela4" for="">معاوضه میکنم</span>
-  <input  type="checkbox" id="moaveze" class="a2-3">
+  <span class="labela4-1" for="">معاوضه میکنم</span>
+  <input  type="checkbox" id="moaveze" class="labela4-2">
 @endif
 
 
@@ -69,7 +69,7 @@
   <textarea class="a2-7" rows="5" id="tozihat" name="text"></textarea>
 
   <div class="a2-6">
-  <button type="button" onclick="etebar('{{$menu1}}','{{$menu2}}','{{$menu3}}')" class="btn btn-danger">ارسال آگهی</button>
+  <button type="button" onclick="etebar('{{$menu}}')" class="btn btn-danger">ارسال آگهی</button>
   </div>
 
 

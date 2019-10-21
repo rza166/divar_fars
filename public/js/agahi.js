@@ -9,7 +9,7 @@
 //   },
 //   success: function() {}
 // });
-function amlak(liClass,kharid,moavezeC,menu1,menu2,menu3) {
+function amlak(liClass,kharid,moavezeC,menu) {
   $.ajaxSetup({ headers: {'X-CSRF-TOKEN': $('meta[name="_token"]').attr('content')}});
   $.ajax({
     type:'post',
@@ -18,9 +18,7 @@ function amlak(liClass,kharid,moavezeC,menu1,menu2,menu3) {
     liClass:liClass,
     kharid:kharid,
     moavezeC:moavezeC,
-    menu1:menu1,
-    menu2:menu2,
-    menu3:menu3,
+    menu:menu,
     },
     success:function(data){
       $('.mainDiv1').css('display','block');
@@ -64,13 +62,12 @@ function scroll_form(class_form){
 }
 
 // مربوط به اعتبار سنجی آگهی
-function etebar(menu1,menu2,menu3) {
+function etebar(menu) {
   $.ajaxSetup({ headers: {'X-CSRF-TOKEN': $('meta[name="_token"]').attr('content')}});
   $.ajax({
     type:'post',
     url:'../etebar',
     data: {
-
          city:$('#city').val(),
          map:$('#map').val(),
          price:$('#price').val(),
@@ -85,17 +82,14 @@ function etebar(menu1,menu2,menu3) {
          mobile:$('#mobile').val(),
          onvanagahi:$('#onvanagahi').val(),
           tozihat:$('#tozihat').val(),
-          menu1:menu1,
-          menu2:menu2,
-          menu3:menu3,
+          menu:menu,
        },
     success:function(data){
       scroll_form('reset')
       // refresh()
       $('#error').html('<div class="alert alert-success"> ثبت با موفقیت انجام شد </div>')
       document.getElementById('reset').reset();
-      // window.location.href = "/sabtname3/" + data;
-
+      window.location.href = "/sabtnahaei/" + data;
     },
     error: function(xhr) {
       scroll_form('reset')
@@ -104,7 +98,6 @@ function etebar(menu1,menu2,menu3) {
         var error=errors.errors;
         if(error['city']){
           $('#error').html('<div class="alert alert-danger ">' + error['city'] +'</div>');
-
          }
         //   else if(error['tavalod']){
         //   $('#error').html('<div class="alert alert-danger">' + error['tavalod'] +'</div>');
