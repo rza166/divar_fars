@@ -109,7 +109,7 @@
   height: 50px;
   float: right;
   background-color: rgb(255, 255, 255);
-  margin: 5px 7% 20px 0;
+  margin: 5px 7% 5px 0;
   border: 2px solid rgb(219, 219, 219);
 }
 .labela4{
@@ -228,4 +228,77 @@ margin-right: 2%;
   margin-right: 2.5%;
   margin-top: 16px;
   text-align: right;
+}
+
+.a5{
+  width: 90%;
+  float: right;
+  height: 45px;
+  margin: 0 5% 5% 0;
+  border-bottom: 1px solid rgb(148, 148, 148);
+
+}
+.a5 span{
+  width: 15%;
+  padding: 15px 0 0 0;
+  cursor: pointer;
+  color: rgb(28, 27, 27);
+  float: right;
+  text-align: center;
+  font-size: 18px;
+}
+.a5 span::selection{
+  color: rgb(218, 16, 16);
+}
+.a3 {
+  width: 15%;
+  text-align: center;
+  height:45px;
+  border-bottom: 1px solid rgb(148, 148, 148);
+  float: right;
+
+}
+.a3:hover{
+  color:rgb(0, 0, 0);
+  border-bottom: 2px solid rgb(191, 16, 227);
+}
+.a4{
+  margin-right: 30%;
+}
+.a6{
+width: 100%;
+float: right;
+}
+.a6-1 {
+  font-size: 22px;
+    float: right;
+    text-align: right;
+    margin-right: 9%;
+    padding: 15px 0 0 0;
+}
+.a6-2{
+  width:71%;
+  float: right;
+  text-align: right;
+  margin-right: 9%;
+  padding: 15px 0 0 0;
+}
+.a6-3{
+  width: 15%;
+  height: 45px;
+  float: left;
+  margin-left: 4%;
+  background-color: rgb(255, 255, 255);
+  color: rgba(252, 8, 30, 0.92);
+  font-size: 18px;
+}
+.a6-3 button{
+  padding-bottom: 22.5px;
+}
+.ajax{
+  width: 100%;
+  float: right;
+  text-align: right;
+  margin: 0 7% 0 0;
+
 }

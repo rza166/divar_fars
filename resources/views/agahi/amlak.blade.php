@@ -10,19 +10,23 @@
   </div>
 
   <span class="labela4" for="">متراژ</span>
-  <input  type="text" id="meter" class="a2-3" placeholder="مترمربع">
+  <input oninput="sub('#meter','#meterajax')"  onkeypress='validate(event)' type="text" id="meter" class="a2-3" placeholder="مترمربع">
+  <div class="ajax" id="meterajax" style="font-size:16px; color:rgb(106, 163, 0);">
 
+  </div>
 @if (!empty($kharid))
   <span class="labela4" for="">خرید</span>
-  <input  type="text" id="meter" class="a2-3" placeholder="مترمربع">
+  <input  type="text" id="meter" class="a2-3"  onkeypress='validate(event)' placeholder="قیمت به تومان÷">
 @endif
 
 
   <span class="labela4" for="">ودیعه</span>
-  <input  type="text" id="vadie" class="a2-3" placeholder="قیمت به تومان">
+  <input  oninput="sub2('#vadie','#vadieajax')" type="text" id="vadie" class="a2-3"  onkeypress='validate(event)' placeholder="قیمت به تومان">
+  <div class="ajax" id="vadieajax" style="font-size:16px; color:rgb(106, 163, 0);">
 
+  </div>
   <span class="labela4" for="">اجاره</span>
-  <input  type="text" id="ejare" class="a2-3" placeholder="قیمت به تومان">
+  <input  type="text" id="ejare" class="a2-3"  onkeypress='validate(event)' placeholder="قیمت به تومان">
 
   <span class="labela4" for="">تعداد اتاق</span>
  <select class="a2-3" id="tedadotagh">

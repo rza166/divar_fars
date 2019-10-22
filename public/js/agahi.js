@@ -71,7 +71,7 @@ function etebar(menu) {
          city:$('#city').val(),
          map:$('#map').val(),
          price:$('#price').val(),
-         moaveze:$('input[class=moaveze]:checked').val(),
+         moaveze:$('#moaveze:checked').val(),
          typeagahi:$('input[name=optradio]:checked').val(),
          agahidahande:$('input[name=optradio3]:checked').val(),
          meter:$('#meter').val(),
@@ -140,4 +140,44 @@ $('#error').html('<div class="alert alert-danger">'+ error['tozihat'] + '</div>'
   });
 //   var esi=$('#codemeli').val();
 // alert(esi);
+}
+// تابع زیر نویس
+function  sub(inputId, divId) {
+    $.ajaxSetup({ headers: {'X-CSRF-TOKEN': $('meta[name="_token"]').attr('content')}});
+    $.ajax({
+    success:function(data){
+      var inputId2=$(inputId).val();
+      $(divId).html(inputId2 + ' مترمربع');
+    }
+    })
+}
+function  sub2(inputId, divId) {
+    $.ajaxSetup({ headers: {'X-CSRF-TOKEN': $('meta[name="_token"]').attr('content')}});
+    $.ajax({
+    success:function(data){
+      var inputId2=$(inputId).val();
+      $(divId).html(inputId2 + ' تومان');
+    }
+    })
+}
+
+
+
+// وارد کردن فقط بصورت عدد
+function validate(evt) {
+  var theEvent = evt || window.event;
+
+  // Handle paste
+  if (theEvent.type === 'paste') {
+      key = event.clipboardData.getData('text/plain');
+  } else {
+  // Handle key press
+      var key = theEvent.keyCode || theEvent.which;
+      key = String.fromCharCode(key);
+  }
+  var regex = /[0-9]|\./;
+  if( !regex.test(key) ) {
+    theEvent.returnValue = false;
+    if(theEvent.preventDefault) theEvent.preventDefault();
+  }
 }

@@ -37,7 +37,7 @@
   <input  type="text" id="price" class="a2-3" placeholder="قیمت به تومان">
 @if (!empty($moavezeC))
   <span class="labela4-1" for="">معاوضه میکنم</span>
-  <input  type="checkbox" id="moaveze" class="labela4-2">
+  <input  type="checkbox" value="1" id="moaveze" class="labela4-2">
 @endif
 
 

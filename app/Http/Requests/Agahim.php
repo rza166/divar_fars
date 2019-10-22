@@ -35,7 +35,7 @@ class Agahim extends FormRequest
 //
 //     return (($request->menu1 == 1) && ($request->menu2 == 1) && ($request->menu3 == 3))
 // }|nullable|numeric", // معاوضه
-          'moaveze'=>'required_if:menu,113|numeric', // معاوضه
+          'moaveze'=>'required_if:menu,113|nullable|numeric', // معاوضه
           'typeagahi'=>'required|numeric',
            'agahidahande'=>'required|numeric',
            'meter'=>'required|numeric',

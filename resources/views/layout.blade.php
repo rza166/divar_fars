@@ -17,6 +17,7 @@
 <!-- Add the slick-theme.css if you want default styling -->
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.5.1/min/dropzone.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link href="\css\main.css" rel="stylesheet" type="text/css">
         <link href="\css\chekbox.css" rel="stylesheet" type="text/css">
         <link href="\css\chekbox2.css" rel="stylesheet" type="text/css">
