@@ -3,10 +3,12 @@
   <span class="labela4" for="">آگهی دهنده</span>
   <div class="a2-4">
     <label class="form-check-label a2-4input2a" for="radio3">
-            <input type="radio" class="form-check-input a2-4input1a" id="radio3" name="optradio3" value="1"  >شخصی
+            <input type="radio" class="form-check-input a2-4input1a" id="radio3" name="optradio3" value="شخصی"  >
+            شخصی
     </label>
     <label class="form-check-label a2-4input3" for="radio4">
-        <input type="radio" class="form-check-input a2-4input4a" id="radio4" name="optradio3" value="2">مشاور املاک
+        <input type="radio" class="form-check-input a2-4input4a" id="radio4" name="optradio3" value="مشاوره املاک">
+        مشاور املاک
   </div>
 
   <span class="labela4" for="">متراژ</span>
@@ -16,7 +18,9 @@
   </div>
 @if (!empty($kharid))
   <span class="labela4" for="">خرید</span>
-  <input  type="text" id="meter" class="a2-3"  onkeypress='validate(event)' placeholder="قیمت به تومان÷">
+  <input oninput="sub4('#v','#vad')" type="text" id="meter" class="a2-3"  onkeypress='validate(event)' placeholder="قیمت به تومان÷">
+  <div class="ajax" id="vaajax" style="font-size:16px; color:rgb(106, 163, 0);">
+  </div>
 @endif
 
 
@@ -26,8 +30,12 @@
 
   </div>
   <span class="labela4" for="">اجاره</span>
-  <input  type="text" id="ejare" class="a2-3"  onkeypress='validate(event)' placeholder="قیمت به تومان">
+  <input  oninput="sub3('#ejare','#ejareajax')" type="text" id="ejare" class="a2-3"  onkeypress='validate(event)' placeholder="قیمت به تومان">
+  <div class="ajax" id="ejareajax" style="font-size:16px; color:rgb(106, 163, 0);">
 
+  </div>
+
+@if (!empty($tedadotaghC))
   <span class="labela4" for="">تعداد اتاق</span>
  <select class="a2-3" id="tedadotagh">
    <option  value="" ></option>
@@ -38,7 +46,9 @@
    <option value="4">چهار</option>
    <option value="5">پنج یا بیشتر</option>
  </select>
+@endif
 
+@if (!empty($salesakhtC))
  <span class="labela4" for="">سال ساخت</span>
 <select class="a2-3" id="salesakht">
   <option value=""></option>
@@ -61,7 +71,6 @@
   <option>1381</option>
   <option>1380</option>
 </select>
-
-
+@endif
 
 @endsection

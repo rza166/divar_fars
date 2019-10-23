@@ -234,7 +234,7 @@ margin-right: 2%;
   width: 90%;
   float: right;
   height: 45px;
-  margin: 0 5% 5% 0;
+  margin: 0 5% 15px 0;
   border-bottom: 1px solid rgb(148, 148, 148);
 
 }
@@ -300,5 +300,35 @@ float: right;
   float: right;
   text-align: right;
   margin: 0 7% 0 0;
+}
+.a10{
+  width: 25%;
+  text-align: center;
+  margin:auto;
+  margin-top: 20px;
+}
+.a7{
+  width: 35%;
+  margin: 0 4% 0 0;
+  float: right;
+  border-bottom: 1px solid rgb(235, 235, 235);
 
+}
+.a7 span{
+  background-color: rgb(255, 255, 255);
+  height: 50px;
+}
+.a7-input{
+  width: 95%;
+  padding: 0 66% 0 0;
+  border: none;
+  background-color: rgb(255, 255, 255);
+  float: left;
+}
+.a7-input2{
+  width: 95%;
+  padding: 0 55% 0 0;
+  border: none;
+  background-color: rgb(255, 255, 255);
+  float: left;
 }

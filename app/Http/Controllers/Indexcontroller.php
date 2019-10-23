@@ -121,8 +121,11 @@ else{
   $kharid=null;
 }
 $moavezeC = (!empty($request->moavezeC)) ? 'OK' : NULL ;
+$chatC = (!empty($request->chatC)) ? 'OK' : NULL ;
+$tedadotaghC = (!empty($request->tedadotaghC)) ? 'OK' : NULL ;
+$salesakhtC = (!empty($request->salesakhtC)) ? 'OK' : NULL ;
 // $kharid='ok';
-  return view('agahi.amlak',compact('liClass','city','kharid','moavezeC','menu'));
+  return view('agahi.amlak',compact('liClass','city','kharid','moavezeC','chatC','tedadotaghC','salesakhtC','menu'));
 }
 public function backAgahi(Request $request)
 {

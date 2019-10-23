@@ -30,20 +30,22 @@ class Agahim extends FormRequest
         return [
           'city'=>'required',
           'map'=>'nullable',
-          'price'=>'required|numeric',
+          // 'price'=>'nullable|numeric',
 //           'moaveze'=>"required, function($request){
 //
 //     return (($request->menu1 == 1) && ($request->menu2 == 1) && ($request->menu3 == 3))
 // }|nullable|numeric", // معاوضه
-          'moaveze'=>'required_if:menu,113|nullable|numeric', // معاوضه
-          'typeagahi'=>'required|numeric',
-           'agahidahande'=>'required|numeric',
+          'moaveze'=>'nullable|numeric', // معاوضه
+          // 'moaveze'=>'required_if:menu,113|nullable|numeric', // معاوضه
+          'typeagahi'=>'required|alpha_dash',
+           'agahidahande'=>'required|alpha_dash',
            'meter'=>'required|numeric',
             'vadie'=>'required|numeric',
             'ejare'=>'required|numeric',
-            'tedadotagh'=>'required|numeric',
-            'salesakht'=>'required|numeric',
+            'tedadotagh'=>'required_if:menu,111,112|nullable|numeric',
+            'salesakht'=>'required_if:menu,111,112|nullable|numeric',
             'mobile'=>'required|numeric',
+            'chat'=>'nullable|numeric',
             'onvanagahi'=>'required|alpha_dash',
              'tozihat'=>'required|alpha_dash',
              'menu'=>'required|numeric',

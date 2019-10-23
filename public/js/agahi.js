@@ -9,7 +9,7 @@
 //   },
 //   success: function() {}
 // });
-function amlak(liClass,kharid,moavezeC,menu) {
+function amlak(liClass,kharid,moavezeC,chatC,tedadotaghC,salesakhtC,menu) {
   $.ajaxSetup({ headers: {'X-CSRF-TOKEN': $('meta[name="_token"]').attr('content')}});
   $.ajax({
     type:'post',
@@ -18,6 +18,9 @@ function amlak(liClass,kharid,moavezeC,menu) {
     liClass:liClass,
     kharid:kharid,
     moavezeC:moavezeC,
+    chatC:chatC,
+    tedadotaghC:tedadotaghC,
+    salesakhtC:salesakhtC,
     menu:menu,
     },
     success:function(data){
@@ -70,7 +73,7 @@ function etebar(menu) {
     data: {
          city:$('#city').val(),
          map:$('#map').val(),
-         price:$('#price').val(),
+         // price:$('#price').val(),
          moaveze:$('#moaveze:checked').val(),
          typeagahi:$('input[name=optradio]:checked').val(),
          agahidahande:$('input[name=optradio3]:checked').val(),
@@ -80,6 +83,7 @@ function etebar(menu) {
          tedadotagh:$('#tedadotagh').val(),
          salesakht:$('#salesakht').val(),
          mobile:$('#mobile').val(),
+         chat:$('#chat:checked').val(),
          onvanagahi:$('#onvanagahi').val(),
           tozihat:$('#tozihat').val(),
           menu:menu,
@@ -102,9 +106,9 @@ function etebar(menu) {
         //   else if(error['tavalod']){
         //   $('#error').html('<div class="alert alert-danger">' + error['tavalod'] +'</div>');
         // }
-        else if(error['price']){
-       $('#error').html('<div class="alert alert-danger">' + error['price'] +'</div>');
-     }
+     //    else if(error['price']){
+     //   $('#error').html('<div class="alert alert-danger">' + error['price'] +'</div>');
+     // }
      else if(error['typeagahi']){
     $('#error').html('<div class="alert alert-danger">' + error['typeagahi'] +'</div>');
   }
@@ -160,8 +164,34 @@ function  sub2(inputId, divId) {
     }
     })
 }
+function  sub3(inputId, divId) {
+    $.ajaxSetup({ headers: {'X-CSRF-TOKEN': $('meta[name="_token"]').attr('content')}});
+    $.ajax({
+    success:function(data){
+      var inputId2=$(inputId).val();
+      $(divId).html(inputId2 + ' تومان');
+    }
+    })
+}
 
-
+function  sub4(inputId, divId) {
+    $.ajaxSetup({ headers: {'X-CSRF-TOKEN': $('meta[name="_token"]').attr('content')}});
+    $.ajax({
+    success:function(data){
+      var inputId2=$(inputId).val();
+      $(divId).html(inputId2 + ' تومان');
+    }
+    })
+}
+function  sub5(inputId, divId) {
+    $.ajaxSetup({ headers: {'X-CSRF-TOKEN': $('meta[name="_token"]').attr('content')}});
+    $.ajax({
+    success:function(data){
+      var inputId2=$(inputId).val();
+      $(divId).html(inputId2 + ' تومان');
+    }
+    })
+}
 
 // وارد کردن فقط بصورت عدد
 function validate(evt) {

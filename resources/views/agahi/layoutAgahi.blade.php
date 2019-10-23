@@ -33,8 +33,12 @@
      </div>
   </div>
 
-  <span class="labela4" for="">قیمت</span>
-  <input  type="text" id="price" class="a2-3" placeholder="قیمت به تومان">
+  {{-- <span class="labela4" for="">قیمت</span>
+  <input oninput="sub5('#price','#priceajax')"  type="text" id="price" class="a2-3" placeholder="قیمت به تومان">
+  <div class="ajax" id="priceajax" style="font-size:16px; color:rgb(106, 163, 0);">
+
+  </div> --}}
+
 @if (!empty($moavezeC))
   <span class="labela4-1" for="">معاوضه میکنم</span>
   <input  type="checkbox" value="1" id="moaveze" class="labela4-2">
@@ -59,6 +63,11 @@
   <p class="p2">توجه: لطفاً پس از ثبت آگهی، از طریق هیچ پیامکی برای پرداخت وجه جهت انتشار آگهی اقدام نکنید.</p>
   <p class="p2">کد تأیید به شمارهٔ موبایل شما ارسال خواهد شد. تماس و چت نیز با این شماره انجام می‌شود.</p>
   <input  type="text" id="mobile" class="a2-3">
+
+  @if (!empty($chatC))
+    <span class="labela4-1" for="">چت دیوار فعال شود</span>
+    <input  type="checkbox" value="1" id="chat" class="labela4-2">
+  @endif
 
   <span class="labela5" for="">عنوان آگهی</span>
   <p class="p2">در عنوان آگهی به موارد مهم و چشمگیر اشاره کنید.</p>
