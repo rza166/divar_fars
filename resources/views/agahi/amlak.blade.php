@@ -1,39 +1,43 @@
 @extends('agahi.layoutAgahi')
 @section('agahi2')
-  <span class="labela4" for="">آگهی دهنده</span>
-  <div class="a2-4">
-    <label class="form-check-label a2-4input2a" for="radio3">
-            <input type="radio" class="form-check-input a2-4input1a" id="radio3" name="optradio3" value="شخصی"  >
-            شخصی
-    </label>
-    <label class="form-check-label a2-4input3" for="radio4">
-        <input type="radio" class="form-check-input a2-4input4a" id="radio4" name="optradio3" value="مشاوره املاک">
-        مشاور املاک
+
+
+
+  @if (!empty($kharidC))
+  <span class="labela4" for="">قیمت کل</span>
+  <input oninput="sub6('#price','#priceajax')"   onkeypress='validate(event)' type="text" id="price" class="a2-3" placeholder="قیمت به تومان">
+  <div class="ajax" id="priceajax" style="font-size:16px; color:rgb(106, 163, 0);">
   </div>
+  @endif
 
-  <span class="labela4" for="">متراژ</span>
-  <input oninput="sub('#meter','#meterajax')"  onkeypress='validate(event)' type="text" id="meter" class="a2-3" placeholder="مترمربع">
-  <div class="ajax" id="meterajax" style="font-size:16px; color:rgb(106, 163, 0);">
-
-  </div>
-@if (!empty($kharid))
-  <span class="labela4" for="">خرید</span>
-  <input oninput="sub4('#v','#vad')" type="text" id="meter" class="a2-3"  onkeypress='validate(event)' placeholder="قیمت به تومان÷">
-  <div class="ajax" id="vaajax" style="font-size:16px; color:rgb(106, 163, 0);">
-  </div>
-@endif
-
-
+@if (!empty($vadieC))
   <span class="labela4" for="">ودیعه</span>
   <input  oninput="sub2('#vadie','#vadieajax')" type="text" id="vadie" class="a2-3"  onkeypress='validate(event)' placeholder="قیمت به تومان">
   <div class="ajax" id="vadieajax" style="font-size:16px; color:rgb(106, 163, 0);">
 
   </div>
+  @endif
+
+  @if (!empty($ejareC))
   <span class="labela4" for="">اجاره</span>
   <input  oninput="sub3('#ejare','#ejareajax')" type="text" id="ejare" class="a2-3"  onkeypress='validate(event)' placeholder="قیمت به تومان">
   <div class="ajax" id="ejareajax" style="font-size:16px; color:rgb(106, 163, 0);">
 
   </div>
+  @endif
+
+  @if (!empty($ejaredayC))
+  <span class="labela4" for="">اجاره روزانه</span>
+  <input  oninput="sub7('#ejareday','#ejareajax')" type="text" id="ejareday" class="a2-3"  onkeypress='validate(event)' placeholder="قیمت به تومان">
+  <div class="ajax" id="ejareajax" style="font-size:16px; color:rgb(106, 163, 0);">
+
+  </div>
+  @endif
+
+  @if (!empty($moavezeC))
+    <span class="labela4-1" for="">معاوضه میکنم</span>
+    <input  type="checkbox" value="1" id="moaveze" class="labela4-2">
+  @endif
 
 @if (!empty($tedadotaghC))
   <span class="labela4" for="">تعداد اتاق</span>
@@ -73,4 +77,14 @@
 </select>
 @endif
 
+@if (!empty($sanadC))
+  <span class="labela4-1" for="">سند اداری</span>
+  <input  type="checkbox" value="1" id="sanad" class="labela4-2">
+@endif
+
+
+@if (!empty($codemeliC))
+  <span class="labela4" for="">کد ملی(اختیاری)</span>
+  <input  type="text" id="codemeli" class="a2-3"  onkeypress='validate(event)' placeholder="اختیاری">
+@endif
 @endsection

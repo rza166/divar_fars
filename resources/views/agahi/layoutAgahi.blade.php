@@ -33,17 +33,11 @@
      </div>
   </div>
 
-  {{-- <span class="labela4" for="">قیمت</span>
-  <input oninput="sub5('#price','#priceajax')"  type="text" id="price" class="a2-3" placeholder="قیمت به تومان">
-  <div class="ajax" id="priceajax" style="font-size:16px; color:rgb(106, 163, 0);">
+  <span class="labela4" for="">متراژ</span>
+  <input oninput="sub('#meter','#meterajax')"  onkeypress='validate(event)' type="text" id="meter" class="a2-3" placeholder="مترمربع">
+  <div class="ajax" id="meterajax" style="font-size:16px; color:rgb(106, 163, 0);">
 
-  </div> --}}
-
-@if (!empty($moavezeC))
-  <span class="labela4-1" for="">معاوضه میکنم</span>
-  <input  type="checkbox" value="1" id="moaveze" class="labela4-2">
-@endif
-
+  </div>
 
   <span class="labela4" for="">نوع آگهی</span>
   <div class="a2-4" >
@@ -54,6 +48,20 @@
         <input type="radio" class="form-check-input a2-4input4" id="radio2" name="optradio" value="2">درخواستی
     </label>
   </div>
+
+  <span class="labela4" for="">آگهی دهنده</span>
+  <div class="a2-4">
+    <label class="form-check-label a2-4input2a" for="radio3">
+            <input type="radio" class="form-check-input a2-4input1a" id="radio3" name="optradio3" value="شخصی"  >
+            شخصی
+    </label>
+    <label class="form-check-label a2-4input3" for="radio4">
+        <input type="radio" class="form-check-input a2-4input4a" id="radio4" name="optradio3" value="مشاوره املاک">
+        مشاور املاک
+  </div>
+
+
+
 {{--  --}}
   <div class="agahi2">
     @yield('agahi2')

@@ -9,18 +9,23 @@
 //   },
 //   success: function() {}
 // });
-function amlak(liClass,kharid,moavezeC,chatC,tedadotaghC,salesakhtC,menu) {
+function amlak(liClass,li2,kharidC,moavezeC,chatC,tedadotaghC,salesakhtC,codemeliC,vadieC,ejareC,sanadC,ejaredayC,menu) {
   $.ajaxSetup({ headers: {'X-CSRF-TOKEN': $('meta[name="_token"]').attr('content')}});
   $.ajax({
     type:'post',
     url:'../amlak',
     data:{
     liClass:liClass,
-    kharid:kharid,
+    kharidC:kharidC,
     moavezeC:moavezeC,
     chatC:chatC,
     tedadotaghC:tedadotaghC,
     salesakhtC:salesakhtC,
+    codemeliC:codemeliC,
+    vadieC:vadieC,
+    ejareC:ejareC,
+    sanadC:sanadC,
+    ejaredayC:ejaredayC,
     menu:menu,
     },
     success:function(data){
@@ -83,6 +88,7 @@ function etebar(menu) {
          tedadotagh:$('#tedadotagh').val(),
          salesakht:$('#salesakht').val(),
          mobile:$('#mobile').val(),
+         codemeli:$('#codemeli').val(),
          chat:$('#chat:checked').val(),
          onvanagahi:$('#onvanagahi').val(),
           tozihat:$('#tozihat').val(),
@@ -106,9 +112,9 @@ function etebar(menu) {
         //   else if(error['tavalod']){
         //   $('#error').html('<div class="alert alert-danger">' + error['tavalod'] +'</div>');
         // }
-     //    else if(error['price']){
-     //   $('#error').html('<div class="alert alert-danger">' + error['price'] +'</div>');
-     // }
+        else if(error['price']){
+       $('#error').html('<div class="alert alert-danger">' + error['price'] +'</div>');
+     }
      else if(error['typeagahi']){
     $('#error').html('<div class="alert alert-danger">' + error['typeagahi'] +'</div>');
   }
@@ -184,6 +190,36 @@ function  sub4(inputId, divId) {
     })
 }
 function  sub5(inputId, divId) {
+    $.ajaxSetup({ headers: {'X-CSRF-TOKEN': $('meta[name="_token"]').attr('content')}});
+    $.ajax({
+    success:function(data){
+      var inputId2=$(inputId).val();
+      $(divId).html(inputId2 + ' تومان');
+    }
+    })
+}
+
+function  sub6(inputId, divId) {
+    $.ajaxSetup({ headers: {'X-CSRF-TOKEN': $('meta[name="_token"]').attr('content')}});
+    $.ajax({
+    success:function(data){
+      var inputId2=$(inputId).val();
+      $(divId).html(inputId2 + ' تومان');
+    }
+    })
+}
+
+function  sub7(inputId, divId) {
+    $.ajaxSetup({ headers: {'X-CSRF-TOKEN': $('meta[name="_token"]').attr('content')}});
+    $.ajax({
+    success:function(data){
+      var inputId2=$(inputId).val();
+      $(divId).html(inputId2 + ' تومان');
+    }
+    })
+}
+
+function  sub8(inputId, divId) {
     $.ajaxSetup({ headers: {'X-CSRF-TOKEN': $('meta[name="_token"]').attr('content')}});
     $.ajax({
     success:function(data){

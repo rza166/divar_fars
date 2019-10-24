@@ -114,18 +114,25 @@ public function amlak(Request $request)
   $liClass=$request->liClass;
   $menu=$request->menu;
 $city=$this->city;
-if (!empty($request->kharid)) {
-$kharid='ok';
-}
-else{
-  $kharid=null;
-}
+// if (!empty($request->kharidC)) {
+// $kharidC='ok';
+// }
+// else{
+//   $kharidC=null;
+// }
+$kharidC = (!empty($request->kharidC)) ? 'OK' : NULL ;
 $moavezeC = (!empty($request->moavezeC)) ? 'OK' : NULL ;
 $chatC = (!empty($request->chatC)) ? 'OK' : NULL ;
 $tedadotaghC = (!empty($request->tedadotaghC)) ? 'OK' : NULL ;
 $salesakhtC = (!empty($request->salesakhtC)) ? 'OK' : NULL ;
+$codemeliC = (!empty($request->codemeliC)) ? 'OK' : NULL ;
+$vadieC = (!empty($request->vadieC)) ? 'OK' : NULL ;
+$ejareC = (!empty($request->ejareC)) ? 'OK' : NULL ;
+$ejaredayC = (!empty($request->ejaredayC)) ? 'OK' : NULL ;
+$sanadC = (!empty($request->sanadC)) ? 'OK' : NULL ;
+
 // $kharid='ok';
-  return view('agahi.amlak',compact('liClass','city','kharid','moavezeC','chatC','tedadotaghC','salesakhtC','menu'));
+  return view('agahi.amlak',compact('liClass','city','kharidC','moavezeC','chatC','tedadotaghC','salesakhtC','codemeliC','vadieC','ejareC','sanadC','ejaredayC','menu'));
 }
 public function backAgahi(Request $request)
 {

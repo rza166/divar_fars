@@ -3,16 +3,16 @@
        <ul class="ul2 ul2-1">
            <li  class="li_5 lia1" data-show2="show" onclick="showMenu2('li1','lia1','ula1')">اجاره مسکونی(آپارتمان،خانه،زمین) <i class='fas fa-chevron-left e43' style='font-size:21px'></i></li>
                <ul class="ul22_s ula1">
-                 <li onclick="amlak('lia1','','','ok','ok','ok',111)"><i class='fas fa-check-square e43' style='font-size:24px'></i>آپارتمان</li>
-                 <li onclick="amlak('lia1','','','ok','ok','ok',112)"> <i class='fas fa-check-square e43' style='font-size:24px'></i>خانه و ویلا</li>
-                 <li onclick="amlak('lia1','','','ok','' ,'',113)"> <i class='fas fa-check-square e43' style='font-size:24px'></i>متفرقه</li>
+                 <li onclick="amlak('lia1','','','','ok','ok','ok','','ok','ok','','',111)"><i class='fas fa-check-square e43' style='font-size:24px'></i>آپارتمان</li>
+                 <li onclick="amlak('lia1','','','','ok','ok','ok','','ok','ok','','',112)"> <i class='fas fa-check-square e43' style='font-size:24px'></i>خانه و ویلا</li>
+                 <li onclick="amlak('lia1','','','','ok','','','','ok','ok','','',113)"> <i class='fas fa-check-square e43' style='font-size:24px'></i>متفرقه</li>
                </ul>
            <li class="li_5 lia2" data-show2="show" onclick="showMenu2('li1','lia2','ula2')">فروش مسکونی(آپارتمان،خانه،زمین) <i class='fas fa-chevron-left e43' style='font-size:21px'></i></li>
                <ul class="ul22_s ula2">
-                 <li><i class='fas fa-check-square e43' style='font-size:24px'></i>آپارتمان</li>
-                 <li> <i class='fas fa-check-square e43' style='font-size:24px'></i>خانه و ویلا</li>
-                 <li> <i class='fas fa-check-square e43' style='font-size:24px'></i>زمین وکلنگی</li>
-                 <li> <i class='fas fa-check-square e43' style='font-size:24px'></i>متفرقه</li>
+                 <li onclick="amlak('lia1','','ok','ok','ok','ok','ok','ok','','','','',121)"><i class='fas fa-check-square e43' style='font-size:24px'></i>آپارتمان</li>
+                 <li onclick="amlak('lia1','','ok','ok','ok','ok','ok','ok','','','','',122)"> <i class='fas fa-check-square e43' style='font-size:24px'></i>خانه و ویلا</li>
+                 <li onclick="amlak('lia1','','ok','ok','ok','','','ok','','','','',123)"> <i class='fas fa-check-square e43' style='font-size:24px'></i>زمین وکلنگی</li>
+                 <li onclick="amlak('lia1','','ok','ok','ok','','','ok','','','','',124)"> <i class='fas fa-check-square e43' style='font-size:24px'></i>متفرقه</li>
                </ul>
            <li class="li_5 lia3" data-show2="show" onclick="showMenu2('li1','lia3','ula3')">فروش اداری وتجاری(مغازه،دفترکار،صنعتی) <i class='fas fa-chevron-left e43' style='font-size:21px'></i></li>
                <ul class="ul22_s ula3">

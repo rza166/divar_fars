@@ -26,7 +26,10 @@ class CreateAgahisTable extends Migration
             $table->integer('ejare');
             $table->tinyInteger('tedadotagh');
             $table->smallInteger('salesakht');
+            $table->tinyInteger('sanad')->nullable()->comment('سند اداری');
+            $table->integer('ejareday');
             $table->string('mobile',13);
+            $table->string('codemeli',10);
             $table->tinyInteger('chat')->nullable()->comment('چت');
             $table->string('onvanagahi',50);
             $table->string('tozihat',150);
