@@ -77,14 +77,13 @@
 </select>
 @endif
 
-@if (!empty($sanadC))
-  <span class="labela4-1" for="">سند اداری</span>
-  <input  type="checkbox" value="1" id="sanad" class="labela4-2">
-@endif
-
-
 @if (!empty($codemeliC))
   <span class="labela4" for="">کد ملی(اختیاری)</span>
   <input  type="text" id="codemeli" class="a2-3"  onkeypress='validate(event)' placeholder="اختیاری">
+@endif
+
+@if (!empty($sanadC))
+  <span class="labela4-1" for="">سند اداری</span>
+  <input  type="checkbox" value="1" id="sanad" class="labela4-2">
 @endif
 @endsection

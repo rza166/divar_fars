@@ -3,45 +3,45 @@
        <ul class="ul2 ul2-1">
            <li  class="li_5 lia1" data-show2="show" onclick="showMenu2('li1','lia1','ula1')">اجاره مسکونی(آپارتمان،خانه،زمین) <i class='fas fa-chevron-left e43' style='font-size:21px'></i></li>
                <ul class="ul22_s ula1">
-                 <li onclick="amlak('lia1','','','','ok','ok','ok','','ok','ok','','',111)"><i class='fas fa-check-square e43' style='font-size:24px'></i>آپارتمان</li>
-                 <li onclick="amlak('lia1','','','','ok','ok','ok','','ok','ok','','',112)"> <i class='fas fa-check-square e43' style='font-size:24px'></i>خانه و ویلا</li>
-                 <li onclick="amlak('lia1','','','','ok','','','','ok','ok','','',113)"> <i class='fas fa-check-square e43' style='font-size:24px'></i>متفرقه</li>
+                 <li onclick="amlak('lia1','','ok','ok','','','ok','ok','ok','','ok','ok','','',111)"><i class='fas fa-check-square e43' style='font-size:24px'></i>آپارتمان</li>
+                 <li onclick="amlak('lia1','','ok','ok','','','ok','ok','ok','','ok','ok','','',112)"> <i class='fas fa-check-square e43' style='font-size:24px'></i>خانه و ویلا</li>
+                 <li onclick="amlak('lia1','','ok','ok','','','ok','','','','ok','ok','','',113)"> <i class='fas fa-check-square e43' style='font-size:24px'></i>متفرقه</li>
                </ul>
            <li class="li_5 lia2" data-show2="show" onclick="showMenu2('li1','lia2','ula2')">فروش مسکونی(آپارتمان،خانه،زمین) <i class='fas fa-chevron-left e43' style='font-size:21px'></i></li>
                <ul class="ul22_s ula2">
-                 <li onclick="amlak('lia1','','ok','ok','ok','ok','ok','ok','','','','',121)"><i class='fas fa-check-square e43' style='font-size:24px'></i>آپارتمان</li>
-                 <li onclick="amlak('lia1','','ok','ok','ok','ok','ok','ok','','','','',122)"> <i class='fas fa-check-square e43' style='font-size:24px'></i>خانه و ویلا</li>
-                 <li onclick="amlak('lia1','','ok','ok','ok','','','ok','','','','',123)"> <i class='fas fa-check-square e43' style='font-size:24px'></i>زمین وکلنگی</li>
-                 <li onclick="amlak('lia1','','ok','ok','ok','','','ok','','','','',124)"> <i class='fas fa-check-square e43' style='font-size:24px'></i>متفرقه</li>
+                 <li onclick="amlak('lia1','','ok','ok','ok','ok','ok','ok','ok','ok','','','','',121)"><i class='fas fa-check-square e43' style='font-size:24px'></i>آپارتمان</li>
+                 <li onclick="amlak('lia1','','ok','ok','ok','ok','ok','ok','ok','ok','','','','',122)"> <i class='fas fa-check-square e43' style='font-size:24px'></i>خانه و ویلا</li>
+                 <li onclick="amlak('lia1','','ok','ok','ok','ok','ok','','','ok','','','','',123)"> <i class='fas fa-check-square e43' style='font-size:24px'></i>زمین وکلنگی</li>
+                 <li onclick="amlak('lia1','','ok','ok','ok','ok','ok','','','ok','','','','',124)"> <i class='fas fa-check-square e43' style='font-size:24px'></i>متفرقه</li>
                </ul>
            <li class="li_5 lia3" data-show2="show" onclick="showMenu2('li1','lia3','ula3')">فروش اداری وتجاری(مغازه،دفترکار،صنعتی) <i class='fas fa-chevron-left e43' style='font-size:21px'></i></li>
                <ul class="ul22_s ula3">
-                 <li><i class='fas fa-check-square e43' style='font-size:24px'></i>دفترکار،اتاق اداری ومطب</li>
-                 <li> <i class='fas fa-check-square e43' style='font-size:24px'></i>مغازه و غرفه</li>
-                 <li> <i class='fas fa-check-square e43' style='font-size:24px'></i>صنعتی،کشاورزی وتجاری</li>
-                 <li> <i class='fas fa-check-square e43' style='font-size:24px'></i>متفرقه</li>
+                 <li onclick="amlak('lia1','','ok','ok','ok','ok','ok','ok','ok','ok','','','ok','',131)"><i class='fas fa-check-square e43' style='font-size:24px'></i>دفترکار،اتاق اداری ومطب</li>
+                 <li onclick="amlak('lia1','','ok','ok','ok','ok','ok','ok','ok','ok','','','ok','',132)"> <i class='fas fa-check-square e43' style='font-size:24px'></i>مغازه و غرفه</li>
+                 <li onclick="amlak('lia1','','ok','ok','ok','ok','ok','ok','ok','ok','','','ok','',133)"> <i class='fas fa-check-square e43' style='font-size:24px'></i>صنعتی،کشاورزی وتجاری</li>
+                 <li onclick="amlak('lia1','','ok','ok','ok','ok','ok','','','ok','','','ok','',134)"> <i class='fas fa-check-square e43' style='font-size:24px'></i>متفرقه</li>
                </ul>
            <li class="li_5 lia4" data-show2="show" onclick="showMenu2('li1','lia4','ula4')">اجاره اداری وتجاری(مغازه،دفترکار،صنعتی) <i class='fas fa-chevron-left e43' style='font-size:21px'></i></li>
                <ul class="ul22_s ula4">
-                 <li><i class='fas fa-check-square e43' style='font-size:24px'></i>دفترکار،اتاق اداری ومطب</li>
-                 <li> <i class='fas fa-check-square e43' style='font-size:24px'></i>مغازه و غرفه</li>
-                 <li> <i class='fas fa-check-square e43' style='font-size:24px'></i>صنعتی،کشاورزی وتجاری</li>
-                 <li> <i class='fas fa-check-square e43' style='font-size:24px'></i>متفرقه</li>
+                 <li onclick="amlak('lia1','','ok','ok','','','ok','ok','ok','','ok','ok','','',141)"><i class='fas fa-check-square e43' style='font-size:24px'></i>دفترکار،اتاق اداری ومطب</li>
+                 <li onclick="amlak('lia1','','ok','ok','','','ok','ok','ok','','ok','ok','','',142)"> <i class='fas fa-check-square e43' style='font-size:24px'></i>مغازه و غرفه</li>
+                 <li onclick="amlak('lia1','','ok','ok','','','ok','ok','ok','','ok','ok','','',143)"> <i class='fas fa-check-square e43' style='font-size:24px'></i>صنعتی،کشاورزی وتجاری</li>
+                 <li onclick="amlak('lia1','','ok','ok','','','ok','','','','ok','ok','','',144)"> <i class='fas fa-check-square e43' style='font-size:24px'></i>متفرقه</li>
                </ul>
            <li class="li_5 lia5" data-show2="show" onclick="showMenu2('li1','lia5','ula5')">اجاره کوتاه مدت <i class='fas fa-chevron-left e43' style='font-size:21px'></i></li>
                <ul class="ul22_s ula5">
-                 <li><i class='fas fa-check-square e43' style='font-size:24px'></i>آپارتمان و سوئیت</li>
-                 <li> <i class='fas fa-check-square e43' style='font-size:24px'></i>ویلا و باغ</li>
-                 <li> <i class='fas fa-check-square e43' style='font-size:24px'></i>دفترکار و فضای آموزشی</li>
-                 <li> <i class='fas fa-check-square e43' style='font-size:24px'></i>متفرقه</li>
+                 <li onclick="amlak('lia1','','ok','','','','ok','ok','','','','','','ok',151)"><i class='fas fa-check-square e43' style='font-size:24px'></i>آپارتمان و سوئیت</li>
+                 <li onclick="amlak('lia1','','ok','','','','ok','ok','','','','','','ok',152)"> <i class='fas fa-check-square e43' style='font-size:24px'></i>ویلا و باغ</li>
+                 <li onclick="amlak('lia1','','ok','','','','ok','ok','','','','','','ok',153)"> <i class='fas fa-check-square e43' style='font-size:24px'></i>دفترکار و فضای آموزشی</li>
+                 <li onclick="amlak('lia1','','ok','','','','ok','ok','','','','','','ok',154)"> <i class='fas fa-check-square e43' style='font-size:24px'></i>متفرقه</li>
                </ul>
            <li class="li_5 lia6" data-show2="show" onclick="showMenu2('li1','lia6','ula6')">خدمات املاک <i class='fas fa-chevron-left e43' style='font-size:21px'></i></li>
                <ul class="ul22_s ula6">
-                 <li><i class='fas fa-check-square e43' style='font-size:24px'></i>آژانس املاک</li>
-                 <li> <i class='fas fa-check-square e43' style='font-size:24px'></i>مشارکت در ساخت</li>
-                 <li> <i class='fas fa-check-square e43' style='font-size:24px'></i>امورمالی وحقوقی</li>
-                 <li> <i class='fas fa-check-square e43' style='font-size:24px'></i>پیش فروش</li>
-                 <li> <i class='fas fa-check-square e43' style='font-size:24px'></i>متفرقه</li>
+                 <li onclick="amlak('lia1','','','','','','ok','','','','','','','',161)"><i class='fas fa-check-square e43' style='font-size:24px'></i>آژانس املاک</li>
+                 <li onclick="amlak('lia1','','','','','','ok','','','','','','','',162)"> <i class='fas fa-check-square e43' style='font-size:24px'></i>مشارکت در ساخت</li>
+                 <li onclick="amlak('lia1','','','','','','ok','','','','','','','',163)"> <i class='fas fa-check-square e43' style='font-size:24px'></i>امورمالی وحقوقی</li>
+                 <li onclick="amlak('lia1','','','','','','ok','','','','','','','',164)"> <i class='fas fa-check-square e43' style='font-size:24px'></i>پیش فروش</li>
+                 <li onclick="amlak('lia1','','','','','','ok','','','','','','','',165)"> <i class='fas fa-check-square e43' style='font-size:24px'></i>متفرقه</li>
                </ul>
            <li class="li_5 lia7" data-show2="show" onclick="showMenu2('li1','lia7','ula7')">متفرقه <i class='fas fa-chevron-left e43' style='font-size:21px'></i></li>
                <ul class="ul22_s ula7">

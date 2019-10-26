@@ -130,9 +130,11 @@ $vadieC = (!empty($request->vadieC)) ? 'OK' : NULL ;
 $ejareC = (!empty($request->ejareC)) ? 'OK' : NULL ;
 $ejaredayC = (!empty($request->ejaredayC)) ? 'OK' : NULL ;
 $sanadC = (!empty($request->sanadC)) ? 'OK' : NULL ;
+$meterC = (!empty($request->meterC)) ? 'OK' : NULL ;
+$agahidahandeC = (!empty($request->agahidahandeC)) ? 'OK' : NULL ;
 
 // $kharid='ok';
-  return view('agahi.amlak',compact('liClass','city','kharidC','moavezeC','chatC','tedadotaghC','salesakhtC','codemeliC','vadieC','ejareC','sanadC','ejaredayC','menu'));
+  return view('agahi.amlak',compact('liClass','city','meterC','agahidahandeC','kharidC','moavezeC','chatC','tedadotaghC','salesakhtC','codemeliC','vadieC','ejareC','sanadC','ejaredayC','menu'));
 }
 public function backAgahi(Request $request)
 {

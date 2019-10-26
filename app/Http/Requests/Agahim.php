@@ -38,12 +38,12 @@ class Agahim extends FormRequest
           'moaveze'=>'nullable|numeric', // معاوضه
           // 'moaveze'=>'required_if:menu,113|nullable|numeric', // معاوضه
           'typeagahi'=>'required|alpha_dash',
-           'agahidahande'=>'required|alpha_dash',
-           'meter'=>'required|numeric',
-            'vadie'=>'required_if:menu,111,112,113|nullable|numeric',
-            'ejare'=>'required_if:menu,111,112,113|nullable|numeric',
-            'tedadotagh'=>'required_if:menu,111,112|nullable|numeric',
-            'salesakht'=>'required_if:menu,111,112|nullable|numeric',
+           'agahidahande'=>'nullable|alpha_dash',
+           'meter'=>'nullable|numeric',
+            'vadie'=>'required_if:menu,111,112,113,143|nullable|numeric',
+            'ejare'=>'required_if:menu,111,112,113,143|nullable|numeric',
+            'tedadotagh'=>'required_if:menu,111,112,143|nullable|numeric',
+            'salesakht'=>'required_if:menu,111,112,143|nullable|numeric',
             'ejareday'=>'required_if:menu,137|nullable|numeric',
             'sanad'=>'nullable|numeric',
             'mobile'=>'required|numeric',
@@ -51,7 +51,7 @@ class Agahim extends FormRequest
             'chat'=>'nullable|numeric',
             'onvanagahi'=>'required|alpha_dash',
              'tozihat'=>'required|alpha_dash',
-             'menu'=>'required|numeric',
+             'menu'=>'required|alpha_dash',
 
         ];
     }

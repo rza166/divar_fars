@@ -9,13 +9,14 @@
 //   },
 //   success: function() {}
 // });
-function amlak(liClass,li2,kharidC,moavezeC,chatC,tedadotaghC,salesakhtC,codemeliC,vadieC,ejareC,sanadC,ejaredayC,menu) {
+function amlak(liClass,li2,meterC,agahidahandeC,kharidC,moavezeC,chatC,tedadotaghC,salesakhtC,codemeliC,vadieC,ejareC,sanadC,ejaredayC,menu) {
   $.ajaxSetup({ headers: {'X-CSRF-TOKEN': $('meta[name="_token"]').attr('content')}});
   $.ajax({
     type:'post',
     url:'../amlak',
     data:{
     liClass:liClass,
+    li2:li2,
     kharidC:kharidC,
     moavezeC:moavezeC,
     chatC:chatC,
@@ -26,6 +27,8 @@ function amlak(liClass,li2,kharidC,moavezeC,chatC,tedadotaghC,salesakhtC,codemel
     ejareC:ejareC,
     sanadC:sanadC,
     ejaredayC:ejaredayC,
+    meterC:meterC,
+    agahidahandeC:agahidahandeC,
     menu:menu,
     },
     success:function(data){

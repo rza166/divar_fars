@@ -33,11 +33,13 @@
      </div>
   </div>
 
+  @if (!empty($meterC))
   <span class="labela4" for="">متراژ</span>
   <input oninput="sub('#meter','#meterajax')"  onkeypress='validate(event)' type="text" id="meter" class="a2-3" placeholder="مترمربع">
   <div class="ajax" id="meterajax" style="font-size:16px; color:rgb(106, 163, 0);">
 
   </div>
+  @endif
 
   <span class="labela4" for="">نوع آگهی</span>
   <div class="a2-4" >
@@ -49,6 +51,7 @@
     </label>
   </div>
 
+@if (!empty($agahidahandeC))
   <span class="labela4" for="">آگهی دهنده</span>
   <div class="a2-4">
     <label class="form-check-label a2-4input2a" for="radio3">
@@ -59,6 +62,7 @@
         <input type="radio" class="form-check-input a2-4input4a" id="radio4" name="optradio3" value="مشاوره املاک">
         مشاور املاک
   </div>
+  @endif
 
 
 
