@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 use App\Models\City;
 use App\models\Aks;
 use App\models\Agahi;
+use App\models\ImageAgahi;
+use Cookie;
 use Illuminate\Http\Request;
 use App\Http\Requests\divar;
 use App\Http\Requests\Agahim;
@@ -100,17 +102,34 @@ public function sabt()
 
 public function uplod_img_pro(Request $request)
 {
+  $nameCookei='picCookie';
+   if (!empty($request->cookie($nameCookei))) {
+       $nameImg=unserialize($request->cookie($nameCookei));
+       if(count($nameImg)>5){
+         return response()->json(['errors' => ['no_uplod' => ['بیشتر از 6 عکس نمی شود بارکذاری کرد.']]], 422);
+       }
+   }
   $this->validate($request, [
         'file' => 'required|mimes:jpeg,jpg,png|max:3000',
 
     ]);
  $file=$request->file('file');
-  $name= time() . $file->getClientOriginalName();
+  // $name= time() . $file->getClientOriginalName();
+    $name= time() . 'agahi';
   $file->move('img_pro' , $name);
+  if (empty($request->cookie($nameCookei))) {
+     $nameImg=[$name];
+     Cookie::queue($nameCookei, serialize($nameImg));
+   } else {
+   $nameImg=unserialize($request->cookie($nameCookei));
+   $nameImg[]=$name;
+     Cookie::queue($nameCookei, serialize($nameImg));
+   }
   return "$name";
 }
 public function amlak(Request $request)
 {
+   Cookie::queue('picCookie','',time() - 3600);
   $liClass=$request->liClass;
   $menu=$request->menu;
 $city=$this->city;
@@ -175,6 +194,20 @@ public function etebar(Agahim  $request)
   $save->date=time();
   $save->save();
   $id= $save->id;
+  $picture=new ImageAgahi();
+  $picture->nameTable ='amlak';
+  $picture->recordId =$id;
+    if(!empty($request->cookie('picCookie'))){
+    $nameImg=unserialize($request->cookie('picCookie'));
+    $picture->nameImage1 =  (!empty($nameImg[0])) ? $nameImg[0] : null ;
+    $picture->nameImage2 =  (!empty($nameImg[1])) ? $nameImg[1] : null  ;
+    $picture->nameImage3 =  (!empty($nameImg[2])) ? $nameImg[2] : null  ;
+    $picture->nameImage4 =  (!empty($nameImg[3])) ? $nameImg[3] : null  ;
+    $picture->nameImage5 =  (!empty($nameImg[4])) ? $nameImg[4] : null  ;
+    $picture->nameImage6 =  (!empty($nameImg[5])) ? $nameImg[5] : null  ;
+
+    }
+    $picture->save();
   return $id;
 }
 public function sabtnahaei(Request $request)
