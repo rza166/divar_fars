@@ -45,7 +45,7 @@ function amlak(liClass,li2,meterC,agahidahandeC,kharidC,moavezeC,chatC,tedadotag
 
 
 // مربوط به وسایل نقلیه
-function mashin(liClass,li3,berandC,karkardC,kharidC,moavezeC,chatC,nahveforoushC,salesakhtC,codemeliC,girboxC,badaneC,sanadC,rangC,menu) {
+function mashin(liClass,li3,berandC,karkardC,kharidC,moavezeC,chatC,nahveforoushC,salesakhtC,codemeliC,girboxC,badaneC,sanadC,rangC,typeagahiC,menu) {
   $.ajaxSetup({ headers: {'X-CSRF-TOKEN': $('meta[name="_token"]').attr('content')}});
   $.ajax({
     type:'post',
@@ -65,6 +65,7 @@ function mashin(liClass,li3,berandC,karkardC,kharidC,moavezeC,chatC,nahveforoush
     badaneC:badaneC,
     sanadC:sanadC,
     sanadC:sanadC,
+    typeagahiC:typeagahiC,
     menu:menu,
     },
     success:function(data){

@@ -43,38 +43,28 @@
                  <li onclick="amlak('lia1','','','','','','ok','','','','','','','',164)"> <i class='fas fa-check-square e43' style='font-size:24px'></i>پیش فروش</li>
                  <li onclick="amlak('lia1','','','','','','ok','','','','','','','',165)"> <i class='fas fa-check-square e43' style='font-size:24px'></i>متفرقه</li>
                </ul>
-           <li class="li_5 lia7" data-show2="show" onclick="showMenu2('li1','lia7','ula7')">متفرقه <i class='fas fa-chevron-left e43' style='font-size:21px'></i></li>
-               <ul class="ul22_s ula7">
+           <li class="li_5 lia7" data-show2="show" onclick="amlak('lia1','','','','','','ok','','','','','','','',171)">متفرقه <i class='fas fa-chevron-left e43' style='font-size:21px'></i></li>
 
-               </ul>
        </ul>
 
   <li class="li_4 li2"  data-show="show" onclick="showMenu('li2','li_i2', 'ul2-2')"><i class='fas fa-chevron-right li_i li_i2 e40-2' style='font-size:21px'></i><a href="#">وسایل نقلیه</a><i class='fas fa-chevron-left e40-1 e40-1-2' style='font-size:21px'></i></li>
       <ul class="ul2  ul2-2">
             <li class="li_5 lib1" data-show2="show" onclick="showMenu2('li2','lib1','ulb1')">خودرو<i class='fas fa-chevron-left e43' style='font-size:21px'></i></li>
                 <ul class="ul22_s ulb1">
-                  <li onclick="mashin('lib1','','ok','ok','ok','ok','ok','ok','ok','ok','ok','ok','ok','ok',211)"><i class='fas fa-check-square e43' style='font-size:24px'></i>سواری</li>
-                  <li onclick="amlak('lib1','','','','','','ok','','','','','','','',212)"> <i class='fas fa-check-square e43' style='font-size:24px'></i>اجاره ای</li>
-                  <li onclick="amlak('lib1','','','','','','ok','','','','','','','',213)"> <i class='fas fa-check-square e43' style='font-size:24px'></i>کلاسیک</li>
-                  <li onclick="amlak('lib1','','','','','','ok','','','','','','','',214)"> <i class='fas fa-check-square e43' style='font-size:24px'></i>سنگین</li>
-                  <li onclick="amlak('lib1','','','','','','ok','','','','','','','',215)"> <i class='fas fa-check-square e43' style='font-size:24px'></i>متفرقه</li>
+                  <li onclick="mashin('lib1','','ok','ok','ok','ok','ok','ok','ok','ok','ok','ok','ok','ok','ok',211)"><i class='fas fa-check-square e43' style='font-size:24px'></i>سواری</li>
+                  <li onclick="mashin('lib1','','','','ok','ok','','','','','','','','','ok',212)"> <i class='fas fa-check-square e43' style='font-size:24px'></i>اجاره ای</li>
+                  <li onclick="mashin('lib1','','','','ok','ok','','','','','','','','','ok',213)"> <i class='fas fa-check-square e43' style='font-size:24px'></i>کلاسیک</li>
+                  <li onclick="mashin('lib1','','','ok','ok','ok','','','ok','','','','','','ok',214)"> <i class='fas fa-check-square e43' style='font-size:24px'></i>سنگین</li>
+                  <li onclick="mashin('lib1','','','ok','ok','ok','','','ok','','','','','','ok',215)"> <i class='fas fa-check-square e43' style='font-size:24px'></i>متفرقه</li>
                 </ul>
-            <li class="li_5 lib2" data-show2="show" onclick="showMenu2('li2','lib2','ulb2')"> قطعات یدکی و لوازم جانبی خودرو<i class='fas fa-chevron-left e43' style='font-size:21px'></i></li>
-                <ul class="ul22_s ulb2">
+            <li class="li_5 lib2" data-show2="show" onclick="mashin('lib2','','','ok','ok','ok','','','ok','','','','','','ok',221)"> قطعات یدکی و لوازم جانبی خودرو<i class='fas fa-chevron-left e43' style='font-size:21px'></i></li>
 
-                </ul>
-            <li class="li_5 lib3" data-show2="show" onclick="showMenu2('li2','lib3','ulb3')"> موتور سیکلت و لوازم جانبی<i class='fas fa-chevron-left e43' style='font-size:21px'></i></li>
-                <ul class="ul22_s ulb3">
+            <li class="li_5 lib3" data-show2="show" onclick="mashin('lib2','','','ok','ok','ok','','','ok','','','','','','ok',231)"> موتور سیکلت و لوازم جانبی<i class='fas fa-chevron-left e43' style='font-size:21px'></i></li>
 
-                </ul>
-            <li class="li_5 lib4" data-show2="show" onclick="showMenu2('li2','lib4','ulb4')"> قایق ولوازم جانبی<i class='fas fa-chevron-left e43' style='font-size:21px'></i></li>
-                <ul class="ul22_s ulb4">
+            <li class="li_5 lib4" data-show2="show"onclick="mashin('lib2','','','ok','ok','ok','','','ok','','','','','','ok',241)"> قایق ولوازم جانبی<i class='fas fa-chevron-left e43' style='font-size:21px'></i></li>
 
-                </ul>
-            <li class="li_5 lib5" data-show2="show" onclick="showMenu2('li2','lib5','ulb5')"> متفرقه<i class='fas fa-chevron-left e43' style='font-size:21px'></i></li>
-                <ul class="ul22_s ulb5">
+            <li class="li_5 lib5" data-show2="show" onclick="mashin('lib2','','','ok','ok','ok','','','ok','','','','','','ok',216)"> متفرقه<i class='fas fa-chevron-left e43' style='font-size:21px'></i></li>
 
-                </ul>
       </ul>
 
 

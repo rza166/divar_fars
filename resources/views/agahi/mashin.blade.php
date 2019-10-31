@@ -51,6 +51,17 @@
   </select>
   @endif
 
+  @if (!empty($typeagahiC))
+  <span class="labela4" for="">نوع آگهی</span>
+  <div class="a2-4" >
+    <label class="form-check-label a2-4input2a" for="radio1">
+            <input type="radio" id="typeagahi" class="form-check-input a2-4input1" id="radio1" name="optradio" value="1" >فروشی
+    </label>
+    <label class="form-check-label a2-4input3" for="radio2">
+        <input type="radio" class="form-check-input a2-4input4" id="radio2" name="optradio" value="2">درخواستی
+    </label>
+  </div>
+  @endif
 
 
 

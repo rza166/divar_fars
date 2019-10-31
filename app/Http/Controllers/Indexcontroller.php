@@ -254,9 +254,10 @@ $girboxC = (!empty($request->girboxC)) ? 'OK' : NULL ;
 $badaneC = (!empty($request->badaneC)) ? 'OK' : NULL ;
 $sanadC = (!empty($request->sanadC)) ? 'OK' : NULL ;
 $rangC = (!empty($request->rangC)) ? 'OK' : NULL ;
+$typeagahiC = (!empty($request->typeagahiC)) ? 'OK' : NULL ;
 
 // $kharid='ok';
-  return view('agahi.mashin',compact('liClass','city','berandC','karkardC','kharidC','moavezeC','chatC','nahveforoushC','salesakhtC','codemeliC','girboxC','badaneC','sanadC','rangC','menu'));
+  return view('agahi.mashin',compact('liClass','city','berandC','karkardC','kharidC','moavezeC','chatC','nahveforoushC','salesakhtC','codemeliC','girboxC','badaneC','sanadC','rangC','typeagahiC','menu'));
 }
 
 }//end class
