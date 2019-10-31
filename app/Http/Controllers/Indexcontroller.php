@@ -5,10 +5,12 @@ use App\Models\City;
 use App\models\Aks;
 use App\models\Agahi;
 use App\models\ImageAgahi;
+use App\models\Mashin;
 use Cookie;
 use Illuminate\Http\Request;
 use App\Http\Requests\divar;
 use App\Http\Requests\Agahim;
+use App\Http\Requests\Mashinm;
 class Indexcontroller extends Controller
 {
   public $city;
@@ -127,34 +129,7 @@ public function uplod_img_pro(Request $request)
    }
   return "$name";
 }
-public function amlak(Request $request)
-{
-   Cookie::queue('picCookie','',time() - 3600);
-  $liClass=$request->liClass;
-  $menu=$request->menu;
-$city=$this->city;
-// if (!empty($request->kharidC)) {
-// $kharidC='ok';
-// }
-// else{
-//   $kharidC=null;
-// }
-$kharidC = (!empty($request->kharidC)) ? 'OK' : NULL ;
-$moavezeC = (!empty($request->moavezeC)) ? 'OK' : NULL ;
-$chatC = (!empty($request->chatC)) ? 'OK' : NULL ;
-$tedadotaghC = (!empty($request->tedadotaghC)) ? 'OK' : NULL ;
-$salesakhtC = (!empty($request->salesakhtC)) ? 'OK' : NULL ;
-$codemeliC = (!empty($request->codemeliC)) ? 'OK' : NULL ;
-$vadieC = (!empty($request->vadieC)) ? 'OK' : NULL ;
-$ejareC = (!empty($request->ejareC)) ? 'OK' : NULL ;
-$ejaredayC = (!empty($request->ejaredayC)) ? 'OK' : NULL ;
-$sanadC = (!empty($request->sanadC)) ? 'OK' : NULL ;
-$meterC = (!empty($request->meterC)) ? 'OK' : NULL ;
-$agahidahandeC = (!empty($request->agahidahandeC)) ? 'OK' : NULL ;
 
-// $kharid='ok';
-  return view('agahi.amlak',compact('liClass','city','meterC','agahidahandeC','kharidC','moavezeC','chatC','tedadotaghC','salesakhtC','codemeliC','vadieC','ejareC','sanadC','ejaredayC','menu'));
-}
 public function backAgahi(Request $request)
 {
   return view('agahi.agahi1');
@@ -224,4 +199,64 @@ $city1=City::where('show',1)->orderby('bazdid', 'DESC')->get();  $id=$request->i
  $esi=Agahi::find($id);
 return view('agahi.sabtnahaei',compact('esi','agahi','city','city1'));
 }
+// مربوط به منوی املاک
+public function amlak(Request $request)
+{
+   Cookie::queue('picCookie','',time() - 3600);
+  $liClass=$request->liClass;
+  $menu=$request->menu;
+$city=$this->city;
+// if (!empty($request->kharidC)) {
+// $kharidC='ok';
+// }
+// else{
+//   $kharidC=null;
+// }
+$kharidC = (!empty($request->kharidC)) ? 'OK' : NULL ;
+$moavezeC = (!empty($request->moavezeC)) ? 'OK' : NULL ;
+$chatC = (!empty($request->chatC)) ? 'OK' : NULL ;
+$tedadotaghC = (!empty($request->tedadotaghC)) ? 'OK' : NULL ;
+$salesakhtC = (!empty($request->salesakhtC)) ? 'OK' : NULL ;
+$codemeliC = (!empty($request->codemeliC)) ? 'OK' : NULL ;
+$vadieC = (!empty($request->vadieC)) ? 'OK' : NULL ;
+$ejareC = (!empty($request->ejareC)) ? 'OK' : NULL ;
+$ejaredayC = (!empty($request->ejaredayC)) ? 'OK' : NULL ;
+$sanadC = (!empty($request->sanadC)) ? 'OK' : NULL ;
+$meterC = (!empty($request->meterC)) ? 'OK' : NULL ;
+$agahidahandeC = (!empty($request->agahidahandeC)) ? 'OK' : NULL ;
+
+// $kharid='ok';
+  return view('agahi.amlak',compact('liClass','city','meterC','agahidahandeC','kharidC','moavezeC','chatC','tedadotaghC','salesakhtC','codemeliC','vadieC','ejareC','sanadC','ejaredayC','menu'));
+}
+
+//مربوط به منوی وسایل نقلیه
+public function mashin(Request $request)
+{
+   Cookie::queue('picCookie','',time() - 3600);
+  $liClass=$request->liClass;
+  $menu=$request->menu;
+  $city=$this->city;
+// if (!empty($request->kharidC)) {
+// $kharidC='ok';
+// }
+// else{
+//   $kharidC=null;
+// }
+$berandC = (!empty($request->berandC)) ? 'OK' : NULL ;
+$karkardC = (!empty($request->karkardC)) ? 'OK' : NULL ;
+$kharidC = (!empty($request->kharidC)) ? 'OK' : NULL ;
+$moavezeC = (!empty($request->moavezeC)) ? 'OK' : NULL ;
+$chatC = (!empty($request->chatC)) ? 'OK' : NULL ;
+$nahveforoushC = (!empty($request->nahveforoushC)) ? 'OK' : NULL ;
+$salesakhtC = (!empty($request->salesakhtC)) ? 'OK' : NULL ;
+$codemeliC = (!empty($request->codemeliC)) ? 'OK' : NULL ;
+$girboxC = (!empty($request->girboxC)) ? 'OK' : NULL ;
+$badaneC = (!empty($request->badaneC)) ? 'OK' : NULL ;
+$sanadC = (!empty($request->sanadC)) ? 'OK' : NULL ;
+$rangC = (!empty($request->rangC)) ? 'OK' : NULL ;
+
+// $kharid='ok';
+  return view('agahi.mashin',compact('liClass','city','berandC','karkardC','kharidC','moavezeC','chatC','nahveforoushC','salesakhtC','codemeliC','girboxC','badaneC','sanadC','rangC','menu'));
+}
+
 }//end class

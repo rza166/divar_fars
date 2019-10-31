@@ -53,11 +53,11 @@
       <ul class="ul2  ul2-2">
             <li class="li_5 lib1" data-show2="show" onclick="showMenu2('li2','lib1','ulb1')">خودرو<i class='fas fa-chevron-left e43' style='font-size:21px'></i></li>
                 <ul class="ul22_s ulb1">
-                  <li><i class='fas fa-check-square e43' style='font-size:24px'></i>سواری</li>
-                  <li> <i class='fas fa-check-square e43' style='font-size:24px'></i>اجاره ای</li>
-                  <li> <i class='fas fa-check-square e43' style='font-size:24px'></i>کلاسیک</li>
-                  <li> <i class='fas fa-check-square e43' style='font-size:24px'></i>سنگین</li>
-                  <li> <i class='fas fa-check-square e43' style='font-size:24px'></i>متفرقه</li>
+                  <li onclick="mashin('lib1','','ok','ok','ok','ok','ok','ok','ok','ok','ok','ok','ok','ok',211)"><i class='fas fa-check-square e43' style='font-size:24px'></i>سواری</li>
+                  <li onclick="amlak('lib1','','','','','','ok','','','','','','','',212)"> <i class='fas fa-check-square e43' style='font-size:24px'></i>اجاره ای</li>
+                  <li onclick="amlak('lib1','','','','','','ok','','','','','','','',213)"> <i class='fas fa-check-square e43' style='font-size:24px'></i>کلاسیک</li>
+                  <li onclick="amlak('lib1','','','','','','ok','','','','','','','',214)"> <i class='fas fa-check-square e43' style='font-size:24px'></i>سنگین</li>
+                  <li onclick="amlak('lib1','','','','','','ok','','','','','','','',215)"> <i class='fas fa-check-square e43' style='font-size:24px'></i>متفرقه</li>
                 </ul>
             <li class="li_5 lib2" data-show2="show" onclick="showMenu2('li2','lib2','ulb2')"> قطعات یدکی و لوازم جانبی خودرو<i class='fas fa-chevron-left e43' style='font-size:21px'></i></li>
                 <ul class="ul22_s ulb2">

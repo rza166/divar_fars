@@ -9,6 +9,8 @@
 //   },
 //   success: function() {}
 // });
+
+// مربوط به املاک
 function amlak(liClass,li2,meterC,agahidahandeC,kharidC,moavezeC,chatC,tedadotaghC,salesakhtC,codemeliC,vadieC,ejareC,sanadC,ejaredayC,menu) {
   $.ajaxSetup({ headers: {'X-CSRF-TOKEN': $('meta[name="_token"]').attr('content')}});
   $.ajax({
@@ -40,6 +42,42 @@ function amlak(liClass,li2,meterC,agahidahandeC,kharidC,moavezeC,chatC,tedadotag
     }
   });
 }
+
+
+// مربوط به وسایل نقلیه
+function mashin(liClass,li3,berandC,karkardC,kharidC,moavezeC,chatC,nahveforoushC,salesakhtC,codemeliC,girboxC,badaneC,sanadC,rangC,menu) {
+  $.ajaxSetup({ headers: {'X-CSRF-TOKEN': $('meta[name="_token"]').attr('content')}});
+  $.ajax({
+    type:'post',
+    url:'../mashin',
+    data:{
+    liClass:liClass,
+    li3:li3,
+    berandC:berandC,
+    karkardC:karkardC,
+    kharidC:kharidC,
+    moavezeC:moavezeC,
+    chatC:chatC,
+    nahveforoushC:nahveforoushC,
+    salesakhtC:salesakhtC,
+    codemeliC:codemeliC,
+    girboxC:girboxC,
+    badaneC:badaneC,
+    sanadC:sanadC,
+    sanadC:sanadC,
+    menu:menu,
+    },
+    success:function(data){
+      $('.mainDiv1').css('display','block');
+    $('.mainDiv2').css('display','none');
+
+    $('#ajaxmindiv').html(data)
+
+    }
+  });
+}
+
+
 function backAgahi(liClass) {
   $.ajaxSetup({ headers: {'X-CSRF-TOKEN': $('meta[name="_token"]').attr('content')}});
   $.ajax({

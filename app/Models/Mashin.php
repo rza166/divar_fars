@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Agahi extends Model
+class Mashin extends Model
 {
   public $timestamps=false;
   public $gaurded='id';
