@@ -121,6 +121,25 @@
   margin-top: 15px;
   text-align: right;
 }
+.labela4brand{
+  width: 50%;
+  font-size: 18px;
+  color: rgb(6, 0, 3);
+  float: right;
+  margin-right: 8%;
+
+  text-align: right;
+}
+
+.a6-3brand{
+  width: 10%;
+  height: 30px;
+  float: left;
+  margin-left: 7%;
+  background-color: rgb(255, 255, 255);
+  color: rgba(252, 8, 30, 0.92);
+  font-size: 13px;
+}
 
 .a2-4{
   width: 86%;
@@ -136,6 +155,10 @@
 }
 .a2-4input1{
 margin-right: 3%;
+  float: right;
+}
+.a2-4input11{
+margin-right: 4%;
   float: right;
 }
 .a2-4input2{

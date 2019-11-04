@@ -6,11 +6,14 @@ use App\models\Aks;
 use App\models\Agahi;
 use App\models\ImageAgahi;
 use App\models\Mashin;
+use App\models\Electrici;
 use Cookie;
 use Illuminate\Http\Request;
 use App\Http\Requests\divar;
 use App\Http\Requests\Agahim;
 use App\Http\Requests\Mashinm;
+use App\Http\Requests\Electricim;
+
 class Indexcontroller extends Controller
 {
   public $city;
@@ -134,6 +137,7 @@ public function backAgahi(Request $request)
 {
   return view('agahi.agahi1');
 }
+
 //اعتبار سنجی املاک
 public function etebar(Agahim  $request)
 {
@@ -236,12 +240,6 @@ public function mashin(Request $request)
   $liClass=$request->liClass;
   $menu=$request->menu;
   $city=$this->city;
-// if (!empty($request->kharidC)) {
-// $kharidC='ok';
-// }
-// else{
-//   $kharidC=null;
-// }
 $berandC = (!empty($request->berandC)) ? 'OK' : NULL ;
 $karkardC = (!empty($request->karkardC)) ? 'OK' : NULL ;
 $kharidC = (!empty($request->kharidC)) ? 'OK' : NULL ;
@@ -258,6 +256,19 @@ $typeagahiC = (!empty($request->typeagahiC)) ? 'OK' : NULL ;
 
 // $kharid='ok';
   return view('agahi.mashin',compact('liClass','city','berandC','karkardC','kharidC','moavezeC','chatC','nahveforoushC','salesakhtC','codemeliC','girboxC','badaneC','sanadC','rangC','typeagahiC','menu'));
+}
+
+
+//مربوط به لوازم الکتریکی
+public function electriki(Request $request)
+{
+  Cookie::queue('picCookie','',time() - 3600);
+  $liClass=$request->liClass;
+  $menu=$request->menu;
+  $city=$this->city;
+  $sazandehC = (!empty($request->sazandehC)) ? 'OK' : NULL ;
+  $simkartC = (!empty($request->simkartC)) ? 'OK' : NULL ;
+  return view('agahi.electriki',compact('liClass','city','sazandehC','simkartC','menu'));
 }
 
 }//end class

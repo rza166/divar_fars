@@ -11,11 +11,13 @@
   @endif
 
 @if (!empty($berandC))
-  <span class="labela4" for="">برند</span>
-  <input  oninput="sub2('#vadie','#vadieajax')" type="text" id="vadie" class="a2-3"  onkeypress='validate(event)' placeholder="قیمت به تومان">
-  <div class="ajax" id="vadieajax" style="font-size:16px; color:rgb(106, 163, 0);">
-
+  <div class="">
+    <span class="labela4brand" for="">برند</span>
+    <button type="button" onclick="" class="btn btn-danger a6-3brand"> انتخاب دستی</button>
   </div>
+
+  <input   type="text" id="vadie" class="a2-3"   placeholder="برند ماشین">
+
   @endif
 
   @if (!empty($karkardC))
@@ -55,7 +57,7 @@
   <span class="labela4" for="">نوع آگهی</span>
   <div class="a2-4" >
     <label class="form-check-label a2-4input2a" for="radio1">
-            <input type="radio" id="typeagahi" class="form-check-input a2-4input1" id="radio1" name="optradio" value="1" >فروشی
+            <input type="radio" id="typeagahi" class="form-check-input a2-4input11" id="radio1" name="optradio" value="1">فروشی
     </label>
     <label class="form-check-label a2-4input3" for="radio2">
         <input type="radio" class="form-check-input a2-4input4" id="radio2" name="optradio" value="2">درخواستی
@@ -115,10 +117,8 @@
 
     @if (!empty($rangC))
     <span class="labela4" for="">رنگ</span>
-    <input  oninput="sub7('#ejareday','#ejareajax')" type="text" id="ejareday" class="a2-3"  onkeypress='validate(event)' placeholder="قیمت به تومان">
-    <div class="ajax" id="ejareajax" style="font-size:16px; color:rgb(106, 163, 0);">
+    <input   type="text" id="ejareday" class="a2-3"   placeholder=" نوع رنگ">
 
-    </div>
     @endif
 
     @if (!empty($moavezeC))

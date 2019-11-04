@@ -64,8 +64,31 @@ function mashin(liClass,li3,berandC,karkardC,kharidC,moavezeC,chatC,nahveforoush
     girboxC:girboxC,
     badaneC:badaneC,
     sanadC:sanadC,
-    sanadC:sanadC,
+    rangC:rangC,
     typeagahiC:typeagahiC,
+    menu:menu,
+    },
+    success:function(data){
+      $('.mainDiv1').css('display','block');
+    $('.mainDiv2').css('display','none');
+
+    $('#ajaxmindiv').html(data)
+
+    }
+  });
+}
+
+//مربوط به لوازم الکتریکی
+function electriki(liClass,li4,sazandehC,simkartC,menu) {
+  $.ajaxSetup({ headers: {'X-CSRF-TOKEN': $('meta[name="_token"]').attr('content')}});
+  $.ajax({
+    type:'post',
+    url:'../electriki',
+    data:{
+    liClass:liClass,
+    li4:li4,
+    sazandehC:sazandehC,
+    simkartC:simkartC,
     menu:menu,
     },
     success:function(data){

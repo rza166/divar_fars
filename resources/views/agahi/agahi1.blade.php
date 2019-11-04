@@ -73,49 +73,41 @@
   <ul class="ul2 ul2-3">
         <li class="li_5 lic1" data-show2="show" onclick="showMenu2('li3','lic1','ulc1')">موبایل وتبلت<i class='fas fa-chevron-left e43' style='font-size:21px'></i></li>
             <ul class="ul22_s ulc1">
-                  <li><i class='fas fa-check-square e43' style='font-size:24px'></i>موبایل</li>
-                  <li> <i class='fas fa-check-square e43' style='font-size:24px'></i>تبلت </li>
-                  <li> <i class='fas fa-check-square e43' style='font-size:24px'></i>لوازم جانبی موبایل وتبلت</li>
-                  <li> <i class='fas fa-check-square e43' style='font-size:24px'></i>سیم کارت</li>
-                  <li> <i class='fas fa-check-square e43' style='font-size:24px'></i>متفرقه</li>
+                  <li onclick="electriki('lib1','','ok','',311)"><i class='fas fa-check-square e43' style='font-size:24px'></i>موبایل</li>
+                  <li onclick="electriki('lib1','','ok','',312)"> <i class='fas fa-check-square e43' style='font-size:24px'></i>تبلت </li>
+                  <li onclick="electriki('lib1','','','',313)"> <i class='fas fa-check-square e43' style='font-size:24px'></i>لوازم جانبی موبایل وتبلت</li>
+                  <li onclick="electriki('lib1','','','ok',314)"> <i class='fas fa-check-square e43' style='font-size:24px'></i>سیم کارت</li>
+                  <li onclick="electriki('lib1','','','',315)"> <i class='fas fa-check-square e43' style='font-size:24px'></i>متفرقه</li>
             </ul>
 
         <li class="li_5 lic2" data-show2="show" onclick="showMenu2('li3','lic2','ulc2')">رایانه<i class='fas fa-chevron-left e43' style='font-size:21px'></i></li>
             <ul class="ul22_s ulc2">
-                  <li><i class='fas fa-check-square e43' style='font-size:24px'></i>رایانه همراه</li>
-                  <li> <i class='fas fa-check-square e43' style='font-size:24px'></i>رایانه رومیزی</li>
-                  <li> <i class='fas fa-check-square e43' style='font-size:24px'></i>قطعات ولوازم جانبی</li>
-                  <li> <i class='fas fa-check-square e43' style='font-size:24px'></i>لوازم وتجهیزات شبکه</li>
-                  <li> <i class='fas fa-check-square e43' style='font-size:24px'></i>پرینتر/اسکنر/کپی/فاکس</li>
-                  <li> <i class='fas fa-check-square e43' style='font-size:24px'></i>متفرقه</li>
+                  <li onclick="electriki('lib1','','','',321)"><i class='fas fa-check-square e43' style='font-size:24px'></i>رایانه همراه</li>
+                  <li onclick="electriki('lib1','','','',322)"> <i class='fas fa-check-square e43' style='font-size:24px'></i>رایانه رومیزی</li>
+                  <li onclick="electriki('lib1','','','',323)"> <i class='fas fa-check-square e43' style='font-size:24px'></i>قطعات ولوازم جانبی</li>
+                  <li onclick="electriki('lib1','','','',324)"> <i class='fas fa-check-square e43' style='font-size:24px'></i>لوازم وتجهیزات شبکه</li>
+                  <li onclick="electriki('lib1','','','',325)"> <i class='fas fa-check-square e43' style='font-size:24px'></i>پرینتر/اسکنر/کپی/فاکس</li>
+                  <li onclick="electriki('lib1','','','',326)"> <i class='fas fa-check-square e43' style='font-size:24px'></i>متفرقه</li>
             </ul>
 
-        <li class="li_5 lic3" data-show2="show" onclick="showMenu2('li3','lic3','ulc3')">کنسول،بازی ویدئویی وآنلاین<i class='fas fa-chevron-left e43' style='font-size:21px'></i></li>
-            <ul class="ul22_s ulc3">
-
-            </ul>
+        <li class="li_5 lic3" data-show2="show" onclick="electriki('lib1','','','',331)">کنسول،بازی ویدئویی وآنلاین<i class='fas fa-chevron-left e43' style='font-size:21px'></i></li>
 
         <li class="li_5 lic4" data-show2="show" onclick="showMenu2('li3','lic4','ulc4')">صوتی وتصویری<i class='fas fa-chevron-left e43' style='font-size:21px'></i></li>
             <ul class="ul22_s ulc4">
-                  <li><i class='fas fa-check-square e43' style='font-size:24px'></i>فیلم وموسیقی</li>
-                  <li> <i class='fas fa-check-square e43' style='font-size:24px'></i>دوربین عکاسی وفیلمبردای</li>
-                  <li> <i class='fas fa-check-square e43' style='font-size:24px'></i>پخش کننده همراه</li>
-                  <li> <i class='fas fa-check-square e43' style='font-size:24px'></i>سیستم صوتی خانگی</li>
-                  <li> <i class='fas fa-check-square e43' style='font-size:24px'></i>ویدئو وپخش کننده دی وی دی</li>
-                  <li> <i class='fas fa-check-square e43' style='font-size:24px'></i>تلویزیون وپروژکتور</li>
-                  <li> <i class='fas fa-check-square e43' style='font-size:24px'></i>دوربین مدار بسته</li>
-                  <li> <i class='fas fa-check-square e43' style='font-size:24px'></i>متفرقه</li>
+                  <li onclick="electriki('lib1','','','',341)"><i class='fas fa-check-square e43' style='font-size:24px'></i>فیلم وموسیقی</li>
+                  <li onclick="electriki('lib1','','','',342)"> <i class='fas fa-check-square e43' style='font-size:24px'></i>دوربین عکاسی وفیلمبردای</li>
+                  <li onclick="electriki('lib1','','','',343)"> <i class='fas fa-check-square e43' style='font-size:24px'></i>پخش کننده همراه</li>
+                  <li onclick="electriki('lib1','','','',344)"> <i class='fas fa-check-square e43' style='font-size:24px'></i>سیستم صوتی خانگی</li>
+                  <li onclick="electriki('lib1','','','',345)"> <i class='fas fa-check-square e43' style='font-size:24px'></i>ویدئو وپخش کننده دی وی دی</li>
+                  <li onclick="electriki('lib1','','','',346)"> <i class='fas fa-check-square e43' style='font-size:24px'></i>تلویزیون وپروژکتور</li>
+                  <li onclick="electriki('lib1','','','',347)"> <i class='fas fa-check-square e43' style='font-size:24px'></i>دوربین مدار بسته</li>
+                  <li onclick="electriki('lib1','','','',348)"> <i class='fas fa-check-square e43' style='font-size:24px'></i>متفرقه</li>
             </ul>
 
-        <li class="li_5 lic5" data-show2="show" onclick="showMenu2('li3','lic5','ulc5')">تلفن رومیزی<i class='fas fa-chevron-left e43' style='font-size:21px'></i></li>
-            <ul class="ul22_s ulc5">
+        <li class="li_5 lic5" data-show2="show" onclick="electriki('lib1','','','',351)">تلفن رومیزی<i class='fas fa-chevron-left e43' style='font-size:21px'></i></li>
 
-            </ul>
+        <li class="li_5 lic6" data-show2="show" onclick="electriki('lib1','','','',361)">متفرقه<i class='fas fa-chevron-left e43' style='font-size:21px'></i></li>
 
-        <li class="li_5 lic6" data-show2="show" onclick="showMenu2('li3','lic6','ulc6')">متفرقه<i class='fas fa-chevron-left e43' style='font-size:21px'></i></li>
-            <ul class="ul22_s ulc6">
-
-            </ul>
   </ul>
 
 

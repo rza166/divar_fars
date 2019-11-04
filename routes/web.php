@@ -16,6 +16,8 @@ Route::get('/tamas','IndexController@tamas');
 Route::get('/sabt','IndexController@sabt');
 Route::post('/amlak','IndexController@amlak');
 Route::post('/mashin','IndexController@mashin');
+Route::post('/electriki','IndexController@electriki');
+
 Route::post('/backAgahi','IndexController@backAgahi');
 Route::post('/etebar','IndexController@etebar');
 Route::get('/sabtnahaei/{id}', 'IndexController@sabtnahaei' )->where('id', '[1-9]+');

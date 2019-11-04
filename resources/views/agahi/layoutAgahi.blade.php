@@ -44,10 +44,10 @@
   <p class="p2">کد تأیید به شمارهٔ موبایل شما ارسال خواهد شد. تماس و چت نیز با این شماره انجام می‌شود.</p>
   <input  type="text" id="mobile" class="a2-3">
 
-  @if (!empty($chatC))
+  
     <span class="labela4-1" for="">چت دیوار فعال شود</span>
     <input  type="checkbox" value="1" id="chat" class="labela4-2">
-  @endif
+
 
   <span class="labela5" for="">عنوان آگهی</span>
   <p class="p2">در عنوان آگهی به موارد مهم و چشمگیر اشاره کنید.</p>
