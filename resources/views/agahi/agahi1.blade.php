@@ -115,45 +115,43 @@
       <ul class="ul2 ul2-4">
             <li class="li_5 lid1" data-show2="show" onclick="showMenu2('li4','lid1','uld1')">وسایل وتزئینات خانه <i class='fas fa-chevron-left e43' style='font-size:21px'></i></li>
                 <ul class="ul22_s uld1">
-                  <li><i class='fas fa-check-square e43' style='font-size:24px'></i>تزئینی وآثار هنری</li>
-                  <li> <i class='fas fa-check-square e43' style='font-size:24px'></i>لوازم روشنایی</li>
-                  <li> <i class='fas fa-check-square e43' style='font-size:24px'></i>میز وصندلی</li>
-                  <li> <i class='fas fa-check-square e43' style='font-size:24px'></i>فرش وگلیم</li>
-                  <li> <i class='fas fa-check-square e43' style='font-size:24px'></i>کمد وبوفه</li>
-                  <li><i class='fas fa-check-square e43' style='font-size:24px'></i>پرده و رومیزی</li>
-                  <li> <i class='fas fa-check-square e43' style='font-size:24px'></i>تخت واتاق خواب</li>
-                  <li> <i class='fas fa-check-square e43' style='font-size:24px'></i>مبلمان وصندلی راحتی</li>
-                  <li> <i class='fas fa-check-square e43' style='font-size:24px'></i>میز تلویزیون ووسایل سیستم پخش</li>
-                  <li> <i class='fas fa-check-square e43' style='font-size:24px'></i>متفرقه</li>
+                  <li onclick="khane('lib1','',411)"><i class='fas fa-check-square e43' style='font-size:24px'></i>تزئینی وآثار هنری</li>
+                  <li onclick="khane('lib1','',412)"> <i class='fas fa-check-square e43' style='font-size:24px'></i>لوازم روشنایی</li>
+                  <li onclick="khane('lib1','',413)"> <i class='fas fa-check-square e43' style='font-size:24px'></i>میز وصندلی</li>
+                  <li onclick="khane('lib1','',414)"> <i class='fas fa-check-square e43' style='font-size:24px'></i>فرش وگلیم</li>
+                  <li onclick="khane('lib1','',415)"> <i class='fas fa-check-square e43' style='font-size:24px'></i>کمد وبوفه</li>
+                  <li onclick="khane('lib1','',416)"> <i class='fas fa-check-square e43' style='font-size:24px'></i>پرده و رومیزی</li>
+                  <li onclick="khane('lib1','',417)"> <i class='fas fa-check-square e43' style='font-size:24px'></i>تخت واتاق خواب</li>
+                  <li onclick="khane('lib1','',418)"> <i class='fas fa-check-square e43' style='font-size:24px'></i>مبلمان وصندلی راحتی</li>
+                  <li onclick="khane('lib1','',419)"> <i class='fas fa-check-square e43' style='font-size:24px'></i>میز تلویزیون ووسایل سیستم پخش</li>
+                  <li onclick="khane('lib1','',410)"> <i class='fas fa-check-square e43' style='font-size:24px'></i>متفرقه</li>
                 </ul>
             <li class="li_5 lid2" data-show2="show" onclick="showMenu2('li4','lid2','uld2')">وسایل آشپزخانه<i class='fas fa-chevron-left e43' style='font-size:21px'></i></li>
                 <ul class="ul22_s uld2">
-                  <li><i class='fas fa-check-square e43' style='font-size:24px'></i>ماشین ظرفشویی</li>
-                  <li> <i class='fas fa-check-square e43' style='font-size:24px'></i>یخچال وفریزر </li>
-                  <li> <i class='fas fa-check-square e43' style='font-size:24px'></i>وسایل آشپزی وغذاخوری</li>
-                  <li> <i class='fas fa-check-square e43' style='font-size:24px'></i>مایکروویو وگاز</li>
-                  <li> <i class='fas fa-check-square e43' style='font-size:24px'></i>ماشین لباسشویی وخشک کن</li>
-                  <li> <i class='fas fa-check-square e43' style='font-size:24px'></i>متفرقه</li>
+                  <li onclick="khane('lib1','',421)"><i class='fas fa-check-square e43' style='font-size:24px'></i>ماشین ظرفشویی</li>
+                  <li onclick="khane('lib1','',422)"> <i class='fas fa-check-square e43' style='font-size:24px'></i>یخچال وفریزر </li>
+                  <li onclick="khane('lib1','',423)"> <i class='fas fa-check-square e43' style='font-size:24px'></i>وسایل آشپزی وغذاخوری</li>
+                  <li onclick="khane('lib1','',424)"> <i class='fas fa-check-square e43' style='font-size:24px'></i>مایکروویو وگاز</li>
+                  <li onclick="khane('lib1','',425)"> <i class='fas fa-check-square e43' style='font-size:24px'></i>ماشین لباسشویی وخشک کن</li>
+                  <li onclick="khane('lib1','',426)"> <i class='fas fa-check-square e43' style='font-size:24px'></i>متفرقه</li>
                 </ul>
             <li class="li_5 lid3" data-show2="show" onclick="showMenu2('li4','lid3','uld3')">ابزار<i class='fas fa-chevron-left e43' style='font-size:21px'></i></li>
                 <ul class="ul22_s uld3">
-                  <li><i class='fas fa-check-square e43' style='font-size:24px'></i>نظافت وخیاطی واتو</li>
-                  <li> <i class='fas fa-check-square e43' style='font-size:24px'></i>تعمیرات </li>
-                  <li> <i class='fas fa-check-square e43' style='font-size:24px'></i>متفرقه</li>
+                  <li onclick="khane('lib1','',431)"><i class='fas fa-check-square e43' style='font-size:24px'></i>نظافت وخیاطی واتو</li>
+                  <li onclick="khane('lib1','',432)"> <i class='fas fa-check-square e43' style='font-size:24px'></i>تعمیرات </li>
+                  <li onclick="khane('lib1','',433)"> <i class='fas fa-check-square e43' style='font-size:24px'></i>متفرقه</li>
                 </ul>
             <li class="li_5 lid4" data-show2="show" onclick="showMenu2('li4','lid4','uld4')">ساختمان وحیاط<i class='fas fa-chevron-left e43' style='font-size:21px'></i></li>
                 <ul class="ul22_s uld4">
-                  <li><i class='fas fa-check-square e43' style='font-size:24px'></i>سرویش بهداشتی وسونا</li>
-                  <li> <i class='fas fa-check-square e43' style='font-size:24px'></i>سیستم گرمایشی سرمایشی وگاز</li>
-                  <li> <i class='fas fa-check-square e43' style='font-size:24px'></i>آشپزخانه</li>
-                  <li> <i class='fas fa-check-square e43' style='font-size:24px'></i>حیاط وایوان</li>
-                  <li> <i class='fas fa-check-square e43' style='font-size:24px'></i>ابزار باغبانی</li>
-                  <li> <i class='fas fa-check-square e43' style='font-size:24px'></i>متفرقه</li>
+                  <li onclick="khane('lib1','',441)"><i class='fas fa-check-square e43' style='font-size:24px'></i>سرویش بهداشتی وسونا</li>
+                  <li onclick="khane('lib1','',442)"> <i class='fas fa-check-square e43' style='font-size:24px'></i>سیستم گرمایشی سرمایشی وگاز</li>
+                  <li onclick="khane('lib1','',443)"> <i class='fas fa-check-square e43' style='font-size:24px'></i>آشپزخانه</li>
+                  <li onclick="khane('lib1','',444)"> <i class='fas fa-check-square e43' style='font-size:24px'></i>حیاط وایوان</li>
+                  <li onclick="khane('lib1','',445)"> <i class='fas fa-check-square e43' style='font-size:24px'></i>ابزار باغبانی</li>
+                  <li onclick="khane('lib1','',446)"> <i class='fas fa-check-square e43' style='font-size:24px'></i>متفرقه</li>
                 </ul>
-            <li class="li_5 lid5" data-show2="show" onclick="showMenu2('li4','lid5','uld5')">متفرقه<i class='fas fa-chevron-left e43' style='font-size:21px'></i></li>
-                <ul class="ul22_s uld5">
+            <li class="li_5 lid5" data-show2="show" onclick="khane('lib1','',451)">متفرقه<i class='fas fa-chevron-left e43' style='font-size:21px'></i></li>
 
-                </ul>
       </ul>
 
   <li class="li_4 li5"  data-show="show" onclick="showMenu('li5','li_i5','ul2-5')"><i class='fas fa-chevron-right li_i li_i5 e40-2' style='font-size:21px'></i><a href="#">خدمات</a><i class='fas fa-chevron-left e40-1 e40-1-5' style='font-size:21px'></i></li>

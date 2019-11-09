@@ -46,6 +46,7 @@ class Agahim extends FormRequest
             'tedadotagh'=>'required_if:menu,111,112,121,122,131,132,133,141,142,143,151,152,153,154|nullable|numeric',
             'salesakht'=>'required_if:menu,111,112,121,122,131,132,133,141,142,143|nullable|numeric',
             'ejareday'=>'required_if:menu,151,152,153,154|nullable|numeric',
+            // 'ejareday'=>'nullable|numeric',
             'sanad'=>'nullable|numeric',
             'mobile'=>'required|numeric',
             'codemeli'=>'nullable|numeric',

@@ -117,7 +117,7 @@
 
     @if (!empty($rangC))
     <span class="labela4" for="">رنگ</span>
-    <input   type="text" id="ejareday" class="a2-3"   placeholder=" نوع رنگ">
+    <input   type="text" id="rang" class="a2-3"   placeholder=" نوع رنگ">
 
     @endif
 

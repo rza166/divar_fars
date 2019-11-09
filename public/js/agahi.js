@@ -28,9 +28,9 @@ function amlak(liClass,li2,meterC,agahidahandeC,kharidC,moavezeC,chatC,tedadotag
     vadieC:vadieC,
     ejareC:ejareC,
     sanadC:sanadC,
-    ejaredayC:ejaredayC,
     meterC:meterC,
     agahidahandeC:agahidahandeC,
+    ejaredayC:ejaredayC,
     menu:menu,
     },
     success:function(data){
@@ -101,6 +101,26 @@ function electriki(liClass,li4,sazandehC,simkartC,menu) {
   });
 }
 
+//مربوط به خدمات خانه
+function khane(liClass,li5,menu) {
+  $.ajaxSetup({ headers: {'X-CSRF-TOKEN': $('meta[name="_token"]').attr('content')}});
+  $.ajax({
+    type:'post',
+    url:'../electriki',
+    data:{
+    liClass:liClass,
+    li4:li5,
+    menu:menu,
+    },
+    success:function(data){
+      $('.mainDiv1').css('display','block');
+    $('.mainDiv2').css('display','none');
+
+    $('#ajaxmindiv').html(data)
+
+    }
+  });
+}
 
 function backAgahi(liClass) {
   $.ajaxSetup({ headers: {'X-CSRF-TOKEN': $('meta[name="_token"]').attr('content')}});

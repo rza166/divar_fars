@@ -17,6 +17,7 @@ Route::get('/sabt','IndexController@sabt');
 Route::post('/amlak','IndexController@amlak');
 Route::post('/mashin','IndexController@mashin');
 Route::post('/electriki','IndexController@electriki');
+Route::post('/khane','IndexController@khane');
 
 Route::post('/backAgahi','IndexController@backAgahi');
 Route::post('/etebar','IndexController@etebar');

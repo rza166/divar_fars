@@ -7,6 +7,7 @@ use App\models\Agahi;
 use App\models\ImageAgahi;
 use App\models\Mashin;
 use App\models\Electrici;
+use App\models\Khanem;
 use Cookie;
 use Illuminate\Http\Request;
 use App\Http\Requests\divar;
@@ -270,5 +271,16 @@ public function electriki(Request $request)
   $simkartC = (!empty($request->simkartC)) ? 'OK' : NULL ;
   return view('agahi.electriki',compact('liClass','city','sazandehC','simkartC','menu'));
 }
+
+//مربوط به خدمات خانه
+public function khane(Request $request)
+{
+  Cookie::queue('picCookie','',time() - 3600);
+  $liClass=$request->liClass;
+  $menu=$request->menu;
+  $city=$this->city;
+  return view('agahi.khane',compact('liClass','city','menu'));
+}
+
 
 }//end class
