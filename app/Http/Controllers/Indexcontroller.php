@@ -8,12 +8,24 @@ use App\models\ImageAgahi;
 use App\models\Mashin;
 use App\models\Electrici;
 use App\models\Khanem;
+use App\models\KHadamat;
+use App\models\vasayel;
+use App\models\Sargarmi;
+use App\models\ejtemaei;
+use App\models\Forkar;
+use App\models\estejhdam;
 use Cookie;
 use Illuminate\Http\Request;
 use App\Http\Requests\divar;
 use App\Http\Requests\Agahim;
 use App\Http\Requests\Mashinm;
 use App\Http\Requests\Electricim;
+use App\Http\Requests\KHadamatM;
+use App\Http\Requests\vasayelM;
+use App\Http\Requests\SargarmiM;
+use App\Http\Requests\EjtemaeiM;
+use App\Http\Requests\ForkarM;
+use App\Http\Requests\estekhdam;
 
 class Indexcontroller extends Controller
 {
@@ -190,6 +202,47 @@ public function etebar(Agahim  $request)
     $picture->save();
   return $id;
 }
+
+//استخدام
+public function es(estekhdam  $request)
+{
+  $city=$request->city;
+  $map=$request->map;
+  $mobile=$request->mobile;
+  $chat=$request->chat;
+  $onvanagahi=$request->onvanagahi;
+  $tozihat=$request->tozihat;
+  $menu=$request->menu;
+  $save=new estekhdam();
+  $save->city=$city;
+  $save->map=$map;
+  $save->mobile=$mobile;
+  $save->chat=$chat;
+  $save->onvanagahi=$onvanagahi;
+  $save->tozihat=$tozihat;
+  $save->menu=$menu;
+  $save->date=time();
+  $save->save();
+  $id= $save->id;
+  $picture=new ImageAgahi();
+  $picture->nameTable ='estekhdam';
+  $picture->recordId =$id;
+    if(!empty($request->cookie('picCookie'))){
+    $nameImg=unserialize($request->cookie('picCookie'));
+    $picture->nameImage1 =  (!empty($nameImg[0])) ? $nameImg[0] : null ;
+    $picture->nameImage2 =  (!empty($nameImg[1])) ? $nameImg[1] : null  ;
+    $picture->nameImage3 =  (!empty($nameImg[2])) ? $nameImg[2] : null  ;
+    $picture->nameImage4 =  (!empty($nameImg[3])) ? $nameImg[3] : null  ;
+    $picture->nameImage5 =  (!empty($nameImg[4])) ? $nameImg[4] : null  ;
+    $picture->nameImage6 =  (!empty($nameImg[5])) ? $nameImg[5] : null  ;
+
+    }
+    $picture->save();
+  return $id;
+}
+
+
+
 public function sabtnahaei(Request $request)
 {
   $agahi='ok';
@@ -229,11 +282,11 @@ $ejaredayC = (!empty($request->ejaredayC)) ? 'OK' : NULL ;
 $sanadC = (!empty($request->sanadC)) ? 'OK' : NULL ;
 $meterC = (!empty($request->meterC)) ? 'OK' : NULL ;
 $agahidahandeC = (!empty($request->agahidahandeC)) ? 'OK' : NULL ;
+$titr=$request->titr;
 
 // $kharid='ok';
-  return view('agahi.amlak',compact('liClass','city','meterC','agahidahandeC','kharidC','moavezeC','chatC','tedadotaghC','salesakhtC','codemeliC','vadieC','ejareC','sanadC','ejaredayC','menu'));
+  return view('agahi.amlak',compact('liClass','city','meterC','agahidahandeC','kharidC','moavezeC','chatC','tedadotaghC','salesakhtC','codemeliC','vadieC','ejareC','sanadC','ejaredayC','menu','titr'));
 }
-
 //مربوط به منوی وسایل نقلیه
 public function mashin(Request $request)
 {
@@ -254,9 +307,9 @@ $badaneC = (!empty($request->badaneC)) ? 'OK' : NULL ;
 $sanadC = (!empty($request->sanadC)) ? 'OK' : NULL ;
 $rangC = (!empty($request->rangC)) ? 'OK' : NULL ;
 $typeagahiC = (!empty($request->typeagahiC)) ? 'OK' : NULL ;
-
+$titr=$request->titr;
 // $kharid='ok';
-  return view('agahi.mashin',compact('liClass','city','berandC','karkardC','kharidC','moavezeC','chatC','nahveforoushC','salesakhtC','codemeliC','girboxC','badaneC','sanadC','rangC','typeagahiC','menu'));
+  return view('agahi.mashin',compact('liClass','city','berandC','karkardC','kharidC','moavezeC','chatC','nahveforoushC','salesakhtC','codemeliC','girboxC','badaneC','sanadC','rangC','typeagahiC','menu','titr'));
 }
 
 
@@ -269,7 +322,8 @@ public function electriki(Request $request)
   $city=$this->city;
   $sazandehC = (!empty($request->sazandehC)) ? 'OK' : NULL ;
   $simkartC = (!empty($request->simkartC)) ? 'OK' : NULL ;
-  return view('agahi.electriki',compact('liClass','city','sazandehC','simkartC','menu'));
+  $titr=$request->titr;
+  return view('agahi.electriki',compact('liClass','city','sazandehC','simkartC','menu','titr'));
 }
 
 //مربوط به خدمات خانه
@@ -279,7 +333,77 @@ public function khane(Request $request)
   $liClass=$request->liClass;
   $menu=$request->menu;
   $city=$this->city;
-  return view('agahi.khane',compact('liClass','city','menu'));
+  $titr=$request->titr;
+  return view('agahi.khane',compact('liClass','city','menu','titr'));
+}
+
+//مربوط به خدمات
+public function khadamat(Request $request)
+{
+  Cookie::queue('picCookie','',time() - 3600);
+  $liClass=$request->liClass;
+  $menu=$request->menu;
+  $city=$this->city;
+  $titr=$request->titr;
+  return view('agahi.khadamat',compact('liClass','city','menu','titr'));
+}
+
+//مربوط به وسایل شخصی
+public function vasayel(Request $request)
+{
+  Cookie::queue('picCookie','',time() - 3600);
+  $liClass=$request->liClass;
+  $menu=$request->menu;
+  $titr=$request->titr;
+  $city=$this->city;
+  $typeagahiC = (!empty($request->typeagahiC)) ? 'OK' : NULL ;
+  return view('agahi.vasayel',compact('liClass','city','typeagahiC','menu','titr'));
+}
+
+//مربوط به سرگرمی وفراغت
+public function sargarmi(Request $request)
+{
+  Cookie::queue('picCookie','',time() - 3600);
+  $liClass=$request->liClass;
+  $menu=$request->menu;
+  $city=$this->city;
+  $codemeliC = (!empty($request->codemeliC)) ? 'OK' : NULL ;
+  $titr=$request->titr;
+  return view('agahi.sargarmi',compact('liClass','city','codemeliC','menu','titr'));
+}
+
+//مربوط به اجتماعی
+public function ejtemaei(Request $request)
+{
+  Cookie::queue('picCookie','',time() - 3600);
+  $liClass=$request->liClass;
+  $menu=$request->menu;
+  $city=$this->city;
+  $typeagahiC = (!empty($request->typeagahiC)) ? 'OK' : NULL ;
+  $titr=$request->titr;
+  return view('agahi.ejtemaei',compact('liClass','city','typeagahiC','menu'.'titr'));
+}
+
+//مربوط به برای کسب وکار
+public function forkar(Request $request)
+{
+  Cookie::queue('picCookie','',time() - 3600);
+  $liClass=$request->liClass;
+  $menu=$request->menu;
+  $city=$this->city;
+  $titr=$request->titr;
+  return view('agahi.forkar',compact('liClass','city','menu','titr'));
+}
+
+//مربوط به استخدام وکاریابی
+public function estekhdam(Request $request)
+{
+  Cookie::queue('picCookie','',time() - 3600);
+  $liClass=$request->liClass;
+  $menu=$request->menu;
+  $city=$this->city;
+  $titr=$request->titr;
+  return view('agahi.estekhdam',compact('liClass','city','menu','titr'));
 }
 
 

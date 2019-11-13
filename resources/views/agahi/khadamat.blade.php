@@ -34,11 +34,6 @@
   </div>
 
 
-  <span class="labela4" for="">قیمت</span>
-  <input oninput="sub6('#price','#priceajax')"   onkeypress='validate(event)' type="text" id="price" class="a2-3" placeholder="قیمت به تومان">
-  <div class="ajax" id="priceajax" style="font-size:16px; color:rgb(106, 163, 0);">
-  </div>
-
 
   <span class="labela4" for="">نوع آگهی</span>
   <div class="a2-4" >
@@ -50,9 +45,10 @@
     </label>
   </div>
 
-  <span class="labela4-1" for="">مایلم معاوضه کنم</span>
-  <input  type="checkbox" value="1" id="moaveze" class="labela4-2">
 
+    <span class="labela4" for="">لینک وب سایت شما</span>
+    <p class="p2">لینک وب‌سایت شما، در وب‌سایت دیوار و در نسخهٔ ۱۰ اندروید قابل مشاهده و کلیک است. هزینهٔ فعال‌سازی درج لینک در آگهی ۲۰,۰۰۰ تومان است.</p>
+    <input  type="text" id="websayt" class="a2-3"  placeholder="اختیاری">
 
   <span class="labela5" for="">شماره موبایل</span>
   <p class="p2">توجه: لطفاً پس از ثبت آگهی، از طریق هیچ پیامکی برای پرداخت وجه جهت انتشار آگهی اقدام نکنید.</p>

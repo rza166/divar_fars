@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class Khanem extends FormRequest
+class estekhdam extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -26,14 +26,11 @@ class Khanem extends FormRequest
         return [
           'city'=>'required',
           'map'=>'nullable',
-          'price'=>'nullable|numeric',
-          'moaveze'=>'nullable|numeric',
-          'typeagahi'=>'nullable|alpha_dash',
             'mobile'=>'required|numeric',
             'chat'=>'nullable|numeric',
             'onvanagahi'=>'required|alpha_dash',
              'tozihat'=>'required|alpha_dash',
-             'menu'=>'nullable|alpha
+             'menu'=>'required|alpha
         ];
     }
 }

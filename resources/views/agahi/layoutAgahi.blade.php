@@ -2,7 +2,7 @@
 <form class="reset" id="reset">
   <div class="a2-8" id="error"></div>
 <a onclick="backAgahi()"><div class="a1">
-<span class="span1">آپارتمان</span>
+<span class="span1">{{$titr}}</span>
 <span class="span2">تغییر دسته بندی</span>
 </div>
 </a>
@@ -44,7 +44,7 @@
   <p class="p2">کد تأیید به شمارهٔ موبایل شما ارسال خواهد شد. تماس و چت نیز با این شماره انجام می‌شود.</p>
   <input  type="text" id="mobile" class="a2-3">
 
-  
+
     <span class="labela4-1" for="">چت دیوار فعال شود</span>
     <input  type="checkbox" value="1" id="chat" class="labela4-2">
 
@@ -57,9 +57,8 @@
   <p class="p2">جزئیات و نکات قابل توجه آگهی خود را کامل و دقیق بنویسید تا شانس موفقیت آگهی شما بیشتر شود.</p>
   <textarea class="a2-7" rows="5" id="tozihat" name="text"></textarea>
 
-  <div class="a2-6">
-  <button type="button" onclick="etebar('{{$menu}}')" class="btn btn-danger">ارسال آگهی</button>
+  <div class="agahi3">
+    @yield('agahi3')
   </div>
-
 
 </form>

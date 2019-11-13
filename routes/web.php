@@ -18,6 +18,12 @@ Route::post('/amlak','IndexController@amlak');
 Route::post('/mashin','IndexController@mashin');
 Route::post('/electriki','IndexController@electriki');
 Route::post('/khane','IndexController@khane');
+Route::post('/khadamat','IndexController@khadamat');
+Route::post('/vasayel','IndexController@vasayel');
+Route::post('/sargarmi','IndexController@sargarmi');
+Route::post('/ejtemaei','IndexController@ejtemaei');
+Route::post('/forkar','IndexController@forkar');
+Route::post('/estekhdam','IndexController@estekhdam');
 
 Route::post('/backAgahi','IndexController@backAgahi');
 Route::post('/etebar','IndexController@etebar');

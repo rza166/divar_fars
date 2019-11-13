@@ -11,7 +11,7 @@
 // });
 
 // مربوط به املاک
-function amlak(liClass,li2,meterC,agahidahandeC,kharidC,moavezeC,chatC,tedadotaghC,salesakhtC,codemeliC,vadieC,ejareC,sanadC,ejaredayC,menu) {
+function amlak(liClass,li2,meterC,agahidahandeC,kharidC,moavezeC,chatC,tedadotaghC,salesakhtC,codemeliC,vadieC,ejareC,sanadC,ejaredayC,menu,titr) {
   $.ajaxSetup({ headers: {'X-CSRF-TOKEN': $('meta[name="_token"]').attr('content')}});
   $.ajax({
     type:'post',
@@ -32,6 +32,7 @@ function amlak(liClass,li2,meterC,agahidahandeC,kharidC,moavezeC,chatC,tedadotag
     agahidahandeC:agahidahandeC,
     ejaredayC:ejaredayC,
     menu:menu,
+    titr:titr,
     },
     success:function(data){
       $('.mainDiv1').css('display','block');
@@ -45,7 +46,7 @@ function amlak(liClass,li2,meterC,agahidahandeC,kharidC,moavezeC,chatC,tedadotag
 
 
 // مربوط به وسایل نقلیه
-function mashin(liClass,li3,berandC,karkardC,kharidC,moavezeC,chatC,nahveforoushC,salesakhtC,codemeliC,girboxC,badaneC,sanadC,rangC,typeagahiC,menu) {
+function mashin(liClass,li3,berandC,karkardC,kharidC,moavezeC,chatC,nahveforoushC,salesakhtC,codemeliC,girboxC,badaneC,sanadC,rangC,typeagahiC,menu,titr) {
   $.ajaxSetup({ headers: {'X-CSRF-TOKEN': $('meta[name="_token"]').attr('content')}});
   $.ajax({
     type:'post',
@@ -67,6 +68,7 @@ function mashin(liClass,li3,berandC,karkardC,kharidC,moavezeC,chatC,nahveforoush
     rangC:rangC,
     typeagahiC:typeagahiC,
     menu:menu,
+    titr:titr,
     },
     success:function(data){
       $('.mainDiv1').css('display','block');
@@ -79,7 +81,7 @@ function mashin(liClass,li3,berandC,karkardC,kharidC,moavezeC,chatC,nahveforoush
 }
 
 //مربوط به لوازم الکتریکی
-function electriki(liClass,li4,sazandehC,simkartC,menu) {
+function electriki(liClass,li4,sazandehC,simkartC,menu,titr) {
   $.ajaxSetup({ headers: {'X-CSRF-TOKEN': $('meta[name="_token"]').attr('content')}});
   $.ajax({
     type:'post',
@@ -90,6 +92,7 @@ function electriki(liClass,li4,sazandehC,simkartC,menu) {
     sazandehC:sazandehC,
     simkartC:simkartC,
     menu:menu,
+    titr:titr,
     },
     success:function(data){
       $('.mainDiv1').css('display','block');
@@ -102,15 +105,16 @@ function electriki(liClass,li4,sazandehC,simkartC,menu) {
 }
 
 //مربوط به خدمات خانه
-function khane(liClass,li5,menu) {
+function khane(liClass,li5,menu,titr) {
   $.ajaxSetup({ headers: {'X-CSRF-TOKEN': $('meta[name="_token"]').attr('content')}});
   $.ajax({
     type:'post',
-    url:'../electriki',
+    url:'../khane',
     data:{
     liClass:liClass,
-    li4:li5,
+    li5:li5,
     menu:menu,
+    titr:titr,
     },
     success:function(data){
       $('.mainDiv1').css('display','block');
@@ -121,6 +125,146 @@ function khane(liClass,li5,menu) {
     }
   });
 }
+
+// مربوط به خدمات
+function khadamat(liClass,li5,menu,titr) {
+  $.ajaxSetup({ headers: {'X-CSRF-TOKEN': $('meta[name="_token"]').attr('content')}});
+  $.ajax({
+    type:'post',
+    url:'../khadamat',
+    data:{
+    liClass:liClass,
+    li5:li5,
+    menu:menu,
+    titr:titr,
+    },
+    success:function(data){
+      $('.mainDiv1').css('display','block');
+    $('.mainDiv2').css('display','none');
+
+    $('#ajaxmindiv').html(data)
+
+    }
+  });
+}
+
+// مربوط به وسایل شخصی
+function vasayel(liClass,li5,typeagahiC,menu,titr) {
+  $.ajaxSetup({ headers: {'X-CSRF-TOKEN': $('meta[name="_token"]').attr('content')}});
+  $.ajax({
+    type:'post',
+    url:'../vasayel',
+    data:{
+    liClass:liClass,
+    li5:li5,
+    typeagahiC:typeagahiC,
+    menu:menu,
+    titr:titr,
+    },
+    success:function(data){
+      $('.mainDiv1').css('display','block');
+    $('.mainDiv2').css('display','none');
+
+    $('#ajaxmindiv').html(data)
+
+    }
+  });
+}
+
+
+//مربوط به سرگرمی وفراغت
+function sargarmi(liClass,li5,codemeliC,menu,titr) {
+  $.ajaxSetup({ headers: {'X-CSRF-TOKEN': $('meta[name="_token"]').attr('content')}});
+  $.ajax({
+    type:'post',
+    url:'../sargarmi',
+    data:{
+    liClass:liClass,
+    li5:li5,
+    codemeliC:codemeliC,
+    menu:menu,
+    titr:titr,
+    },
+    success:function(data){
+      $('.mainDiv1').css('display','block');
+    $('.mainDiv2').css('display','none');
+
+    $('#ajaxmindiv').html(data)
+
+    }
+  });
+}
+
+//مربوط به منوی اجتماعی
+function ejtemaei(liClass,li5,typeagahiC,menu,titr) {
+  $.ajaxSetup({ headers: {'X-CSRF-TOKEN': $('meta[name="_token"]').attr('content')}});
+  $.ajax({
+    type:'post',
+    url:'../ejtemaei',
+    data:{
+    liClass:liClass,
+    li5:li5,
+    typeagahiC:typeagahiC,
+    menu:menu,
+    titr:titr,
+    },
+    success:function(data){
+      $('.mainDiv1').css('display','block');
+    $('.mainDiv2').css('display','none');
+
+    $('#ajaxmindiv').html(data)
+
+    }
+  });
+}
+
+//مربوط به برای کسب وکار
+function forkar(liClass,li5,menu,titr) {
+  $.ajaxSetup({ headers: {'X-CSRF-TOKEN': $('meta[name="_token"]').attr('content')}});
+  $.ajax({
+    type:'post',
+    url:'../forkar',
+    data:{
+    liClass:liClass,
+    li5:li5,
+    menu:menu,
+    titr:titr,
+    },
+    success:function(data){
+      $('.mainDiv1').css('display','block');
+    $('.mainDiv2').css('display','none');
+
+    $('#ajaxmindiv').html(data)
+
+    }
+  });
+}
+
+
+//مربوط به استخدام وکاریابی
+function estekhdam(liClass,li5,menu,titr) {
+  $.ajaxSetup({ headers: {'X-CSRF-TOKEN': $('meta[name="_token"]').attr('content')}});
+  $.ajax({
+    type:'post',
+    url:'../estekhdam',
+    data:{
+    liClass:liClass,
+    li5:li5,
+    menu:menu,
+    titr:titr,
+    },
+    success:function(data){
+      $('.mainDiv1').css('display','block');
+    $('.mainDiv2').css('display','none');
+
+    $('#ajaxmindiv').html(data)
+
+    }
+  });
+}
+
+
+
 
 function backAgahi(liClass) {
   $.ajaxSetup({ headers: {'X-CSRF-TOKEN': $('meta[name="_token"]').attr('content')}});
@@ -236,6 +380,61 @@ $('#error').html('<div class="alert alert-danger">'+ error['tozihat'] + '</div>'
 //   var esi=$('#codemeli').val();
 // alert(esi);
 }
+
+
+//استخدام
+function es(menu) {
+  $.ajaxSetup({ headers: {'X-CSRF-TOKEN': $('meta[name="_token"]').attr('content')}});
+  $.ajax({
+    type:'post',
+    url:'../estekhdam',
+    data: {
+         city:$('#city').val(),
+         map:$('#map').val(),
+         // price:$('#price').val(),
+         mobile:$('#mobile').val(),
+         chat:$('#chat:checked').val(),
+         onvanagahi:$('#onvanagahi').val(),
+          tozihat:$('#tozihat').val(),
+          menu:menu,
+       },
+    success:function(data){
+      scroll_form('reset')
+      // refresh()
+      $('#error').html('<div class="alert alert-success"> ثبت با موفقیت انجام شد </div>')
+      document.getElementById('reset').reset();
+      window.location.href = "/sabtnahaei/" + data;
+    },
+    error: function(xhr) {
+      scroll_form('reset')
+     // refresh()
+    var errors = xhr.responseJSON;
+        var error=errors.errors;
+        if(error['city']){
+          $('#error').html('<div class="alert alert-danger ">' + error['city'] +'</div>');
+         }
+        //   else if(error['tavalod']){
+        //   $('#error').html('<div class="alert alert-danger">' + error['tavalod'] +'</div>');
+        // }
+
+else if(error['mobile']){
+$('#error').html('<div class="alert alert-danger">'+ error['mobile'] + '</div>');
+}
+else if(error['onvanagahi']){
+$('#error').html('<div class="alert alert-danger">'+ error['onvanagahi'] + '</div>');
+}
+else if(error['tozihat']){
+$('#error').html('<div class="alert alert-danger">'+ error['tozihat'] + '</div>');
+}
+
+     }
+  });
+//   var esi=$('#codemeli').val();
+// alert(esi);
+}
+
+
+
 // تابع زیر نویس
 function  sub(inputId, divId) {
     $.ajaxSetup({ headers: {'X-CSRF-TOKEN': $('meta[name="_token"]').attr('content')}});

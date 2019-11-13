@@ -23,7 +23,7 @@
     <div class="a7">
       <span class="input-group-text">شهر <input type="text" class="input-group-text a7-input" id="city2" disabled name=""  value="{{$esi->city}}"></span>
       <span class="input-group-text">قیمت<input type="text" class="input-group-text a7-input" id="price2" name="" disabled value="{{$esi->price}}"></span>
-      <span class="input-group-text">نوع آگهیه<input type="text" class="input-group-text a7-input" id="typeagahi2" name="" disabled @if ($esi->typeagahi==1)value="ارایه"@else value="درخواستی"@endif ></span>
+      <span class="input-group-text">نوع آگهی<input type="text" class="input-group-text a7-input" id="typeagahi2" name="" disabled @if ($esi->typeagahi==1)value="ارایه"@else value="درخواستی"@endif ></span>
       <span class="input-group-text">آگهی دهنده<input type="text" class="input-group-text a7-input2" id="agahidahande2" name="" disabled value="{{$esi->agahidahande}}"></span>
       <span class="input-group-text">متراژ<input type="text" class="input-group-text a7-input" id="meter2" name="" disabled value="{{$esi->meter}}"></span>
       <span class="input-group-text">ودیعه<input type="text" class="input-group-text a7-input" id="vadie2" name="" disabled value="{{$esi->vadie}}"></span>

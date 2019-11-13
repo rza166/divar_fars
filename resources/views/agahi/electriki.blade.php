@@ -11,8 +11,8 @@
 
 
   @if (!empty($sazandehC))
-   <span class="labela4" for="">سال ساخت</span>
-  <select class="a2-3" id="salesakht">
+   <span class="labela4" for="">مدل گوشی</span>
+  <select class="a2-3" id="sazandeh">
     <option value=""></option>
     <option>sumsun</option>
     <option>apple</option>
@@ -62,6 +62,6 @@
 
       <span class="labela4-1" for="">مایلم معاوضه کنم</span>
       <input  type="checkbox" value="1" id="moaveze" class="labela4-2">
-  
+
 
 @endsection
