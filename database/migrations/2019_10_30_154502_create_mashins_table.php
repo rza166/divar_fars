@@ -24,10 +24,10 @@ class CreateMashinsTable extends Migration
           $table->string('badane',15)->nullable();
           $table->integer('barand')->nullable();
           $table->integer('karkard')->nullable();
-          $table->tinyInteger('rang')->nullable();
+          $table->string('rang,15')->nullable();
           $table->smallInteger('salesakht')->nullable();
-          $table->tinyInteger('sanad')->nullable()->comment('سند اداری');
-          $table->integer('nahveforoush');
+          $table->string('sanad')->nullable()->comment('سند اداری');
+          $table->string('nahveforoush');
           $table->string('mobile',13);
           $table->string('codemeli',10)->nullable();
           $table->tinyInteger('chat')->nullable()->comment('چت');

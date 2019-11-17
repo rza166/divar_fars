@@ -21,12 +21,13 @@ class CreateElectricisTable extends Migration
             $table->tinyInteger('moaveze')->nullable()->comment('معاوضه');
             $table->string('typeagahi',10);
             $table->tinyInteger('simkart')->nullable();
-            $table->smallInteger('sazandeh')->nullable();
+            $table->string('sazandeh')->nullable();
             $table->string('mobile',13);
             $table->tinyInteger('chat')->nullable()->comment('چت');
             $table->string('onvanagahi',50);
             $table->string('tozihat',150);
             $table->string('menu');
+            $table->string('date');
         });
     }
 

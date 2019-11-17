@@ -163,6 +163,7 @@ return [
       'onvanagahi' =>'عنوان آگهی',
       'tozihat'=>'توضیحات',
       'moaveze'=>'معاوضه',
+      'girbox'=>'گیربکس',
     ],
 
 ];

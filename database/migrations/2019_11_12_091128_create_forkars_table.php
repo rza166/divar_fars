@@ -14,7 +14,7 @@ class CreateForkarsTable extends Migration
     public function up()
     {
         Schema::create('forkars', function (Blueprint $table) {
-            $$table->bigIncrements('id');
+            
             $table->string('city',20);
             $table->string('map',50)->nullable();
             $table->integer('price')->nullable();

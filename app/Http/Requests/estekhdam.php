@@ -1,10 +1,10 @@
 <?php
 
 namespace App\Http\Requests;
-
+use Illuminate\Http\Request;
 use Illuminate\Foundation\Http\FormRequest;
 
-class estekhdam extends FormRequest
+class Estekhdam extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -27,10 +27,10 @@ class estekhdam extends FormRequest
           'city'=>'required',
           'map'=>'nullable',
             'mobile'=>'required|numeric',
-            'chat'=>'nullable|numeric',
-            'onvanagahi'=>'required|alpha_dash',
-             'tozihat'=>'required|alpha_dash',
-             'menu'=>'required|alpha
+            'chat'=>'nullable',
+            'onvanagahi'=>'required|string',
+             'tozihat'=>'required|string',
+             'menu'=>'required|string'
         ];
     }
 }

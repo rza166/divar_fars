@@ -5,6 +5,9 @@ use App\Models\City;
 use App\models\Aks;
 use App\models\Agahi;
 use App\models\ImageAgahi;
+use App\models\ImageMashin;
+use App\models\ImageEstekhdam;
+use App\models\ImageElectrici;
 use App\models\Mashin;
 use App\models\Electrici;
 use App\models\Khanem;
@@ -12,20 +15,21 @@ use App\models\KHadamat;
 use App\models\vasayel;
 use App\models\Sargarmi;
 use App\models\ejtemaei;
+use App\Models\Estejhdam;
 use App\models\Forkar;
-use App\models\estejhdam;
+
 use Cookie;
 use Illuminate\Http\Request;
 use App\Http\Requests\divar;
 use App\Http\Requests\Agahim;
 use App\Http\Requests\Mashinm;
-use App\Http\Requests\Electricim;
+use App\Http\Requests\Electrikim;
 use App\Http\Requests\KHadamatM;
 use App\Http\Requests\vasayelM;
 use App\Http\Requests\SargarmiM;
 use App\Http\Requests\EjtemaeiM;
 use App\Http\Requests\ForkarM;
-use App\Http\Requests\estekhdam;
+use App\Http\Requests\Estekhdam;
 
 class Indexcontroller extends Controller
 {
@@ -203,8 +207,112 @@ public function etebar(Agahim  $request)
   return $id;
 }
 
+//وسایل نقلیه
+public function car(MashinM  $request)
+{
+  $city=$request->city;
+  $map=$request->map;
+  $price=$request->price;
+  $typeagahi=$request->typeagahi;
+  $barand=$request->barand;
+  $salesakht=$request->salesakht;
+  $karkard=$request->karkard;
+  $sanad=$request->sanad;
+  $nahveforoush=$request->nahveforoush;
+  $badane=$request->badane;
+  $rang=$request->rang;
+  $moaveze=$request->moaveze;
+  $mobile=$request->mobile;
+  $chat=$request->chat;
+  $codemeli=$request->codemeli;
+  $onvanagahi=$request->onvanagahi;
+  $tozihat=$request->tozihat;
+  $menu=$request->menu;
+  $save=new Mashin();
+  $save->city=$city;
+  $save->map=$map;
+  $save->price=$price;
+  $save->typeagahi=$typeagahi;
+  $save->barand=$barand;
+  $save->salesakht=$salesakht;
+  $save->karkard=$karkard;
+  $save->sanad=$sanad;
+  $save->nahveforoush=$nahveforoush;
+  $save->badane=$badane;
+  $save->rang=$rang;
+  $save->moaveze=$moaveze;
+  $save->mobile=$mobile;
+  $save->chat=$chat;
+  $save->codemeli=$codemeli;
+  $save->onvanagahi=$onvanagahi;
+  $save->tozihat=$tozihat;
+  $save->menu=$menu;
+  $save->date=time();
+  $save->save();
+  $id= $save->id;
+  $picture=new ImageMashin();
+  $picture->nameTable ='mashin';
+  $picture->recordId =$id;
+    if(!empty($request->cookie('picCookie'))){
+    $nameImg=unserialize($request->cookie('picCookie'));
+    $picture->nameImage1 =  (!empty($nameImg[0])) ? $nameImg[0] : null ;
+    $picture->nameImage2 =  (!empty($nameImg[1])) ? $nameImg[1] : null  ;
+    $picture->nameImage3 =  (!empty($nameImg[2])) ? $nameImg[2] : null  ;
+    $picture->nameImage4 =  (!empty($nameImg[3])) ? $nameImg[3] : null  ;
+    $picture->nameImage5 =  (!empty($nameImg[4])) ? $nameImg[4] : null  ;
+    $picture->nameImage6 =  (!empty($nameImg[5])) ? $nameImg[5] : null  ;
+
+    }
+    $picture->save();
+  return $id;
+}
+
+public function barghi(ElectrikiM  $request)
+{
+  $city=$request->city;
+  $map=$request->map;
+  $sazandeh=$request->sazandeh;
+  $price=$request->price;
+  $typeagahi=$request->typeagahi;
+  $moaveze=$request->moaveze;
+  $mobile=$request->mobile;
+  $chat=$request->chat;
+  $onvanagahi=$request->onvanagahi;
+  $tozihat=$request->tozihat;
+  $menu=$request->menu;
+  $save=new Electrici();
+  $save->city=$city;
+  $save->map=$map;
+  $save->sazandeh=$sazandeh;
+  $save->price=$price;
+  $save->typeagahi=$typeagahi;
+  $save->mobile=$mobile;
+  $save->chat=$chat;
+  $save->onvanagahi=$onvanagahi;
+  $save->tozihat=$tozihat;
+  $save->menu=$menu;
+  $save->date=time();
+  $save->save();
+  $id= $save->id;
+  $picture=new ImageElectrici();
+  $picture->nameTable ='electriki';
+  $picture->recordId =$id;
+    if(!empty($request->cookie('picCookie'))){
+    $nameImg=unserialize($request->cookie('picCookie'));
+    $picture->nameImage1 =  (!empty($nameImg[0])) ? $nameImg[0] : null ;
+    $picture->nameImage2 =  (!empty($nameImg[1])) ? $nameImg[1] : null  ;
+    $picture->nameImage3 =  (!empty($nameImg[2])) ? $nameImg[2] : null  ;
+    $picture->nameImage4 =  (!empty($nameImg[3])) ? $nameImg[3] : null  ;
+    $picture->nameImage5 =  (!empty($nameImg[4])) ? $nameImg[4] : null  ;
+    $picture->nameImage6 =  (!empty($nameImg[5])) ? $nameImg[5] : null  ;
+
+    }
+    $picture->save();
+  return $id;
+}
+
 //استخدام
-public function es(estekhdam  $request)
+public function estekhdam2(Estekhdam $request)
 {
   $city=$request->city;
   $map=$request->map;
@@ -213,7 +321,7 @@ public function es(estekhdam  $request)
   $onvanagahi=$request->onvanagahi;
   $tozihat=$request->tozihat;
   $menu=$request->menu;
-  $save=new estekhdam();
+  $save=new Estejhdam();
   $save->city=$city;
   $save->map=$map;
   $save->mobile=$mobile;
@@ -224,7 +332,7 @@ public function es(estekhdam  $request)
   $save->date=time();
   $save->save();
   $id= $save->id;
-  $picture=new ImageAgahi();
+  $picture=new ImageEstekhdam();
   $picture->nameTable ='estekhdam';
   $picture->recordId =$id;
     if(!empty($request->cookie('picCookie'))){

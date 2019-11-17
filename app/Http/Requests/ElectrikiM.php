@@ -29,13 +29,13 @@ class ElectrikiM extends FormRequest
           'price'=>'nullable|numeric',
           'moaveze'=>'nullable|numeric',
           'typeagahi'=>'required|alpha_dash',
-            'sazandeh'=>'required_if:menu,311,312|nullable|numeric',
-            'simkart'=>'required_if:menu,314|nullable|numeric',
+            'sazandeh'=>'required_if:menu,311,312|nullable|string',
+            'simkart'=>'required_if:menu,314|nullable|string',
             'mobile'=>'required|numeric',
             'chat'=>'nullable|numeric',
-            'onvanagahi'=>'required|alpha_dash',
-             'tozihat'=>'required|alpha_dash',
-             'menu'=>'required|alpha
+            'onvanagahi'=>'required|string',
+             'tozihat'=>'required|string',
+             'menu'=>'required|alpha_dash'
         ];
     }
 }

@@ -63,5 +63,9 @@
       <span class="labela4-1" for="">مایلم معاوضه کنم</span>
       <input  type="checkbox" value="1" id="moaveze" class="labela4-2">
 
-
+      @section('agahi3')
+      <div class="a2-6">
+      <button type="button" onclick="barghi('{{$menu}}')" class="btn btn-danger">ارسال آگهی</button>
+      </div>
+      @endsection
 @endsection

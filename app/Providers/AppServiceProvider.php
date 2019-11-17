@@ -23,6 +23,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+      // Validator::extend('string', function($attribute, $value, $parameters, $validator) {
+      //   return preg_match('/^[0-9]{5}_?\s?-?[0-9]{5}$/', $value);
+      // });
     }
 }

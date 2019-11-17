@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Requests;
-
+use Illuminate\Http\Request;
 use Illuminate\Foundation\Http\FormRequest;
 
 class MashinM extends FormRequest
@@ -35,19 +35,19 @@ class MashinM extends FormRequest
           'moaveze'=>'nullable|numeric',
           // 'moaveze'=>'required_if:menu,113|nullable|numeric', // معاوضه
           'typeagahi'=>'required|alpha_dash',
-           'girbox'=>'required_if:menu,211|nullable|numeric',
-            'badane'=>'required_if:menu,211|nullable|numeric',
-            'barand'=>'required_if:menu,211|nullable|numeric',
+           'girbox'=>'required_if:menu,211|nullable|string',
+            'badane'=>'required_if:menu,211|nullable|string',
+            'barand'=>'required_if:menu,211|nullable|string',
             'karkard'=>'required_if:menu,211,214,215,221,231,241,251|nullable|numeric',
-            'rang'=>'required_if:menu,211|nullable|numeric',
+            'rang'=>'required_if:menu,211|nullable|alpha',
             'salesakht'=>'required_if:menu,211,214,215,221,231,241,251|nullable|numeric',
-            'nahveforoush'=>'required_if:menu,211|nullable|numeric',
-            'sanad'=>'required_if:menu,211|nullable|numeric',
+            'nahveforoush'=>'required_if:menu,211|nullable|string',
+            'sanad'=>'required_if:menu,211|nullable|string',
             'mobile'=>'required|numeric',
             'codemeli'=>'nullable|numeric',
             'chat'=>'nullable|numeric',
-            'onvanagahi'=>'required|alpha_dash',
-             'tozihat'=>'required|alpha_dash',
+            'onvanagahi'=>'required|string',
+             'tozihat'=>'required|string',
              'menu'=>'required|alpha_dash',
         ];
     }

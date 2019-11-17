@@ -27,6 +27,11 @@ Route::post('/estekhdam','IndexController@estekhdam');
 
 Route::post('/backAgahi','IndexController@backAgahi');
 Route::post('/etebar','IndexController@etebar');
+Route::post('/car','IndexController@car');
+Route::post('/barghi','IndexController@barghi');
+
+Route::post('/estekhdam2','IndexController@estekhdam2');
+
 Route::get('/sabtnahaei/{id}', 'IndexController@sabtnahaei' )->where('id', '[1-9]+');
 Route::post('/uplod_img_pro', 'IndexController@uplod_img_pro');
 Route::get('/{city2?}','IndexController@view');

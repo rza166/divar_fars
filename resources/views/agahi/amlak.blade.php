@@ -116,4 +116,10 @@
   <span class="labela4-1" for="">سند اداری</span>
   <input  type="checkbox" value="1" id="sanad" class="labela4-2">
 @endif
+
+@section('agahi3')
+<div class="a2-6">
+<button type="button" onclick="etebar('{{$menu}}')" class="btn btn-danger">ارسال آگهی</button>
+</div>
+@endsection
 @endsection

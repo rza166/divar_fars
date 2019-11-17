@@ -1,10 +1,10 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class estejhdam extends Model
+class Estejhdam extends Model
 {
   public $timestamps=false;
   public $gaurded='id';
