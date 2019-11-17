@@ -69,7 +69,7 @@
   <textarea class="a2-7" rows="5" id="tozihat" name="text"></textarea>
 
   <div class="a2-6">
-  <button type="button" onclick="etebar('{{$menu}}')" class="btn btn-danger">ارسال آگهی</button>
+  <button type="button" onclick="help('{{$menu}}')" class="btn btn-danger">ارسال آگهی</button>
   </div>
 
 

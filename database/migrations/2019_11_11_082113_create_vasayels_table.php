@@ -26,6 +26,7 @@ class CreateVasayelsTable extends Migration
           $table->string('onvanagahi',50);
           $table->string('tozihat',150);
           $table->string('menu');
+          $table->string('date');
         });
     }
 

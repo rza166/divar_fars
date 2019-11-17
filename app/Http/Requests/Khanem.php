@@ -31,9 +31,9 @@ class Khanem extends FormRequest
           'typeagahi'=>'nullable|alpha_dash',
             'mobile'=>'required|numeric',
             'chat'=>'nullable|numeric',
-            'onvanagahi'=>'required|alpha_dash',
-             'tozihat'=>'required|alpha_dash',
-             'menu'=>'nullable|alpha
+            'onvanagahi'=>'required|string',
+             'tozihat'=>'required|string',
+             'menu'=>'nullable|alpha_dash'
         ];
     }
 }

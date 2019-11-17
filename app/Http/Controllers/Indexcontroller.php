@@ -8,9 +8,12 @@ use App\models\ImageAgahi;
 use App\models\ImageMashin;
 use App\models\ImageEstekhdam;
 use App\models\ImageElectrici;
+use App\models\ImageKhane;
+use App\models\ImageKHadamat;
+use App\models\Imagevasayel;
 use App\models\Mashin;
 use App\models\Electrici;
-use App\models\Khanem;
+use App\models\Khane;
 use App\models\KHadamat;
 use App\models\vasayel;
 use App\models\Sargarmi;
@@ -30,6 +33,7 @@ use App\Http\Requests\SargarmiM;
 use App\Http\Requests\EjtemaeiM;
 use App\Http\Requests\ForkarM;
 use App\Http\Requests\Estekhdam;
+use App\Http\Requests\Khanem;
 
 class Indexcontroller extends Controller
 {
@@ -296,6 +300,130 @@ public function barghi(ElectrikiM  $request)
   $id= $save->id;
   $picture=new ImageElectrici();
   $picture->nameTable ='electriki';
+  $picture->recordId =$id;
+    if(!empty($request->cookie('picCookie'))){
+    $nameImg=unserialize($request->cookie('picCookie'));
+    $picture->nameImage1 =  (!empty($nameImg[0])) ? $nameImg[0] : null ;
+    $picture->nameImage2 =  (!empty($nameImg[1])) ? $nameImg[1] : null  ;
+    $picture->nameImage3 =  (!empty($nameImg[2])) ? $nameImg[2] : null  ;
+    $picture->nameImage4 =  (!empty($nameImg[3])) ? $nameImg[3] : null  ;
+    $picture->nameImage5 =  (!empty($nameImg[4])) ? $nameImg[4] : null  ;
+    $picture->nameImage6 =  (!empty($nameImg[5])) ? $nameImg[5] : null  ;
+
+    }
+    $picture->save();
+  return $id;
+}
+
+public function home(Khanem  $request)
+{
+  $city=$request->city;
+  $map=$request->map;
+  $price=$request->price;
+  $typeagahi=$request->typeagahi;
+  $moaveze=$request->moaveze;
+  $mobile=$request->mobile;
+  $chat=$request->chat;
+  $onvanagahi=$request->onvanagahi;
+  $tozihat=$request->tozihat;
+  $menu=$request->menu;
+  $save=new khane();
+  $save->city=$city;
+  $save->map=$map;
+  $save->price=$price;
+  $save->typeagahi=$typeagahi;
+  $save->mobile=$mobile;
+  $save->chat=$chat;
+  $save->onvanagahi=$onvanagahi;
+  $save->tozihat=$tozihat;
+  $save->menu=$menu;
+  $save->date=time();
+  $save->save();
+  $id= $save->id;
+  $picture=new ImageKhane();
+  $picture->nameTable ='khane';
+  $picture->recordId =$id;
+    if(!empty($request->cookie('picCookie'))){
+    $nameImg=unserialize($request->cookie('picCookie'));
+    $picture->nameImage1 =  (!empty($nameImg[0])) ? $nameImg[0] : null ;
+    $picture->nameImage2 =  (!empty($nameImg[1])) ? $nameImg[1] : null  ;
+    $picture->nameImage3 =  (!empty($nameImg[2])) ? $nameImg[2] : null  ;
+    $picture->nameImage4 =  (!empty($nameImg[3])) ? $nameImg[3] : null  ;
+    $picture->nameImage5 =  (!empty($nameImg[4])) ? $nameImg[4] : null  ;
+    $picture->nameImage6 =  (!empty($nameImg[5])) ? $nameImg[5] : null  ;
+
+    }
+    $picture->save();
+  return $id;
+}
+
+//خدمات
+public function help(KHadamatM $request)
+{
+  $city=$request->city;
+  $map=$request->map;
+  $mobile=$request->mobile;
+  $chat=$request->chat;
+  $websayt=$request->chat;
+  $onvanagahi=$request->onvanagahi;
+  $tozihat=$request->tozihat;
+  $menu=$request->menu;
+  $save=new KHadamat();
+  $save->city=$city;
+  $save->map=$map;
+  $save->websayt=$websayt;
+  $save->mobile=$mobile;
+  $save->chat=$chat;
+  $save->onvanagahi=$onvanagahi;
+  $save->tozihat=$tozihat;
+  $save->menu=$menu;
+  $save->date=time();
+  $save->save();
+  $id= $save->id;
+  $picture=new ImageKHadamat();
+  $picture->nameTable ='khadamat';
+  $picture->recordId =$id;
+    if(!empty($request->cookie('picCookie'))){
+    $nameImg=unserialize($request->cookie('picCookie'));
+    $picture->nameImage1 =  (!empty($nameImg[0])) ? $nameImg[0] : null ;
+    $picture->nameImage2 =  (!empty($nameImg[1])) ? $nameImg[1] : null  ;
+    $picture->nameImage3 =  (!empty($nameImg[2])) ? $nameImg[2] : null  ;
+    $picture->nameImage4 =  (!empty($nameImg[3])) ? $nameImg[3] : null  ;
+    $picture->nameImage5 =  (!empty($nameImg[4])) ? $nameImg[4] : null  ;
+    $picture->nameImage6 =  (!empty($nameImg[5])) ? $nameImg[5] : null  ;
+
+    }
+    $picture->save();
+  return $id;
+}
+
+public function vasile(vasayelM  $request)
+{
+  $city=$request->city;
+  $map=$request->map;
+  $price=$request->price;
+  $typeagahi=$request->typeagahi;
+  $moaveze=$request->moaveze;
+  $mobile=$request->mobile;
+  $chat=$request->chat;
+  $onvanagahi=$request->onvanagahi;
+  $tozihat=$request->tozihat;
+  $menu=$request->menu;
+  $save=new vasayel();
+  $save->city=$city;
+  $save->map=$map;
+  $save->price=$price;
+  $save->typeagahi=$typeagahi;
+  $save->mobile=$mobile;
+  $save->chat=$chat;
+  $save->onvanagahi=$onvanagahi;
+  $save->tozihat=$tozihat;
+  $save->menu=$menu;
+  $save->date=time();
+  $save->save();
+  $id= $save->id;
+  $picture=new Imagevasayel();
+  $picture->nameTable ='vasayel';
   $picture->recordId =$id;
     if(!empty($request->cookie('picCookie'))){
     $nameImg=unserialize($request->cookie('picCookie'));

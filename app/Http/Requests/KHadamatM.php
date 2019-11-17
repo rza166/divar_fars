@@ -26,12 +26,12 @@ class KHadamatM extends FormRequest
         return [
           'city'=>'required',
           'map'=>'nullable',
-          'websayt'=>'nullable|numeric',
+          'websayt'=>'nullable|string',
             'mobile'=>'required|numeric',
             'chat'=>'nullable|numeric',
-            'onvanagahi'=>'required|alpha_dash',
-             'tozihat'=>'required|alpha_dash',
-             'menu'=>'nullable|alpha
+            'onvanagahi'=>'required|string',
+             'tozihat'=>'required|string',
+             'menu'=>'nullable|string'
         ];
     }
 }

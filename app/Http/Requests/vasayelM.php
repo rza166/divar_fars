@@ -28,13 +28,13 @@ class vasayelM extends FormRequest
           'map'=>'nullable',
           'price'=>'nullable|numeric',
           'moaveze'=>'nullable|numeric',
-          'typeagahi'=>'required_if:menu,601,602,603,631|nullable|numeric',
+          'typeagahi'=>'required_if:menu,601,602,603,631|nullable|alpha_dash',
             'mobile'=>'required|numeric',
             'chat'=>'nullable|numeric',
             'numbertel'=>'nullable|numeric',
-            'onvanagahi'=>'required|alpha_dash',
-             'tozihat'=>'required|alpha_dash',
-             'menu'=>'nullable|alpha
+            'onvanagahi'=>'required|string',
+             'tozihat'=>'required|string',
+             'menu'=>'nullable|string'
         ];
     }
 }

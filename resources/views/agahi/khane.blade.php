@@ -72,9 +72,11 @@
   <p class="p2">جزئیات و نکات قابل توجه آگهی خود را کامل و دقیق بنویسید تا شانس موفقیت آگهی شما بیشتر شود.</p>
   <textarea class="a2-7" rows="5" id="tozihat" name="text"></textarea>
 
+  
   <div class="a2-6">
-  <button type="button" onclick="etebar('{{$menu}}')" class="btn btn-danger">ارسال آگهی</button>
+  <button type="button" onclick="home('{{$menu}}')" class="btn btn-danger">ارسال آگهی</button>
   </div>
+
 
 
 </form>
