@@ -36,8 +36,8 @@ class SargarmiM extends FormRequest
             'codemeli'=>'required_if:menu,701|numeric',
             'chat'=>'nullable|numeric',
             'numbertel'=>'nullable|numeric',
-            'onvanagahi'=>'required|alpha_dash',
-             'tozihat'=>'required|alpha_dash',
+            'onvanagahi'=>'required|string',
+             'tozihat'=>'required|string',
              'menu'=>'required|alpha_dash',
         ];
     }

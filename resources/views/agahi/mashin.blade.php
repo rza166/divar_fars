@@ -12,11 +12,57 @@
 
 @if (!empty($berandC))
   <div class="">
+
+    <button type="button" onclick="berandactive('.berand2', '.divberand2')" class="btn btn-danger a6-3brand active  berand1"> انتخاب دستی</button>
+    <button type="button" onclick="berandactive('.berand1', '.divberand1')" class="btn btn-danger a6-3brand berand2">جستجو</button>
+  </div>
+  <div class="divberand divberand1 active">
     <span class="labela4brand" for="">برند</span>
-    <button type="button" onclick="" class="btn btn-danger a6-3brand"> انتخاب دستی</button>
+    <input   type="text" id="barand" class="a2-3"   placeholder="برند ماشین">
   </div>
 
-  <input   type="text" id="barand" class="a2-3"   placeholder="برند ماشین">
+<div class="divberand divberand2">
+  <span class="labela1"  for="">برند</span>
+  <select class="a2-1" id="city" name="">
+    <option value="" class=" a2-1">انتخاب</option>
+    {{-- <option onclick="modelshow('ok')"value="" class=" a2-1">1</option>
+    <option onclick="modelshow('ok')" value="" class=" a2-1">2</option>
+    <option onclick="modelshow('ok')" value="" class=" a2-1">3</option>
+    <option onclick="modelshow('no')"value="" class=" a2-1">4</option> --}}
+    @foreach ($berandcar as $element)
+      @php
+        $chekmodel=$modelcar->where('berandcar_id',$element->id)->first();
+        if (!empty($chekmodel->id)) {
+          $ok='ok';
+          $id=$chekmodel->berandcar_id;
+        }
+        else{
+          $ok='no';
+          $id=0 ;
+        }
+      @endphp
+      <option  onclick="modelshow('{{$ok}}', {{$id}})"   value="{{$element->berand}}">{{$element->berand}}</option>
+    @endforeach
+  </select>
+
+<div class="model">
+  <span class="labela11"  for="">مدل</span>
+  <select class="a2-1" id="modelshow" name="">
+    <option value="" class=" a2-1">انتخاب</option>
+
+  </select>
+</div>
+
+<div class="model">
+  <span class="labela1"  for="">تیپ</span>
+  <select class="a2-1" id="city" name="">
+    <option value="" class=" a2-1">انتخاب</option>
+
+  </select>
+</div>
+
+</div>
+
 
   @endif
 

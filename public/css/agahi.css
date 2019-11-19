@@ -44,8 +44,18 @@
   font-size: 18px;
   color: rgb(6, 0, 3);
   margin-right: 6%;
-  margin-top: 50px;
+  margin-top: 5px;
   margin-bottom: 15px;
+  text-align: right;
+}
+.labela11{
+
+  font-size: 18px;
+  color: rgb(6, 0, 3);
+  margin-right: 6%;
+  float: right;
+  margin-top: -40px;
+  margin-bottom: 5px;
   text-align: right;
 
 }
@@ -139,6 +149,16 @@
   background-color: rgb(255, 255, 255);
   color: rgba(252, 8, 30, 0.92);
   font-size: 13px;
+  display: none;
+}
+.divberand{
+  display: none;
+}
+.active{
+  display: block;
+}
+.model{
+  display: none;
 }
 
 .a2-4{
@@ -359,4 +379,27 @@ float: right;
   border: none;
   background-color: rgb(255, 255, 255);
   float: left;
+}
+.allagahi{
+  width: 100%;
+  float: left;
+  margin-top: 5px;
+}
+.oneagahi{
+  width: calc(50% - 4px);
+  height: 150px;
+  margin: 5px 2px;
+  float: right;
+  border: 1px solid rgb(226, 115, 130);
+  border-radius: 3px ;
+  text-align: right;
+}
+.matnagahi{
+  width: calc(100% - 140px);
+  float: right;
+}
+.aksagahi{
+  width: 140px;
+  float: left;
+  background-color: rgb(85, 34, 208);
 }

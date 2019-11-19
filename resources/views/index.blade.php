@@ -86,10 +86,51 @@
     <button type="text" class="btn btn-danger e28" >جستجو</button>
     </form>
 
+    <div class="allagahi">
+      @foreach ($mashin as $mashin2)
+        <div class="oneagahi">
+           <div class="matnagahi">
+             <div class="titragahi">
+                   {{$mashin2->onvanagahi}}
+             </div>
+             <div class="priceagahi">
+               {{$mashin2->price}}
+             </div>
+             <div class="tarikh">
+               {{date($mashin2->date)}}
+             </div>
+           </div>
+           <div class="aksagahi">
+             عکس
+           </div>
+        </div>
+      @endforeach
 
+      @foreach ($agahi as $agahi2)
+        <div class="oneagahi">
+           <div class="matnagahi">
+             <div class="titragahi">
+                   {{$agahi2->onvanagahi}}
+             </div>
+             <div class="priceagahi">
+               {{$agahi2->price}}
+             </div>
+             <div class="tarikh">
+               {{date($agahi2->date)}}
+             </div>
+           </div>
+           <div class="aksagahi">
+             عکس
+           </div>
+        </div>
+      @endforeach
+
+    </div>
 
 
   </div>
+
+
 
   {{-- <div class="e27">
 

@@ -702,6 +702,180 @@ $('#error').html('<div class="alert alert-danger">'+ error['tozihat'] + '</div>'
 }
 
 
+//سرگرمی وبازی
+function game(menu) {
+      $.ajaxSetup({ headers: {'X-CSRF-TOKEN': $('meta[name="_token"]').attr('content')}});
+  $.ajax({
+    type:'post',
+    url:'../game',
+    data: {
+         city:$('#city').val(),
+         map:$('#map').val(),
+         numbertel:$('#numbertel').val(),
+         codemeli:$('#codemeli').val(),
+         moaveze:$('#moaveze:checked').val(),
+         typeagahi:$('input[name=optradio]:checked').val(),
+         price:$('#price').val(),
+         mobile:$('#mobile').val(),
+         chat:$('#chat:checked').val(),
+         onvanagahi:$('#onvanagahi').val(),
+          tozihat:$('#tozihat').val(),
+          menu:menu,
+       },
+    success:function(data){
+      scroll_form('reset')
+      // refresh()
+      $('#error').html('<div class="alert alert-success"> ثبت با موفقیت انجام شد </div>')
+      document.getElementById('reset').reset();
+      window.location.href = "/sabtnahaei/" + data;
+    },
+    error: function(xhr) {
+      scroll_form('reset')
+     // refresh()
+    var errors = xhr.responseJSON;
+        var error=errors.errors;
+        if(error['city']){
+          $('#error').html('<div class="alert alert-danger ">' + error['city'] +'</div>');
+         }
+
+        else if(error['price']){
+       $('#error').html('<div class="alert alert-danger">' + error['price'] +'</div>');
+ }
+     else if(error['typeagahi']){
+    $('#error').html('<div class="alert alert-danger">' + error['typeagahi'] +'</div>');
+  }
+  else if(error['moaveze']){
+ $('#error').html('<div class="alert alert-danger">'+ error['moaveze'] + '</div>');
+}
+else if(error['mobile']){
+$('#error').html('<div class="alert alert-danger">'+ error['mobile'] + '</div>');
+}
+else if(error['onvanagahi']){
+$('#error').html('<div class="alert alert-danger">'+ error['onvanagahi'] + '</div>');
+}
+else if(error['tozihat']){
+$('#error').html('<div class="alert alert-danger">'+ error['tozihat'] + '</div>');
+}
+
+     }
+  });
+}
+
+//اجتماعی
+function ejtema(menu) {
+        $.ajaxSetup({ headers: {'X-CSRF-TOKEN': $('meta[name="_token"]').attr('content')}});
+  $.ajax({
+    type:'post',
+    url:'../ejtema',
+    data: {
+         city:$('#city').val(),
+         map:$('#map').val(),
+         numbertel:$('#numbertel').val(),
+         typeagahi:$('input[name=optradio]:checked').val(),
+         mobile:$('#mobile').val(),
+         chat:$('#chat:checked').val(),
+         onvanagahi:$('#onvanagahi').val(),
+          tozihat:$('#tozihat').val(),
+          menu:menu,
+       },
+    success:function(data){
+      scroll_form('reset')
+      // refresh()
+      $('#error').html('<div class="alert alert-success"> ثبت با موفقیت انجام شد </div>')
+      document.getElementById('reset').reset();
+      window.location.href = "/sabtnahaei/" + data;
+    },
+    error: function(xhr) {
+      scroll_form('reset')
+     // refresh()
+    var errors = xhr.responseJSON;
+        var error=errors.errors;
+        if(error['city']){
+          $('#error').html('<div class="alert alert-danger ">' + error['city'] +'</div>');
+         }
+
+        else if(error['price']){
+       $('#error').html('<div class="alert alert-danger">' + error['price'] +'</div>');
+ }
+     else if(error['typeagahi']){
+    $('#error').html('<div class="alert alert-danger">' + error['typeagahi'] +'</div>');
+  }
+  else if(error['moaveze']){
+ $('#error').html('<div class="alert alert-danger">'+ error['moaveze'] + '</div>');
+}
+else if(error['mobile']){
+$('#error').html('<div class="alert alert-danger">'+ error['mobile'] + '</div>');
+}
+else if(error['onvanagahi']){
+$('#error').html('<div class="alert alert-danger">'+ error['onvanagahi'] + '</div>');
+}
+else if(error['tozihat']){
+$('#error').html('<div class="alert alert-danger">'+ error['tozihat'] + '</div>');
+}
+
+     }
+  });
+}
+
+
+//برای کسب وکار
+function job(menu) {
+      $.ajaxSetup({ headers: {'X-CSRF-TOKEN': $('meta[name="_token"]').attr('content')}});
+  $.ajax({
+    type:'post',
+    url:'../job',
+    data: {
+         city:$('#city').val(),
+         map:$('#map').val(),
+         moaveze:$('#moaveze:checked').val(),
+         typeagahi:$('input[name=optradio]:checked').val(),
+         price:$('#price').val(),
+         mobile:$('#mobile').val(),
+         chat:$('#chat:checked').val(),
+         chat:$('#chat:checked').val(),
+         onvanagahi:$('#onvanagahi').val(),
+          tozihat:$('#tozihat').val(),
+          menu:menu,
+       },
+    success:function(data){
+      scroll_form('reset')
+      // refresh()
+      $('#error').html('<div class="alert alert-success"> ثبت با موفقیت انجام شد </div>')
+      document.getElementById('reset').reset();
+      window.location.href = "/sabtnahaei/" + data;
+    },
+    error: function(xhr) {
+      scroll_form('reset')
+     // refresh()
+    var errors = xhr.responseJSON;
+        var error=errors.errors;
+        if(error['city']){
+          $('#error').html('<div class="alert alert-danger ">' + error['city'] +'</div>');
+         }
+
+        else if(error['price']){
+       $('#error').html('<div class="alert alert-danger">' + error['price'] +'</div>');
+ }
+     else if(error['typeagahi']){
+    $('#error').html('<div class="alert alert-danger">' + error['typeagahi'] +'</div>');
+  }
+  else if(error['moaveze']){
+ $('#error').html('<div class="alert alert-danger">'+ error['moaveze'] + '</div>');
+}
+else if(error['mobile']){
+$('#error').html('<div class="alert alert-danger">'+ error['mobile'] + '</div>');
+}
+else if(error['onvanagahi']){
+$('#error').html('<div class="alert alert-danger">'+ error['onvanagahi'] + '</div>');
+}
+else if(error['tozihat']){
+$('#error').html('<div class="alert alert-danger">'+ error['tozihat'] + '</div>');
+}
+
+     }
+  });
+}
+
 //استخدام
 function estekhdam2(menu) {
   $.ajaxSetup({ headers: {'X-CSRF-TOKEN': $('meta[name="_token"]').attr('content')}});
@@ -750,6 +924,34 @@ $('#error').html('<div class="alert alert-danger">'+ error['tozihat'] + '</div>'
 // alert(esi);
 }
 
+// تابع برند
+function  berandactive(berand,div) {
+  $('.a6-3brand').removeClass('active');
+  $(berand).addClass('active');
+  $('.divberand').removeClass('active');
+  $(div).addClass('active');
+
+}
+function modelshow(check,id) {
+  alert(id)
+  $('.model').css('display','none')
+  if (check=='ok') {
+  $('.model').css('display','block');
+  $.ajaxSetup({ headers: {'X-CSRF-TOKEN': $('meta[name="_token"]').attr('content')}});
+  $.ajax({
+    type:'post',
+    url:'../modelshow',
+    data: {
+         id:id,
+
+       },
+    success:function(data){
+    $('#modelshow').html(data);
+    },
+
+  });
+}
+  }
 
 
 // تابع زیر نویس

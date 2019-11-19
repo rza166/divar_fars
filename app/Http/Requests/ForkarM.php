@@ -31,9 +31,9 @@ class Forkar extends FormRequest
           'typeagahi'=>'required|numeric',
             'mobile'=>'required|numeric',
             'chat'=>'nullable|numeric',
-            'onvanagahi'=>'required|alpha_dash',
-             'tozihat'=>'required|alpha_dash',
-             'menu'=>'nullable|alpha
+            'onvanagahi'=>'required|String',
+             'tozihat'=>'required|String',
+             'menu'=>'nullable|alpha_dash'
         ];
     }
 }

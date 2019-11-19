@@ -30,9 +30,9 @@ class EjtemaeiM extends FormRequest
             'mobile'=>'required|numeric',
             'chat'=>'nullable|numeric',
             'numbertel'=>'nullable|numeric',
-            'onvanagahi'=>'required|alpha_dash',
-             'tozihat'=>'required|alpha_dash',
-             'menu'=>'nullable|alpha
+            'onvanagahi'=>'required|String',
+             'tozihat'=>'required|String',
+             'menu'=>'nullable|alpha_dash'
         ];
     }
 }
