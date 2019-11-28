@@ -41,7 +41,7 @@ class RequestMainAgahi extends FormRequest
           'moaveze'=>'nullable|numeric',
           // 'moaveze'=>'required_if:menu,113|nullable|numeric', // معاوضه
           'typeagahi'=>'required|alpha_dash',
-           'agahidahande'=>'required_if:collection,amlak|nullable|numeric nullable|string',
+           'agahidahande'=>'required|string',
            'meter'=>'nullable|numeric',
             'vadie'=>'required_if:menu,111,112,113,141,142,143,144|nullable|numeric',
             'ejare'=>'required_if:menu,111,112,113,141,142,143,144|nullable|numeric',
@@ -50,7 +50,6 @@ class RequestMainAgahi extends FormRequest
             'ejareday'=>'required_if:menu,151,152,153,154|nullable|numeric',
             // 'ejareday'=>'nullable|numeric',
             'sanad'=>'nullable|numeric',
-
             'codemeli'=>'nullable|numeric',
             'chat'=>'nullable|numeric',
 

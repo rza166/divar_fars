@@ -26,8 +26,8 @@ Route::post('/forkar','IndexController@forkar');
 Route::post('/estekhdam','IndexController@estekhdam');
 
 Route::post('/backAgahi','IndexController@backAgahi');
-Route::post('/etebar','IndexController@etebar');
-// Route::post('/car','IndexController@car');
+Route::post('/Mainagahi','IndexController@Mainagahi');
+// Route::post('/saveMashin','IndexController@saveMashin');
 // Route::post('/barghi','IndexController@barghi');
 // Route::post('/home','IndexController@home');
 // Route::post('/help','IndexController@help');

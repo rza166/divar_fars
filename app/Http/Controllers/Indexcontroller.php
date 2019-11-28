@@ -6,6 +6,7 @@ use App\models\Aks;
 use App\models\Agahi;
 use App\models\ImageAgahi;
 use App\models\Mainagahi;
+use App\models\Amlak;
 // use App\models\ImageMashin;
 // use App\models\ImageEstekhdam;
 // use App\models\ImageElectrici;
@@ -152,7 +153,7 @@ public function uplod_img_pro(Request $request)
     ]);
  $file=$request->file('file');
   // $name= time() . $file->getClientOriginalName();
-    $name= time() . 'agahi';
+    $name= time() . 'agahi' . '.' . $file->getClientOriginalExtension();
   $file->move('img_pro' , $name);
   if (empty($request->cookie($nameCookei))) {
      $nameImg=[$name];
@@ -170,73 +171,94 @@ public function backAgahi(Request $request)
   return view('agahi.agahi1');
 }
 
-//اعتبار سنجی املاک
-public function etebar(Agahim  $request)
+
+
+
+//جدول اصلی
+public function Mainagahi(RequestMainAgahi  $request)
 {
-  $city=$request->city;
-  $map=$request->map;
-  $price=$request->price;
-  $typeagahi=$request->typeagahi;
-  $agahidahande=$request->agahidahande;
-  $meter=$request->meter;
-  $vadie=$request->vadie;
-  $ejare=$request->ejare;
-  $tedadotagh=$request->tedadotagh;
-  $salesakht=$request->salesakht;
-
-  $barand=$request->barand;
-  $karkard=$request->karkard;
-  $sanad=$request->sanad;
-  $nahveforoush=$request->nahveforoush;
-  $badane=$request->badane;
-  $rang=$request->rang;
-  $moaveze=$request->moaveze;
-  $chat=$request->chat;
-  $codemeli=$request->codemeli;
-  $websayt=$request->chat;
-  $sazandeh=$request->sazandeh;
-
-  $mobile=$request->mobile;
-  $onvanagahi=$request->onvanagahi;
-  $tozihat=$request->tozihat;
-  $menu=$request->menu;
-  $save=new Agahi();
-  $save->tablename='amlak';
-  $save->city=$city;
-  $save->map=$map;
-  $save->price=$price;
-  $save->typeagahi=$typeagahi;
-  $save->agahidahande=$agahidahande;
-  $save->meter=$meter;
-  $save->vadie=$vadie;
-  $save->ejare=$ejare;
-  $save->tedadotagh=$tedadotagh;
-  $save->salesakht=$salesakht;
-  $numbertel=$request->numbertel;
+  // $collection=$request->collection;
 
 
-
-  $save->chat=$chat;
-  $save->barand=$barand;
-  $save->karkard=$karkard;
-  $save->sanad=$sanad;
-  $save->nahveforoush=$nahveforoush;
-  $save->badane=$badane;
-  $save->rang=$rang;
-  $save->websayt=$websayt;
-  $save->numbertel=$numbertel;
-  $save->sazandeh=$sazandeh;
-
-
-  $save->mobile=$mobile;
-  $save->onvanagahi=$onvanagahi;
-  $save->tozihat=$tozihat;
-  $save->menu=$menu;
+  // $barand=$request->barand;
+  // $karkard=$request->karkard;
+  // $sanad=$request->sanad;
+  // $nahveforoush=$request->nahveforoush;
+  // $badane=$request->badane;
+  // $rang=$request->rang;
+  // $moaveze=$request->moaveze;
+  // $chat=$request->chat;
+  // $codemeli=$request->codemeli;
+  // $websayt=$request->chat;
+  // $sazandeh=$request->sazandeh;
+  // $menu=$request->menu;
+  $collection=$request->collection;
+  $save=new Mainagahi();
+  $save->collection=$request->collection;
+  $save->onvanagahi=$request->onvanagahi;
+  $save->mobile=$request->mobile;
+  $save->ostan='فارس';
+  $save->city=$request->city;
+  $save->map=$request->map;
+  $save->tozihat=$request->tozihat;
   $save->date=time();
+  $save->show=1;
   $save->save();
   $id= $save->id;
+if ($collection=='amlak') {
+ $amlak=new Amlak();
+ $amlak->mainagahi_id=$id;
+ $amlak->price=$request->price;
+ $amlak->moaveze=$request->moaveze;
+ $amlak->typeagahi=$request->typeagahi;
+ $amlak->agahidahande=$request->agahidahande;
+ $amlak->meter=$request->meter;
+ $amlak->vadie=$request->vadie;
+ $amlak->ejare=$request->ejare;
+ $amlak->tedadotagh=$request->tedadotagh;
+ $amlak->salesakht=$request->salesakht;
+ $amlak->sanad=$request->sanad;
+ $amlak->ejareday=$request->ejareday;
+ $amlak->codemeli=$request->codemeli;
+ $amlak->chat=$request->chat;
+ $amlak->menu=$request->menu;
+ $amlak->save();
+
+} elseif($collection=='mashin') {
+  // code...
+}
+elseif($collection=='') {
+  // code...
+}
+elseif($collection=='') {
+  // code...
+}
+elseif($collection=='') {
+  // code...
+}
+elseif($collection=='') {
+  // code...
+}
+elseif($collection=='') {
+  // code...
+}
+elseif($collection=='') {
+  // code...
+}
+elseif($collection=='') {
+  // code...
+}
+elseif($collection=='') {
+  // code...
+}
+elseif($collection=='') {
+  // code...
+}
+
+
+
   $picture=new ImageAgahi();
-  $picture->nameTable ='amlak';
+  $picture->nameTable =$collection;
   $picture->recordId =$id;
     if(!empty($request->cookie('picCookie'))){
     $nameImg=unserialize($request->cookie('picCookie'));
@@ -250,6 +272,17 @@ public function etebar(Agahim  $request)
     }
     $picture->save();
   return $id;
+  //
+  // $save->chat=$chat;
+  // $save->barand=$barand;
+  // $save->karkard=$karkard;
+  // $save->sanad=$sanad;
+  // $save->nahveforoush=$nahveforoush;
+  // $save->badane=$badane;
+  // $save->rang=$rang;
+  // $save->websayt=$websayt;
+  // $save->numbertel=$numbertel;
+  // $save->sazandeh=$sazandeh;
 }
 //
 // //وسایل نقلیه
@@ -671,6 +704,7 @@ public function amlak(Request $request)
    Cookie::queue('picCookie','',time() - 3600);
   $liClass=$request->liClass;
   $menu=$request->menu;
+  $collection=$request->collection;
 $city=$this->city;
 // if (!empty($request->kharidC)) {
 // $kharidC='ok';
@@ -693,7 +727,7 @@ $agahidahandeC = (!empty($request->agahidahandeC)) ? 'OK' : NULL ;
 $titr=$request->titr;
 
 // $kharid='ok';
-  return view('agahi.amlak',compact('liClass','city','meterC','agahidahandeC','kharidC','moavezeC','chatC','tedadotaghC','salesakhtC','codemeliC','vadieC','ejareC','sanadC','ejaredayC','menu','titr'));
+  return view('agahi.amlak',compact('liClass','city','meterC','agahidahandeC','kharidC','moavezeC','chatC','tedadotaghC','salesakhtC','codemeliC','vadieC','ejareC','sanadC','ejaredayC','menu','titr','collection'));
 }
 //مربوط به منوی وسایل نقلیه
 public function mashin(Request $request)
@@ -701,6 +735,7 @@ public function mashin(Request $request)
    Cookie::queue('picCookie','',time() - 3600);
   $liClass=$request->liClass;
   $menu=$request->menu;
+  $collection=$request->collection;
   $city=$this->city;
 $berandC = (!empty($request->berandC)) ? 'OK' : NULL ;
 $karkardC = (!empty($request->karkardC)) ? 'OK' : NULL ;
@@ -720,8 +755,7 @@ $berandcar=Berandcar::where('show',1)->get();
 $modelcar=Modelcar::where('show',1)->get();
 $ImageAgahi=ImageAgahi::where('show',1)->get();
 // $kharid='ok';
-  return view('agahi.mashin',compact('liClass','city','berandC','karkardC','kharidC','moavezeC','chatC','nahveforoushC','salesakhtC','codemeliC','girboxC','badaneC','sanadC','rangC','typeagahiC','menu','titr','berandcar','modelcar','ImageAgahi
-  '));
+  return view('agahi.mashin',compact('liClass','city','berandC','karkardC','kharidC','moavezeC','chatC','nahveforoushC','salesakhtC','codemeliC','girboxC','badaneC','sanadC','rangC','typeagahiC','menu','titr','berandcar','modelcar','ImageAgahi','collection'));
 }
 
 public function modelshow(Request $request)
