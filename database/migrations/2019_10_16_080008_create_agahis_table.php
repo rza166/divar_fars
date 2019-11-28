@@ -15,8 +15,7 @@ class CreateAgahisTable extends Migration
     {
         Schema::create('agahis', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('city',20);
-            $table->string('map',50)->nullable();
+          
             $table->integer('price')->nullable();
             $table->tinyInteger('moaveze')->nullable()->comment('معاوضه');
             $table->string('typeagahi',10);
@@ -28,13 +27,13 @@ class CreateAgahisTable extends Migration
             $table->smallInteger('salesakht')->nullable();
             $table->tinyInteger('sanad')->nullable()->comment('سند اداری');
             $table->integer('ejareday');
-            $table->string('mobile',13);
+          
             $table->string('codemeli',10)->nullable();
             $table->tinyInteger('chat')->nullable()->comment('چت');
-            $table->string('onvanagahi',50);
-            $table->string('tozihat',150);
-            $table->string('menu');
-            $table->integer('date');
+          
+          
+          $table->string('menu');
+          
         });
     }
 

@@ -5,24 +5,25 @@ use App\Models\City;
 use App\models\Aks;
 use App\models\Agahi;
 use App\models\ImageAgahi;
-use App\models\ImageMashin;
-use App\models\ImageEstekhdam;
-use App\models\ImageElectrici;
-use App\models\ImageKhane;
-use App\models\ImageKHadamat;
-use App\models\Imagevasayel;
-use App\models\ImageSargarmi;
-use App\models\Imageejtemaei;
-use App\models\Imageforkar;
-use App\models\Mashin;
-use App\models\Electrici;
-use App\models\Khane;
-use App\models\KHadamat;
-use App\models\vasayel;
-use App\models\Sargarmi;
-use App\models\ejtemaei;
-use App\Models\Estejhdam;
-use App\models\Forkar;
+use App\models\Mainagahi;
+// use App\models\ImageMashin;
+// use App\models\ImageEstekhdam;
+// use App\models\ImageElectrici;
+// use App\models\ImageKhane;
+// use App\models\ImageKHadamat;
+// use App\models\Imagevasayel;
+// use App\models\ImageSargarmi;
+// use App\models\Imageejtemaei;
+// use App\models\Imageforkar;
+// use App\models\Mashin;
+// use App\models\Electrici;
+// use App\models\Khane;
+// use App\models\KHadamat;
+// use App\models\vasayel;
+// use App\models\Sargarmi;
+// use App\models\ejtemaei;
+// use App\Models\Estejhdam;
+// use App\models\Forkar;
 use App\models\Berandcar;
 use App\models\Modelcar;
 
@@ -30,15 +31,16 @@ use Cookie;
 use Illuminate\Http\Request;
 use App\Http\Requests\divar;
 use App\Http\Requests\Agahim;
-use App\Http\Requests\Mashinm;
-use App\Http\Requests\Electrikim;
-use App\Http\Requests\KHadamatM;
-use App\Http\Requests\vasayelM;
-use App\Http\Requests\SargarmiM;
-use App\Http\Requests\EjtemaeiM;
-use App\Http\Requests\ForkarM;
-use App\Http\Requests\Estekhdam;
-use App\Http\Requests\Khanem;
+use App\Http\Requests\RequestMainAgahi;
+// use App\Http\Requests\Mashinm;
+// use App\Http\Requests\Electrikim;
+// use App\Http\Requests\KHadamatM;
+// use App\Http\Requests\vasayelM;
+// use App\Http\Requests\SargarmiM;
+// use App\Http\Requests\EjtemaeiM;
+// use App\Http\Requests\ForkarM;
+// use App\Http\Requests\Estekhdam;
+// use App\Http\Requests\Khanem;
 
 class Indexcontroller extends Controller
 {
@@ -47,6 +49,7 @@ class Indexcontroller extends Controller
   {
       $this->city=City::where('show',1)->orderby('bazdid', 'DESC')->get();
   }
+
   public function view(Request $request)
   {
     $agahi='ok';
@@ -58,10 +61,11 @@ class Indexcontroller extends Controller
  }
 
  $city1=City::where('show',1)->orderby('bazdid', 'DESC')->get();
- $mashin=Mashin::orderby('date', 'DESC')->get();
- $agahi=Agahi::orderby('date', 'DESC')->get();
+ // $mashin=Mashin::where('date', '>=',time()-2592001)->orderby('date', 'DESC')->get();
+ $agahi=Agahi::where('date', '>=',time()-2592001)->orderby('date', 'DESC')->get();
+ $imageAgahi=ImageAgahi::get();
 
-    return view('index', compact('agahi','city','city1','mashin','agahi'));
+    return view('index', compact('agahi','city','city1','agahi','imageAgahi'));
   }
 public function searchName(Request $request)
 {
@@ -179,11 +183,25 @@ public function etebar(Agahim  $request)
   $ejare=$request->ejare;
   $tedadotagh=$request->tedadotagh;
   $salesakht=$request->salesakht;
+
+  $barand=$request->barand;
+  $karkard=$request->karkard;
+  $sanad=$request->sanad;
+  $nahveforoush=$request->nahveforoush;
+  $badane=$request->badane;
+  $rang=$request->rang;
+  $moaveze=$request->moaveze;
+  $chat=$request->chat;
+  $codemeli=$request->codemeli;
+  $websayt=$request->chat;
+  $sazandeh=$request->sazandeh;
+
   $mobile=$request->mobile;
   $onvanagahi=$request->onvanagahi;
   $tozihat=$request->tozihat;
   $menu=$request->menu;
   $save=new Agahi();
+  $save->tablename='amlak';
   $save->city=$city;
   $save->map=$map;
   $save->price=$price;
@@ -194,6 +212,22 @@ public function etebar(Agahim  $request)
   $save->ejare=$ejare;
   $save->tedadotagh=$tedadotagh;
   $save->salesakht=$salesakht;
+  $numbertel=$request->numbertel;
+
+
+
+  $save->chat=$chat;
+  $save->barand=$barand;
+  $save->karkard=$karkard;
+  $save->sanad=$sanad;
+  $save->nahveforoush=$nahveforoush;
+  $save->badane=$badane;
+  $save->rang=$rang;
+  $save->websayt=$websayt;
+  $save->numbertel=$numbertel;
+  $save->sazandeh=$sazandeh;
+
+
   $save->mobile=$mobile;
   $save->onvanagahi=$onvanagahi;
   $save->tozihat=$tozihat;
@@ -217,404 +251,403 @@ public function etebar(Agahim  $request)
     $picture->save();
   return $id;
 }
-
-//وسایل نقلیه
-public function car(MashinM  $request)
-{
-  $city=$request->city;
-  $map=$request->map;
-  $price=$request->price;
-  $typeagahi=$request->typeagahi;
-  $barand=$request->barand;
-  $salesakht=$request->salesakht;
-  $karkard=$request->karkard;
-  $sanad=$request->sanad;
-  $nahveforoush=$request->nahveforoush;
-  $badane=$request->badane;
-  $rang=$request->rang;
-  $moaveze=$request->moaveze;
-  $mobile=$request->mobile;
-  $chat=$request->chat;
-  $codemeli=$request->codemeli;
-  $onvanagahi=$request->onvanagahi;
-  $tozihat=$request->tozihat;
-  $menu=$request->menu;
-  $save=new Mashin();
-  $save->city=$city;
-  $save->map=$map;
-  $save->price=$price;
-  $save->typeagahi=$typeagahi;
-  $save->barand=$barand;
-  $save->salesakht=$salesakht;
-  $save->karkard=$karkard;
-  $save->sanad=$sanad;
-  $save->nahveforoush=$nahveforoush;
-  $save->badane=$badane;
-  $save->rang=$rang;
-  $save->moaveze=$moaveze;
-  $save->mobile=$mobile;
-  $save->chat=$chat;
-  $save->codemeli=$codemeli;
-  $save->onvanagahi=$onvanagahi;
-  $save->tozihat=$tozihat;
-  $save->menu=$menu;
-  $save->date=time();
-  $save->save();
-  $id= $save->id;
-  $picture=new ImageMashin();
-  $picture->nameTable ='mashin';
-  $picture->recordId =$id;
-    if(!empty($request->cookie('picCookie'))){
-    $nameImg=unserialize($request->cookie('picCookie'));
-    $picture->nameImage1 =  (!empty($nameImg[0])) ? $nameImg[0] : null ;
-    $picture->nameImage2 =  (!empty($nameImg[1])) ? $nameImg[1] : null  ;
-    $picture->nameImage3 =  (!empty($nameImg[2])) ? $nameImg[2] : null  ;
-    $picture->nameImage4 =  (!empty($nameImg[3])) ? $nameImg[3] : null  ;
-    $picture->nameImage5 =  (!empty($nameImg[4])) ? $nameImg[4] : null  ;
-    $picture->nameImage6 =  (!empty($nameImg[5])) ? $nameImg[5] : null  ;
-
-    }
-    $picture->save();
-  return $id;
-}
+//
+// //وسایل نقلیه
+// public function car(MashinM  $request)
+// {
+//   $city=$request->city;
+//   $map=$request->map;
+//   $price=$request->price;
+//   $typeagahi=$request->typeagahi;
+//   $barand=$request->barand;
+//   $salesakht=$request->salesakht;
+//   $karkard=$request->karkard;
+//   $sanad=$request->sanad;
+//   $nahveforoush=$request->nahveforoush;
+//   $badane=$request->badane;
+//   $rang=$request->rang;
+//   $moaveze=$request->moaveze;
+//   $mobile=$request->mobile;
+//   $chat=$request->chat;
+//   $codemeli=$request->codemeli;
+//   $onvanagahi=$request->onvanagahi;
+//   $tozihat=$request->tozihat;
+//   $menu=$request->menu;
+//   $save=new Mashin();
+//   $save->city=$city;
+//   $save->map=$map;
+//   $save->price=$price;
+//   $save->typeagahi=$typeagahi;
+//   $save->barand=$barand;
+//   $save->salesakht=$salesakht;
+//   $save->karkard=$karkard;
+//   $save->sanad=$sanad;
+//   $save->nahveforoush=$nahveforoush;
+//   $save->badane=$badane;
+//   $save->rang=$rang;
+//   $save->moaveze=$moaveze;
+//   $save->mobile=$mobile;
+//   $save->chat=$chat;
+//   $save->codemeli=$codemeli;
+//   $save->onvanagahi=$onvanagahi;
+//   $save->tozihat=$tozihat;
+//   $save->menu=$menu;
+//   $save->date=time();
+//   $save->save();
+//   $id= $save->id;
+//   $picture=new ImageMashin();
+//   $picture->nameTable ='mashin';
+//   $picture->recordId =$id;
+//     if(!empty($request->cookie('picCookie'))){
+//     $nameImg=unserialize($request->cookie('picCookie'));
+//     $picture->nameImage1 =  (!empty($nameImg[0])) ? $nameImg[0] : null ;
+//     $picture->nameImage2 =  (!empty($nameImg[1])) ? $nameImg[1] : null  ;
+//     $picture->nameImage3 =  (!empty($nameImg[2])) ? $nameImg[2] : null  ;
+//     $picture->nameImage4 =  (!empty($nameImg[3])) ? $nameImg[3] : null  ;
+//     $picture->nameImage5 =  (!empty($nameImg[4])) ? $nameImg[4] : null  ;
+//     $picture->nameImage6 =  (!empty($nameImg[5])) ? $nameImg[5] : null  ;
+//
+//     }
+//     $picture->save();
+//   return $id;
+// }
 //لوازم الکتریکی
-public function barghi(ElectrikiM  $request)
-{
-  $city=$request->city;
-  $map=$request->map;
-  $sazandeh=$request->sazandeh;
-  $price=$request->price;
-  $typeagahi=$request->typeagahi;
-  $moaveze=$request->moaveze;
-  $mobile=$request->mobile;
-  $chat=$request->chat;
-  $onvanagahi=$request->onvanagahi;
-  $tozihat=$request->tozihat;
-  $menu=$request->menu;
-  $save=new Electrici();
-  $save->city=$city;
-  $save->map=$map;
-  $save->sazandeh=$sazandeh;
-  $save->price=$price;
-  $save->typeagahi=$typeagahi;
-  $save->mobile=$mobile;
-  $save->chat=$chat;
-  $save->onvanagahi=$onvanagahi;
-  $save->tozihat=$tozihat;
-  $save->menu=$menu;
-  $save->date=time();
-  $save->save();
-  $id= $save->id;
-  $picture=new ImageElectrici();
-  $picture->nameTable ='electriki';
-  $picture->recordId =$id;
-    if(!empty($request->cookie('picCookie'))){
-    $nameImg=unserialize($request->cookie('picCookie'));
-    $picture->nameImage1 =  (!empty($nameImg[0])) ? $nameImg[0] : null ;
-    $picture->nameImage2 =  (!empty($nameImg[1])) ? $nameImg[1] : null  ;
-    $picture->nameImage3 =  (!empty($nameImg[2])) ? $nameImg[2] : null  ;
-    $picture->nameImage4 =  (!empty($nameImg[3])) ? $nameImg[3] : null  ;
-    $picture->nameImage5 =  (!empty($nameImg[4])) ? $nameImg[4] : null  ;
-    $picture->nameImage6 =  (!empty($nameImg[5])) ? $nameImg[5] : null  ;
-
-    }
-    $picture->save();
-  return $id;
-}
+// public function barghi(ElectrikiM  $request)
+// {
+//   $city=$request->city;
+//   $map=$request->map;
+//   $sazandeh=$request->sazandeh;
+//   $price=$request->price;
+//   $typeagahi=$request->typeagahi;
+//   $moaveze=$request->moaveze;
+//   $mobile=$request->mobile;
+//   $chat=$request->chat;
+//   $onvanagahi=$request->onvanagahi;
+//   $tozihat=$request->tozihat;
+//   $menu=$request->menu;
+//   $save=new Electrici();
+//   $save->city=$city;
+//   $save->map=$map;
+//   $save->sazandeh=$sazandeh;
+//   $save->price=$price;
+//   $save->typeagahi=$typeagahi;
+//   $save->mobile=$mobile;
+//   $save->chat=$chat;
+//   $save->onvanagahi=$onvanagahi;
+//   $save->tozihat=$tozihat;
+//   $save->menu=$menu;
+//   $save->date=time();
+//   $save->save();
+//   $id= $save->id;
+//   $picture=new ImageElectrici();
+//   $picture->nameTable ='electriki';
+//   $picture->recordId =$id;
+//     if(!empty($request->cookie('picCookie'))){
+//     $nameImg=unserialize($request->cookie('picCookie'));
+//     $picture->nameImage1 =  (!empty($nameImg[0])) ? $nameImg[0] : null ;
+//     $picture->nameImage2 =  (!empty($nameImg[1])) ? $nameImg[1] : null  ;
+//     $picture->nameImage3 =  (!empty($nameImg[2])) ? $nameImg[2] : null  ;
+//     $picture->nameImage4 =  (!empty($nameImg[3])) ? $nameImg[3] : null  ;
+//     $picture->nameImage5 =  (!empty($nameImg[4])) ? $nameImg[4] : null  ;
+//     $picture->nameImage6 =  (!empty($nameImg[5])) ? $nameImg[5] : null  ;
+//
+//     }
+//     $picture->save();
+//   return $id;
+// }
 //مربوط به خانه
-public function home(Khanem  $request)
-{
-  $city=$request->city;
-  $map=$request->map;
-  $price=$request->price;
-  $typeagahi=$request->typeagahi;
-  $moaveze=$request->moaveze;
-  $mobile=$request->mobile;
-  $chat=$request->chat;
-  $onvanagahi=$request->onvanagahi;
-  $tozihat=$request->tozihat;
-  $menu=$request->menu;
-  $save=new khane();
-  $save->city=$city;
-  $save->map=$map;
-  $save->price=$price;
-  $save->typeagahi=$typeagahi;
-  $save->mobile=$mobile;
-  $save->chat=$chat;
-  $save->onvanagahi=$onvanagahi;
-  $save->tozihat=$tozihat;
-  $save->menu=$menu;
-  $save->date=time();
-  $save->save();
-  $id= $save->id;
-  $picture=new ImageKhane();
-  $picture->nameTable ='khane';
-  $picture->recordId =$id;
-    if(!empty($request->cookie('picCookie'))){
-    $nameImg=unserialize($request->cookie('picCookie'));
-    $picture->nameImage1 =  (!empty($nameImg[0])) ? $nameImg[0] : null ;
-    $picture->nameImage2 =  (!empty($nameImg[1])) ? $nameImg[1] : null  ;
-    $picture->nameImage3 =  (!empty($nameImg[2])) ? $nameImg[2] : null  ;
-    $picture->nameImage4 =  (!empty($nameImg[3])) ? $nameImg[3] : null  ;
-    $picture->nameImage5 =  (!empty($nameImg[4])) ? $nameImg[4] : null  ;
-    $picture->nameImage6 =  (!empty($nameImg[5])) ? $nameImg[5] : null  ;
-
-    }
-    $picture->save();
-  return $id;
-}
-
+// public function home(Khanem  $request)
+// {
+//   $city=$request->city;
+//   $map=$request->map;
+//   $price=$request->price;
+//   $typeagahi=$request->typeagahi;
+//   $moaveze=$request->moaveze;
+//   $mobile=$request->mobile;
+//   $chat=$request->chat;
+//   $onvanagahi=$request->onvanagahi;
+//   $tozihat=$request->tozihat;
+//   $menu=$request->menu;
+//   $save=new khane();
+//   $save->city=$city;
+//   $save->map=$map;
+//   $save->price=$price;
+//   $save->typeagahi=$typeagahi;
+//   $save->mobile=$mobile;
+//   $save->chat=$chat;
+//   $save->onvanagahi=$onvanagahi;
+//   $save->tozihat=$tozihat;
+//   $save->menu=$menu;
+//   $save->date=time();
+//   $save->save();
+//   $id= $save->id;
+//   $picture=new ImageKhane();
+//   $picture->nameTable ='khane';
+//   $picture->recordId =$id;
+//     if(!empty($request->cookie('picCookie'))){
+//     $nameImg=unserialize($request->cookie('picCookie'));
+//     $picture->nameImage1 =  (!empty($nameImg[0])) ? $nameImg[0] : null ;
+//     $picture->nameImage2 =  (!empty($nameImg[1])) ? $nameImg[1] : null  ;
+//     $picture->nameImage3 =  (!empty($nameImg[2])) ? $nameImg[2] : null  ;
+//     $picture->nameImage4 =  (!empty($nameImg[3])) ? $nameImg[3] : null  ;
+//     $picture->nameImage5 =  (!empty($nameImg[4])) ? $nameImg[4] : null  ;
+//     $picture->nameImage6 =  (!empty($nameImg[5])) ? $nameImg[5] : null  ;
+//
+//     }
+//     $picture->save();
+//   return $id;
+// }
 //خدمات
-public function help(KHadamatM $request)
-{
-  $city=$request->city;
-  $map=$request->map;
-  $mobile=$request->mobile;
-  $chat=$request->chat;
-  $websayt=$request->chat;
-  $onvanagahi=$request->onvanagahi;
-  $tozihat=$request->tozihat;
-  $menu=$request->menu;
-  $save=new KHadamat();
-  $save->city=$city;
-  $save->map=$map;
-  $save->websayt=$websayt;
-  $save->mobile=$mobile;
-  $save->chat=$chat;
-  $save->onvanagahi=$onvanagahi;
-  $save->tozihat=$tozihat;
-  $save->menu=$menu;
-  $save->date=time();
-  $save->save();
-  $id= $save->id;
-  $picture=new ImageKHadamat();
-  $picture->nameTable ='khadamat';
-  $picture->recordId =$id;
-    if(!empty($request->cookie('picCookie'))){
-    $nameImg=unserialize($request->cookie('picCookie'));
-    $picture->nameImage1 =  (!empty($nameImg[0])) ? $nameImg[0] : null ;
-    $picture->nameImage2 =  (!empty($nameImg[1])) ? $nameImg[1] : null  ;
-    $picture->nameImage3 =  (!empty($nameImg[2])) ? $nameImg[2] : null  ;
-    $picture->nameImage4 =  (!empty($nameImg[3])) ? $nameImg[3] : null  ;
-    $picture->nameImage5 =  (!empty($nameImg[4])) ? $nameImg[4] : null  ;
-    $picture->nameImage6 =  (!empty($nameImg[5])) ? $nameImg[5] : null  ;
-
-    }
-    $picture->save();
-  return $id;
-}
+// public function help(KHadamatM $request)
+// {
+//   $city=$request->city;
+//   $map=$request->map;
+//   $mobile=$request->mobile;
+//   $chat=$request->chat;
+//   $websayt=$request->chat;
+//   $onvanagahi=$request->onvanagahi;
+//   $tozihat=$request->tozihat;
+//   $menu=$request->menu;
+//   $save=new KHadamat();
+//   $save->city=$city;
+//   $save->map=$map;
+//   $save->websayt=$websayt;
+//   $save->mobile=$mobile;
+//   $save->chat=$chat;
+//   $save->onvanagahi=$onvanagahi;
+//   $save->tozihat=$tozihat;
+//   $save->menu=$menu;
+//   $save->date=time();
+//   $save->save();
+//   $id= $save->id;
+//   $picture=new ImageKHadamat();
+//   $picture->nameTable ='khadamat';
+//   $picture->recordId =$id;
+//     if(!empty($request->cookie('picCookie'))){
+//     $nameImg=unserialize($request->cookie('picCookie'));
+//     $picture->nameImage1 =  (!empty($nameImg[0])) ? $nameImg[0] : null ;
+//     $picture->nameImage2 =  (!empty($nameImg[1])) ? $nameImg[1] : null  ;
+//     $picture->nameImage3 =  (!empty($nameImg[2])) ? $nameImg[2] : null  ;
+//     $picture->nameImage4 =  (!empty($nameImg[3])) ? $nameImg[3] : null  ;
+//     $picture->nameImage5 =  (!empty($nameImg[4])) ? $nameImg[4] : null  ;
+//     $picture->nameImage6 =  (!empty($nameImg[5])) ? $nameImg[5] : null  ;
+//
+//     }
+//     $picture->save();
+//   return $id;
+// }
 //مربوط به وسایل شخصی
-public function vasile(vasayelM  $request)
-{
-  $city=$request->city;
-  $map=$request->map;
-  $price=$request->price;
-  $typeagahi=$request->typeagahi;
-  $moaveze=$request->moaveze;
-  $mobile=$request->mobile;
-  $chat=$request->chat;
-  $onvanagahi=$request->onvanagahi;
-  $tozihat=$request->tozihat;
-  $menu=$request->menu;
-  $save=new vasayel();
-  $save->city=$city;
-  $save->map=$map;
-  $save->price=$price;
-  $save->typeagahi=$typeagahi;
-  $save->mobile=$mobile;
-  $save->chat=$chat;
-  $save->onvanagahi=$onvanagahi;
-  $save->tozihat=$tozihat;
-  $save->menu=$menu;
-  $save->date=time();
-  $save->save();
-  $id= $save->id;
-  $picture=new Imagevasayel();
-  $picture->nameTable ='vasayel';
-  $picture->recordId =$id;
-    if(!empty($request->cookie('picCookie'))){
-    $nameImg=unserialize($request->cookie('picCookie'));
-    $picture->nameImage1 =  (!empty($nameImg[0])) ? $nameImg[0] : null ;
-    $picture->nameImage2 =  (!empty($nameImg[1])) ? $nameImg[1] : null  ;
-    $picture->nameImage3 =  (!empty($nameImg[2])) ? $nameImg[2] : null  ;
-    $picture->nameImage4 =  (!empty($nameImg[3])) ? $nameImg[3] : null  ;
-    $picture->nameImage5 =  (!empty($nameImg[4])) ? $nameImg[4] : null  ;
-    $picture->nameImage6 =  (!empty($nameImg[5])) ? $nameImg[5] : null  ;
-
-    }
-    $picture->save();
-  return $id;
-}
+// public function vasile(vasayelM  $request)
+// {
+//   $city=$request->city;
+//   $map=$request->map;
+//   $price=$request->price;
+//   $typeagahi=$request->typeagahi;
+//   $moaveze=$request->moaveze;
+//   $mobile=$request->mobile;
+//   $chat=$request->chat;
+//   $onvanagahi=$request->onvanagahi;
+//   $tozihat=$request->tozihat;
+//   $menu=$request->menu;
+//   $save=new vasayel();
+//   $save->city=$city;
+//   $save->map=$map;
+//   $save->price=$price;
+//   $save->typeagahi=$typeagahi;
+//   $save->mobile=$mobile;
+//   $save->chat=$chat;
+//   $save->onvanagahi=$onvanagahi;
+//   $save->tozihat=$tozihat;
+//   $save->menu=$menu;
+//   $save->date=time();
+//   $save->save();
+//   $id= $save->id;
+//   $picture=new Imagevasayel();
+//   $picture->nameTable ='vasayel';
+//   $picture->recordId =$id;
+//     if(!empty($request->cookie('picCookie'))){
+//     $nameImg=unserialize($request->cookie('picCookie'));
+//     $picture->nameImage1 =  (!empty($nameImg[0])) ? $nameImg[0] : null ;
+//     $picture->nameImage2 =  (!empty($nameImg[1])) ? $nameImg[1] : null  ;
+//     $picture->nameImage3 =  (!empty($nameImg[2])) ? $nameImg[2] : null  ;
+//     $picture->nameImage4 =  (!empty($nameImg[3])) ? $nameImg[3] : null  ;
+//     $picture->nameImage5 =  (!empty($nameImg[4])) ? $nameImg[4] : null  ;
+//     $picture->nameImage6 =  (!empty($nameImg[5])) ? $nameImg[5] : null  ;
+//
+//     }
+//     $picture->save();
+//   return $id;
+// }
 
 //سرگرمی وبازی
-public function game(SargarmiM $request)
-{
-  $city=$request->city;
-  $map=$request->map;
-  $numbertel=$request->numbertel;
-  $codemeli=$request->codemeli;
-  $price=$request->price;
-  $typeagahi=$request->typeagahi;
-  $moaveze=$request->moaveze;
-  $mobile=$request->mobile;
-  $chat=$request->chat;
-  $onvanagahi=$request->onvanagahi;
-  $tozihat=$request->tozihat;
-  $menu=$request->menu;
-  $save=new Sargarmi();
-  $save->city=$city;
-  $save->map=$map;
-  $save->numbertel=$numbertel;
-  $save->codemeli=$codemeli;
-  $save->price=$price;
-  $save->typeagahi=$typeagahi;
-  $save->mobile=$mobile;
-  $save->chat=$chat;
-  $save->onvanagahi=$onvanagahi;
-  $save->tozihat=$tozihat;
-  $save->menu=$menu;
-  $save->date=time();
-  $save->save();
-  $id= $save->id;
-  $picture=new ImageSargarmi();
-  $picture->nameTable ='sargarmi';
-  $picture->recordId =$id;
-    if(!empty($request->cookie('picCookie'))){
-    $nameImg=unserialize($request->cookie('picCookie'));
-    $picture->nameImage1 =  (!empty($nameImg[0])) ? $nameImg[0] : null ;
-    $picture->nameImage2 =  (!empty($nameImg[1])) ? $nameImg[1] : null  ;
-    $picture->nameImage3 =  (!empty($nameImg[2])) ? $nameImg[2] : null  ;
-    $picture->nameImage4 =  (!empty($nameImg[3])) ? $nameImg[3] : null  ;
-    $picture->nameImage5 =  (!empty($nameImg[4])) ? $nameImg[4] : null  ;
-    $picture->nameImage6 =  (!empty($nameImg[5])) ? $nameImg[5] : null  ;
-
-    }
-    $picture->save();
-  return $id;
-}
-
-//اجتماعی
-public function ejtema(EjtemaeiM $request)
-{
-  $city=$request->city;
-  $map=$request->map;
-  $numbertel=$request->numbertel;
-  $typeagahi=$request->typeagahi;
-  $mobile=$request->mobile;
-  $chat=$request->chat;
-  $onvanagahi=$request->onvanagahi;
-  $tozihat=$request->tozihat;
-  $menu=$request->menu;
-  $save=new ejtemaei();
-  $save->city=$city;
-  $save->map=$map;
-  $save->numbertel=$numbertel;
-  $save->typeagahi=$typeagahi;
-  $save->mobile=$mobile;
-  $save->chat=$chat;
-  $save->onvanagahi=$onvanagahi;
-  $save->tozihat=$tozihat;
-  $save->menu=$menu;
-  $save->date=time();
-  $save->save();
-  $id= $save->id;
-  $picture=new Imageejtemaei();
-  $picture->nameTable ='ejtemaei';
-  $picture->recordId =$id;
-    if(!empty($request->cookie('picCookie'))){
-    $nameImg=unserialize($request->cookie('picCookie'));
-    $picture->nameImage1 =  (!empty($nameImg[0])) ? $nameImg[0] : null ;
-    $picture->nameImage2 =  (!empty($nameImg[1])) ? $nameImg[1] : null  ;
-    $picture->nameImage3 =  (!empty($nameImg[2])) ? $nameImg[2] : null  ;
-    $picture->nameImage4 =  (!empty($nameImg[3])) ? $nameImg[3] : null  ;
-    $picture->nameImage5 =  (!empty($nameImg[4])) ? $nameImg[4] : null  ;
-    $picture->nameImage6 =  (!empty($nameImg[5])) ? $nameImg[5] : null  ;
-
-    }
-    $picture->save();
-  return $id;
-}
-
-//برای کسب وکار
-public function job(ForkarM  $request)
-{
-  $city=$request->city;
-  $map=$request->map;
-  $price=$request->price;
-  $typeagahi=$request->typeagahi;
-  $moaveze=$request->moaveze;
-  $mobile=$request->mobile;
-  $chat=$request->chat;
-  $onvanagahi=$request->onvanagahi;
-  $tozihat=$request->tozihat;
-  $menu=$request->menu;
-  $save=new Forkar();
-  $save->city=$city;
-  $save->map=$map;
-  $save->price=$price;
-  $save->typeagahi=$typeagahi;
-  $save->mobile=$mobile;
-  $save->chat=$chat;
-  $save->onvanagahi=$onvanagahi;
-  $save->tozihat=$tozihat;
-  $save->menu=$menu;
-  $save->date=time();
-  $save->save();
-  $id= $save->id;
-  $picture=new Imageforkar();
-  $picture->nameTable ='forkar';
-  $picture->recordId =$id;
-    if(!empty($request->cookie('picCookie'))){
-    $nameImg=unserialize($request->cookie('picCookie'));
-    $picture->nameImage1 =  (!empty($nameImg[0])) ? $nameImg[0] : null ;
-    $picture->nameImage2 =  (!empty($nameImg[1])) ? $nameImg[1] : null  ;
-    $picture->nameImage3 =  (!empty($nameImg[2])) ? $nameImg[2] : null  ;
-    $picture->nameImage4 =  (!empty($nameImg[3])) ? $nameImg[3] : null  ;
-    $picture->nameImage5 =  (!empty($nameImg[4])) ? $nameImg[4] : null  ;
-    $picture->nameImage6 =  (!empty($nameImg[5])) ? $nameImg[5] : null  ;
-
-    }
-    $picture->save();
-  return $id;
-}
-
-//استخدام
-public function estekhdam2(Estekhdam $request)
-{
-  $city=$request->city;
-  $map=$request->map;
-  $mobile=$request->mobile;
-  $chat=$request->chat;
-  $onvanagahi=$request->onvanagahi;
-  $tozihat=$request->tozihat;
-  $menu=$request->menu;
-  $save=new Estejhdam();
-  $save->city=$city;
-  $save->map=$map;
-  $save->mobile=$mobile;
-  $save->chat=$chat;
-  $save->onvanagahi=$onvanagahi;
-  $save->tozihat=$tozihat;
-  $save->menu=$menu;
-  $save->date=time();
-  $save->save();
-  $id= $save->id;
-  $picture=new ImageEstekhdam();
-  $picture->nameTable ='estekhdam';
-  $picture->recordId =$id;
-    if(!empty($request->cookie('picCookie'))){
-    $nameImg=unserialize($request->cookie('picCookie'));
-    $picture->nameImage1 =  (!empty($nameImg[0])) ? $nameImg[0] : null ;
-    $picture->nameImage2 =  (!empty($nameImg[1])) ? $nameImg[1] : null  ;
-    $picture->nameImage3 =  (!empty($nameImg[2])) ? $nameImg[2] : null  ;
-    $picture->nameImage4 =  (!empty($nameImg[3])) ? $nameImg[3] : null  ;
-    $picture->nameImage5 =  (!empty($nameImg[4])) ? $nameImg[4] : null  ;
-    $picture->nameImage6 =  (!empty($nameImg[5])) ? $nameImg[5] : null  ;
-
-    }
-    $picture->save();
-  return $id;
-}
+// public function game(SargarmiM $request)
+// {
+//   $city=$request->city;
+//   $map=$request->map;
+//   $numbertel=$request->numbertel;
+//   $codemeli=$request->codemeli;
+//   $price=$request->price;
+//   $typeagahi=$request->typeagahi;
+//   $moaveze=$request->moaveze;
+//   $mobile=$request->mobile;
+//   $chat=$request->chat;
+//   $onvanagahi=$request->onvanagahi;
+//   $tozihat=$request->tozihat;
+//   $menu=$request->menu;
+//   $save=new Sargarmi();
+//   $save->city=$city;
+//   $save->map=$map;
+//   $save->numbertel=$numbertel;
+//   $save->codemeli=$codemeli;
+//   $save->price=$price;
+//   $save->typeagahi=$typeagahi;
+//   $save->mobile=$mobile;
+//   $save->chat=$chat;
+//   $save->onvanagahi=$onvanagahi;
+//   $save->tozihat=$tozihat;
+//   $save->menu=$menu;
+//   $save->date=time();
+//   $save->save();
+//   $id= $save->id;
+//   $picture=new ImageSargarmi();
+//   $picture->nameTable ='sargarmi';
+//   $picture->recordId =$id;
+//     if(!empty($request->cookie('picCookie'))){
+//     $nameImg=unserialize($request->cookie('picCookie'));
+//     $picture->nameImage1 =  (!empty($nameImg[0])) ? $nameImg[0] : null ;
+//     $picture->nameImage2 =  (!empty($nameImg[1])) ? $nameImg[1] : null  ;
+//     $picture->nameImage3 =  (!empty($nameImg[2])) ? $nameImg[2] : null  ;
+//     $picture->nameImage4 =  (!empty($nameImg[3])) ? $nameImg[3] : null  ;
+//     $picture->nameImage5 =  (!empty($nameImg[4])) ? $nameImg[4] : null  ;
+//     $picture->nameImage6 =  (!empty($nameImg[5])) ? $nameImg[5] : null  ;
+//
+//     }
+//     $picture->save();
+//   return $id;
+// }
+//
+// //اجتماعی
+// public function ejtema(EjtemaeiM $request)
+// {
+//   $city=$request->city;
+//   $map=$request->map;
+//   $numbertel=$request->numbertel;
+//   $typeagahi=$request->typeagahi;
+//   $mobile=$request->mobile;
+//   $chat=$request->chat;
+//   $onvanagahi=$request->onvanagahi;
+//   $tozihat=$request->tozihat;
+//   $menu=$request->menu;
+//   $save=new ejtemaei();
+//   $save->city=$city;
+//   $save->map=$map;
+//   $save->numbertel=$numbertel;
+//   $save->typeagahi=$typeagahi;
+//   $save->mobile=$mobile;
+//   $save->chat=$chat;
+//   $save->onvanagahi=$onvanagahi;
+//   $save->tozihat=$tozihat;
+//   $save->menu=$menu;
+//   $save->date=time();
+//   $save->save();
+//   $id= $save->id;
+//   $picture=new Imageejtemaei();
+//   $picture->nameTable ='ejtemaei';
+//   $picture->recordId =$id;
+//     if(!empty($request->cookie('picCookie'))){
+//     $nameImg=unserialize($request->cookie('picCookie'));
+//     $picture->nameImage1 =  (!empty($nameImg[0])) ? $nameImg[0] : null ;
+//     $picture->nameImage2 =  (!empty($nameImg[1])) ? $nameImg[1] : null  ;
+//     $picture->nameImage3 =  (!empty($nameImg[2])) ? $nameImg[2] : null  ;
+//     $picture->nameImage4 =  (!empty($nameImg[3])) ? $nameImg[3] : null  ;
+//     $picture->nameImage5 =  (!empty($nameImg[4])) ? $nameImg[4] : null  ;
+//     $picture->nameImage6 =  (!empty($nameImg[5])) ? $nameImg[5] : null  ;
+//
+//     }
+//     $picture->save();
+//   return $id;
+// }
+//
+// //برای کسب وکار
+// public function job(ForkarM  $request)
+// {
+//   $city=$request->city;
+//   $map=$request->map;
+//   $price=$request->price;
+//   $typeagahi=$request->typeagahi;
+//   $moaveze=$request->moaveze;
+//   $mobile=$request->mobile;
+//   $chat=$request->chat;
+//   $onvanagahi=$request->onvanagahi;
+//   $tozihat=$request->tozihat;
+//   $menu=$request->menu;
+//   $save=new Forkar();
+//   $save->city=$city;
+//   $save->map=$map;
+//   $save->price=$price;
+//   $save->typeagahi=$typeagahi;
+//   $save->mobile=$mobile;
+//   $save->chat=$chat;
+//   $save->onvanagahi=$onvanagahi;
+//   $save->tozihat=$tozihat;
+//   $save->menu=$menu;
+//   $save->date=time();
+//   $save->save();
+//   $id= $save->id;
+//   $picture=new Imageforkar();
+//   $picture->nameTable ='forkar';
+//   $picture->recordId =$id;
+//     if(!empty($request->cookie('picCookie'))){
+//     $nameImg=unserialize($request->cookie('picCookie'));
+//     $picture->nameImage1 =  (!empty($nameImg[0])) ? $nameImg[0] : null ;
+//     $picture->nameImage2 =  (!empty($nameImg[1])) ? $nameImg[1] : null  ;
+//     $picture->nameImage3 =  (!empty($nameImg[2])) ? $nameImg[2] : null  ;
+//     $picture->nameImage4 =  (!empty($nameImg[3])) ? $nameImg[3] : null  ;
+//     $picture->nameImage5 =  (!empty($nameImg[4])) ? $nameImg[4] : null  ;
+//     $picture->nameImage6 =  (!empty($nameImg[5])) ? $nameImg[5] : null  ;
+//
+//     }
+//     $picture->save();
+//   return $id;
+// }
+//
+// //استخدام
+// public function estekhdam2(Estekhdam $request)
+// {
+//   $city=$request->city;
+//   $map=$request->map;
+//   $mobile=$request->mobile;
+//   $chat=$request->chat;
+//   $onvanagahi=$request->onvanagahi;
+//   $tozihat=$request->tozihat;
+//   $menu=$request->menu;
+//   $save=new Estejhdam();
+//   $save->city=$city;
+//   $save->map=$map;
+//   $save->mobile=$mobile;
+//   $save->chat=$chat;
+//   $save->onvanagahi=$onvanagahi;
+//   $save->tozihat=$tozihat;
+//   $save->menu=$menu;
+//   $save->date=time();
+//   $save->save();
+//   $id= $save->id;
+//   $picture=new ImageEstekhdam();
+//   $picture->nameTable ='estekhdam';
+//   $picture->recordId =$id;
+//     if(!empty($request->cookie('picCookie'))){
+//     $nameImg=unserialize($request->cookie('picCookie'));
+//     $picture->nameImage1 =  (!empty($nameImg[0])) ? $nameImg[0] : null ;
+//     $picture->nameImage2 =  (!empty($nameImg[1])) ? $nameImg[1] : null  ;
+//     $picture->nameImage3 =  (!empty($nameImg[2])) ? $nameImg[2] : null  ;
+//     $picture->nameImage4 =  (!empty($nameImg[3])) ? $nameImg[3] : null  ;
+//     $picture->nameImage5 =  (!empty($nameImg[4])) ? $nameImg[4] : null  ;
+//     $picture->nameImage6 =  (!empty($nameImg[5])) ? $nameImg[5] : null  ;
+//
+//     }
+//     $picture->save();
+//   return $id;
+// }
 
 
 
@@ -685,8 +718,10 @@ $typeagahiC = (!empty($request->typeagahiC)) ? 'OK' : NULL ;
 $titr=$request->titr;
 $berandcar=Berandcar::where('show',1)->get();
 $modelcar=Modelcar::where('show',1)->get();
+$ImageAgahi=ImageAgahi::where('show',1)->get();
 // $kharid='ok';
-  return view('agahi.mashin',compact('liClass','city','berandC','karkardC','kharidC','moavezeC','chatC','nahveforoushC','salesakhtC','codemeliC','girboxC','badaneC','sanadC','rangC','typeagahiC','menu','titr','berandcar','modelcar'));
+  return view('agahi.mashin',compact('liClass','city','berandC','karkardC','kharidC','moavezeC','chatC','nahveforoushC','salesakhtC','codemeliC','girboxC','badaneC','sanadC','rangC','typeagahiC','menu','titr','berandcar','modelcar','ImageAgahi
+  '));
 }
 
 public function modelshow(Request $request)

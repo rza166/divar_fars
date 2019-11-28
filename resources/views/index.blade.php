@@ -8,8 +8,8 @@
   <!-- left site -->
   <div class="e17">
 		<li class="e18"><a href="">همه آگهی ها</a></li>
-		<li><a href="#">املاک</a></li>
-		<li><a href="#">وسایل نقلیه</a></li>
+		<li><i class="fa fa-home" style="font-size:24px"></i><a href="#">املاک</a></li>
+		<li><i class="fa fa-home" style="font-size:24px"></i><a href="#">وسایل نقلیه</a></li>
     <li><a href="#">لوازم الکتریکی</a></li>
   	<li><a href="#">مربوط به خانه</a></li>
   	<li><a href="#">خدمات</a></li>
@@ -36,15 +36,15 @@
       </div>
 
 
-        <div class=" e20">
+        {{-- <div class=" e20">
           <input type="text" class=" e22 e24 e26" placeholder="همه آگهی ها" id="usr2" name="username">
         <div class=" e21 ">
           <i class='fas fa-caret-down e25' style='font-size:14px'></i>
         </div >
-      </div>
+      </div> --}}
 
 
-       <div class=" e20 ">
+       {{-- <div class=" e20 ">
         <input type="text" class=" e22 e23" onclick="sho()" placeholder="همه محله ها " id="sh" name="username">
         <div class=" e21" onclick="sho()" id="ii">
           <i class='fas fa-caret-down e25' style='font-size:14px'></i>
@@ -66,7 +66,7 @@
           <li type="button" name="button">14</li>
         </ul>
 
-      </div>
+      </div> --}}
 
 
       <div class="e30">
@@ -81,31 +81,16 @@
 
       </div>
 
+           {{-- <button type="text" class="btn btn-danger e28" >جستجو</button> --}}
 
 
-    <button type="text" class="btn btn-danger e28" >جستجو</button>
     </form>
 
-    <div class="allagahi">
-      @foreach ($mashin as $mashin2)
-        <div class="oneagahi">
-           <div class="matnagahi">
-             <div class="titragahi">
-                   {{$mashin2->onvanagahi}}
-             </div>
-             <div class="priceagahi">
-               {{$mashin2->price}}
-             </div>
-             <div class="tarikh">
-               {{date($mashin2->date)}}
-             </div>
-           </div>
-           <div class="aksagahi">
-             عکس
-           </div>
-        </div>
-      @endforeach
 
+    <div class="allagahi">
+      <div class="khat2">
+
+      </div>
       @foreach ($agahi as $agahi2)
         <div class="oneagahi">
            <div class="matnagahi">
@@ -116,7 +101,34 @@
                {{$agahi2->price}}
              </div>
              <div class="tarikh">
-               {{date($agahi2->date)}}
+               {{-- {{date('y/m/d h:i:s',$agahi2->date)}} --}}
+               @php
+                $time=time()-$agahi2->date;
+                  // $time=604900;
+                if ($time<=3599) {
+                  // $time=ceil($time/60);
+                  $time=floor($time/60);
+                 switch ($time) {
+                    case $time<=5: $zaman='لحظاتی پیش';  break;
+                    case $time<15: $zaman='دقایقی پیش';  break;
+                    case $time>=15: $zaman=$time . 'دقیقه پیش';  break;
+
+                  default:
+                    // code...
+                    break;
+                }
+              } else if($time<=86400) {
+                  $time=floor($time/60/60);
+                  $zaman=$time . 'ساعت پیش';
+              } else if($time>86400) {
+                  $time=floor($time/60/60/24);
+                  $zaman=$time . 'روز پیش';
+                }
+
+               @endphp
+             {{$zaman}}
+             <br>
+             {{time()}}
              </div>
            </div>
            <div class="aksagahi">
@@ -124,6 +136,36 @@
            </div>
         </div>
       @endforeach
+
+      {{-- @foreach ($agahi as $agahi2)
+        <div class="oneagahi">
+           <div class="matnagahi">
+             <div class="titragahi">
+                   {{$agahi2->onvanagahi}}
+             </div>
+             <div class="priceagahi">
+               {{$agahi2->price}}
+             </div>
+             <div class="tarikh">
+               {{date('y/m/d',$agahi2->date)}}
+             </div>
+           </div>
+           <div class="aksagahi">
+             @php
+               $showimage=$imageAgahi->where('nameTable',$agahi2->tablename)->where('recordId',$agahi2->id)->first();
+             @endphp
+
+             {{$agahi2->ImageAgahi}}
+             @if (!empty($showimage->id))
+               <img width="135" height="135" src="../img_pro/1574349578agahi.jpg" alt="">
+               @else
+                 <i class="fa fa-camera ia" style="font-size:42px"></i>
+             @endif
+ {{-- <img src="../img_pro/1574349578agahi.jpg" alt=""> --}}
+           {{-- </div>
+
+        </div>
+      @endforeach --}}
 
     </div>
 

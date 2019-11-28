@@ -23,6 +23,8 @@ class CreateImageAgahisTable extends Migration
             $table->String('nameImage4',60)->nullable();
             $table->String('nameImage5',60)->nullable();
             $table->String('nameImage6',60)->nullable();
+            $table->String('Imageshow',60)->nullable();
+            $table->integer('date');
         });
     }
 

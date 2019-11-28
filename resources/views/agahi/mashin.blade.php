@@ -5,7 +5,7 @@
 
   @if (!empty($kharidC))
   <span class="labela4" for="">قیمت</span>
-  <input oninput="sub6('#price','#priceajax')"  id="price" onkeypress='validate(event)' type="text" id="price" class="a2-3" placeholder="قیمت به تومان">
+  <input oninput="sub6('#price','#priceajax')"  id="price" onkeypress='validate(event)' type="text" id="price" class="a2-3 zirnevis" placeholder="قیمت به تومان">
   <div class="ajax" id="priceajax" style="font-size:16px; color:rgb(106, 163, 0);">
   </div>
   @endif
@@ -23,7 +23,7 @@
 
 <div class="divberand divberand2">
   <span class="labela1"  for="">برند</span>
-  <select class="a2-1" id="city" name="">
+  <select class="a2-1" id="barand" name="">
     <option value="" class=" a2-1">انتخاب</option>
     {{-- <option onclick="modelshow('ok')"value="" class=" a2-1">1</option>
     <option onclick="modelshow('ok')" value="" class=" a2-1">2</option>
@@ -55,7 +55,7 @@
 
 <div class="model">
   <span class="labela1"  for="">تیپ</span>
-  <select class="a2-1" id="city" name="">
+  <select class="a2-1" id="barand" name="">
     <option value="" class=" a2-1">انتخاب</option>
 
   </select>
@@ -68,8 +68,8 @@
 
   @if (!empty($karkardC))
   <span class="labela4" for="">کارکرد</span>
-  <input  oninput="sub3('#ejare','#ejareajax')" type="text" id="karkard" class="a2-3"  onkeypress='validate(event)' placeholder="کیلومتر">
-  <div class="ajax" id="ejareajax" style="font-size:16px; color:rgb(106, 163, 0);">
+  <input  oninput="sub1('#karkard','#karkardajax')" type="text" id="karkard" class="a2-3 zirnevis"  onkeypress='validate(event)' placeholder="کیلومتر">
+  <div class="ajax" id="karkardajax" style="font-size:14px; color:rgb(106, 163, 0);">
 
   </div>
   @endif
@@ -179,7 +179,7 @@
 
 @section('agahi3')
 <div class="a2-6">
-<button type="button" onclick="car('{{$menu}}')" class="btn btn-danger">ارسال آگهی</button>
+<button type="button" onclick="etebar('{{$menu}}')" class="btn btn-danger">ارسال آگهی</button>
 </div>
 @endsection
 

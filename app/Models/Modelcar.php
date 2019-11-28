@@ -1,4 +1,4 @@
-<?php
+<!-- <?php
 
 namespace App\Models;
 
@@ -8,4 +8,4 @@ class Modelcar extends Model
 {
   public $timestamps=false;
   public $gaurded='id';
-}
+} -->

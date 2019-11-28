@@ -27,15 +27,15 @@ Route::post('/estekhdam','IndexController@estekhdam');
 
 Route::post('/backAgahi','IndexController@backAgahi');
 Route::post('/etebar','IndexController@etebar');
-Route::post('/car','IndexController@car');
-Route::post('/barghi','IndexController@barghi');
-Route::post('/home','IndexController@home');
-Route::post('/help','IndexController@help');
-Route::post('/vasile','IndexController@vasile');
-Route::post('/game','IndexController@game');
-Route::post('/ejtema','IndexController@ejtema');
-Route::post('/job','IndexController@job');
-Route::post('/estekhdam2','IndexController@estekhdam2');
+// Route::post('/car','IndexController@car');
+// Route::post('/barghi','IndexController@barghi');
+// Route::post('/home','IndexController@home');
+// Route::post('/help','IndexController@help');
+// Route::post('/vasile','IndexController@vasile');
+// Route::post('/game','IndexController@game');
+// Route::post('/ejtema','IndexController@ejtema');
+// Route::post('/job','IndexController@job');
+// Route::post('/estekhdam2','IndexController@estekhdam2');
 
 Route::get('/sabtnahaei/{id}', 'IndexController@sabtnahaei' )->where('id', '[1-9]+');
 Route::post('/uplod_img_pro', 'IndexController@uplod_img_pro');
