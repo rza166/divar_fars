@@ -16,7 +16,7 @@ use App\models\Amlak;
 // use App\models\ImageSargarmi;
 // use App\models\Imageejtemaei;
 // use App\models\Imageforkar;
-// use App\models\Mashin;
+use App\models\Mashin;
 // use App\models\Electrici;
 // use App\models\Khane;
 // use App\models\KHadamat;
@@ -205,6 +205,7 @@ public function Mainagahi(RequestMainAgahi  $request)
   $save->show=1;
   $save->save();
   $id= $save->id;
+
 if ($collection=='amlak') {
  $amlak=new Amlak();
  $amlak->mainagahi_id=$id;
@@ -225,7 +226,23 @@ if ($collection=='amlak') {
  $amlak->save();
 
 } elseif($collection=='mashin') {
-  // code...
+  $mashin=new Mashin();
+  $mashin->mainagahi_id=$id;
+  $mashin->price=$request->price;
+  $mashin->moaveze=$request->moaveze;
+  $mashin->typeagahi=$request->typeagahi;
+  $mashin->girbox=$request->girbox;
+  $mashin->badane=$request->badane;
+  $mashin->barand=$request->barand;
+  $mashin->karkard=$request->karkard;
+  $mashin->rang=$request->rang;
+  $mashin->salesakht=$request->salesakht;
+  $mashin->sanad=$request->sanad;
+  $mashin->nahveforoush=$request->nahveforoush;
+  $mashin->codemeli=$request->codemeli;
+  $mashin->chat=$request->chat;
+  $mashin->menu=$request->menu;
+  $mashin->save();
 }
 elseif($collection=='') {
   // code...
@@ -753,9 +770,9 @@ $typeagahiC = (!empty($request->typeagahiC)) ? 'OK' : NULL ;
 $titr=$request->titr;
 $berandcar=Berandcar::where('show',1)->get();
 $modelcar=Modelcar::where('show',1)->get();
-$ImageAgahi=ImageAgahi::where('show',1)->get();
+// $ImageAgahi=ImageAgahi::where('show',1)->get();
 // $kharid='ok';
-  return view('agahi.mashin',compact('liClass','city','berandC','karkardC','kharidC','moavezeC','chatC','nahveforoushC','salesakhtC','codemeliC','girboxC','badaneC','sanadC','rangC','typeagahiC','menu','titr','berandcar','modelcar','ImageAgahi','collection'));
+  return view('agahi.mashin',compact('liClass','city','berandC','karkardC','kharidC','moavezeC','chatC','nahveforoushC','salesakhtC','codemeliC','girboxC','badaneC','sanadC','rangC','typeagahiC','menu','titr','berandcar','modelcar','collection'));
 }
 
 public function modelshow(Request $request)

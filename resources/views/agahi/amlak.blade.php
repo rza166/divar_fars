@@ -119,7 +119,7 @@
 
 @section('agahi3')
 <div class="a2-6">
-<button type="button" onclick="saveAmlak('{{$menu}}','{{$collection}}')" class="btn btn-danger">ارسال آگهی</button>
+<button type="button" onclick="Mainagahi('{{$menu}}','{{$collection}}')" class="btn btn-danger">ارسال آگهی</button>
 </div>
 @endsection
 @endsection

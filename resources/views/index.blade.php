@@ -8,16 +8,16 @@
   <!-- left site -->
   <div class="e17">
 		<li class="e18"><a href="">همه آگهی ها</a></li>
-		<li><i class="fa fa-home" style="font-size:24px"></i><a href="#">املاک</a></li>
-		<li><i class="fa fa-home" style="font-size:24px"></i><a href="#">وسایل نقلیه</a></li>
-    <li><a href="#">لوازم الکتریکی</a></li>
-  	<li><a href="#">مربوط به خانه</a></li>
-  	<li><a href="#">خدمات</a></li>
-    <li><a href="#">وسایل شخصی</a></li>
-  	<li><a href="#">سرگرمی وفراغت</a></li>
-  	<li><a href="#">اجتماعی</a></li>
-    <li><a href="#">برای کسب وکار</a></li>
-  	<li><a href="#">استخدام وکاریابی</a></li>
+		<li><i class="fa fa-home nemad"></i><a href="#">املاک</a></li>
+		<li><i class='fas fa-car nemad'></i><a href="#">وسایل نقلیه</a></li>
+    <li><i class='fas fa-mobile-alt nemad' ></i><a href="#">لوازم الکتریکی</a></li>
+  	<li><i class='fas fa-tv nemad'></i><a href="#">مربوط به خانه</a></li>
+  	<li><i class='far fa-handshake nemad'></i><a href="#">خدمات</a></li>
+    <li><i class='fas fa-bicycle nemad'></i><a href="#">وسایل شخصی</a></li>
+  	<li><i class='fas fa-gamepad nemad'></i><a href="#">سرگرمی وفراغت</a></li>
+  	<li><i class='fas fa-people-carry nemad'></i><a href="#">اجتماعی</a></li>
+    <li><i class='fas fa-bullhorn nemad'></i><a href="#">برای کسب وکار</a></li>
+  	<li><i class='fas fa-restroom nemad'></i><a href="#">استخدام وکاریابی</a></li>
 </div>
 
 
