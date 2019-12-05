@@ -17,18 +17,19 @@ use App\models\Amlak;
 // use App\models\Imageejtemaei;
 // use App\models\Imageforkar;
 use App\models\Mashin;
-// use App\models\Electrici;
-// use App\models\Khane;
-// use App\models\KHadamat;
-// use App\models\vasayel;
-// use App\models\Sargarmi;
-// use App\models\ejtemaei;
-// use App\Models\Estejhdam;
-// use App\models\Forkar;
+use App\models\Electrici;
+use App\models\Khane;
+use App\models\KHadamat;
+use App\models\vasayel;
+use App\models\Sargarmi;
+use App\models\ejtemaei;
+use App\Models\Estejhdam;
+use App\models\Forkar;
 use App\models\Berandcar;
 use App\models\Modelcar;
 
 use Cookie;
+use DB;
 use Illuminate\Http\Request;
 use App\Http\Requests\divar;
 use App\Http\Requests\Agahim;
@@ -63,7 +64,7 @@ class Indexcontroller extends Controller
 
  $city1=City::where('show',1)->orderby('bazdid', 'DESC')->get();
  // $mashin=Mashin::where('date', '>=',time()-2592001)->orderby('date', 'DESC')->get();
- $agahi=Agahi::where('date', '>=',time()-2592001)->orderby('date', 'DESC')->get();
+ $agahi=Mainagahi::where('date', '>=',time()-2592001)->orderby('date', 'DESC')->get();
  $imageAgahi=ImageAgahi::get();
 
     return view('index', compact('agahi','city','city1','agahi','imageAgahi'));
@@ -177,6 +178,7 @@ public function backAgahi(Request $request)
 //جدول اصلی
 public function Mainagahi(RequestMainAgahi  $request)
 {
+  // global $collection=$request->collection;
   // $collection=$request->collection;
 
 
@@ -192,6 +194,8 @@ public function Mainagahi(RequestMainAgahi  $request)
   // $websayt=$request->chat;
   // $sazandeh=$request->sazandeh;
   // $menu=$request->menu;
+
+  DB::transaction(function () use($request) {
   $collection=$request->collection;
   $save=new Mainagahi();
   $save->collection=$request->collection;
@@ -201,6 +205,7 @@ public function Mainagahi(RequestMainAgahi  $request)
   $save->city=$request->city;
   $save->map=$request->map;
   $save->tozihat=$request->tozihat;
+  $save->price=$request->price;
   $save->date=time();
   $save->show=1;
   $save->save();
@@ -244,34 +249,78 @@ if ($collection=='amlak') {
   $mashin->menu=$request->menu;
   $mashin->save();
 }
-elseif($collection=='') {
-  // code...
+elseif($collection=='electriki') {
+  $electriki=new Electrici();
+  $electriki->mainagahi_id=$id;
+  $electriki->price=$request->price;
+  $electriki->moaveze=$request->moaveze;
+  $electriki->typeagahi=$request->typeagahi;
+  $electriki->simkart=$request->simkart;
+  $electriki->sazandeh=$request->sazandeh;
+  $electriki->chat=$request->chat;
+  $electriki->menu=$request->menu;
+  $electriki->save();
 }
-elseif($collection=='') {
-  // code...
+elseif($collection=='khane') {
+  $khane=new khane();
+  $khane->mainagahi_id=$id;
+  $khane->price=$request->price;
+  $khane->moaveze=$request->moaveze;
+  $khane->typeagahi=$request->typeagahi;
+  $khane->chat=$request->chat;
+  $khane->menu=$request->menu;
+  $khane->save();
 }
-elseif($collection=='') {
-  // code...
+elseif($collection=='khadamat') {
+  $khadamat=new KHadamat();
+  $khadamat->mainagahi_id=$id;
+  $khadamat->websayt=$request->websayt;
+  $khadamat->typeagahi=$request->typeagahi;
+  $khadamat->chat=$request->chat;
+  $khadamat->menu=$request->menu;
+  $khadamat->save();
 }
-elseif($collection=='') {
-  // code...
+elseif($collection=='vasayel') {
+  $vasayel=new vasayel();
+  $vasayel->mainagahi_id=$id;
+  $vasayel->price=$request->price;
+  $vasayel->moaveze=$request->moaveze;
+  $vasayel->typeagahi=$request->typeagahi;
+  $vasayel->numbertel=$request->numbertel;
+  $vasayel->chat=$request->chat;
+  $vasayel->menu=$request->menu;
+  $vasayel->save();
 }
-elseif($collection=='') {
-  // code...
-}
-elseif($collection=='') {
-  // code...
-}
-elseif($collection=='') {
-  // code...
-}
-elseif($collection=='') {
-  // code...
-}
-elseif($collection=='') {
-  // code...
-}
+elseif($collection=='sargarmi') {
+  $sargarmi=new Sargarmi();
+  $sargarmi->onvanagahi=$request->onvanagahi;
+  $sargarmi->mobile=$request->mobile;
+  // $sargarmi->ostan='فارس';
+  $sargarmi->city=$request->city;
+  $sargarmi->map=$request->map;
+  $sargarmi->tozihat=$request->tozihat;
 
+  $sargarmi->mainagahi_id=$id;
+  $sargarmi->price=$request->price;
+  $sargarmi->moaveze=$request->moaveze;
+  $sargarmi->typeagahi=$request->typeagahi;
+  $sargarmi->codemeli=$request->codemeli;
+  $sargarmi->chat=$request->chat;
+  $sargarmi->menu=$request->menu;
+  $sargarmi->save();
+}
+elseif($collection=='') {
+  // code...
+}
+elseif($collection=='') {
+  // code...
+}
+elseif($collection=='') {
+  // code...
+}
+elseif($collection=='') {
+  // code...
+}
 
 
   $picture=new ImageAgahi();
@@ -285,10 +334,11 @@ elseif($collection=='') {
     $picture->nameImage4 =  (!empty($nameImg[3])) ? $nameImg[3] : null  ;
     $picture->nameImage5 =  (!empty($nameImg[4])) ? $nameImg[4] : null  ;
     $picture->nameImage6 =  (!empty($nameImg[5])) ? $nameImg[5] : null  ;
-
     }
     $picture->save();
-  return $id;
+    return $id;
+    });
+
   //
   // $save->chat=$chat;
   // $save->barand=$barand;
@@ -712,7 +762,7 @@ public function sabtnahaei(Request $request)
   }
 
 $city1=City::where('show',1)->orderby('bazdid', 'DESC')->get();  $id=$request->id;
- $esi=Agahi::find($id);
+ $esi=Mainagahi::find($id);
 return view('agahi.sabtnahaei',compact('esi','agahi','city','city1'));
 }
 // مربوط به منوی املاک
@@ -790,11 +840,12 @@ public function electriki(Request $request)
   Cookie::queue('picCookie','',time() - 3600);
   $liClass=$request->liClass;
   $menu=$request->menu;
+  $collection=$request->collection;
   $city=$this->city;
   $sazandehC = (!empty($request->sazandehC)) ? 'OK' : NULL ;
   $simkartC = (!empty($request->simkartC)) ? 'OK' : NULL ;
   $titr=$request->titr;
-  return view('agahi.electriki',compact('liClass','city','sazandehC','simkartC','menu','titr'));
+  return view('agahi.electriki',compact('liClass','city','sazandehC','simkartC','menu','titr','collection'));
 }
 
 //مربوط به خدمات خانه
@@ -803,9 +854,10 @@ public function khane(Request $request)
   Cookie::queue('picCookie','',time() - 3600);
   $liClass=$request->liClass;
   $menu=$request->menu;
+  $collection=$request->collection;
   $city=$this->city;
   $titr=$request->titr;
-  return view('agahi.khane',compact('liClass','city','menu','titr'));
+  return view('agahi.khane',compact('liClass','city','menu','titr','collection'));
 }
 
 //مربوط به خدمات
@@ -814,9 +866,10 @@ public function khadamat(Request $request)
   Cookie::queue('picCookie','',time() - 3600);
   $liClass=$request->liClass;
   $menu=$request->menu;
+  $collection=$request->collection;
   $city=$this->city;
   $titr=$request->titr;
-  return view('agahi.khadamat',compact('liClass','city','menu','titr'));
+  return view('agahi.khadamat',compact('liClass','city','menu','titr','collection'));
 }
 
 //مربوط به وسایل شخصی
@@ -825,10 +878,11 @@ public function vasayel(Request $request)
   Cookie::queue('picCookie','',time() - 3600);
   $liClass=$request->liClass;
   $menu=$request->menu;
+  $collection=$request->collection;
   $titr=$request->titr;
   $city=$this->city;
   $typeagahiC = (!empty($request->typeagahiC)) ? 'OK' : NULL ;
-  return view('agahi.vasayel',compact('liClass','city','typeagahiC','menu','titr'));
+  return view('agahi.vasayel',compact('liClass','city','typeagahiC','menu','titr','collection'));
 }
 
 //مربوط به سرگرمی وفراغت
@@ -837,10 +891,11 @@ public function sargarmi(Request $request)
   Cookie::queue('picCookie','',time() - 3600);
   $liClass=$request->liClass;
   $menu=$request->menu;
+  $collection=$request->collection;
   $city=$this->city;
   $codemeliC = (!empty($request->codemeliC)) ? 'OK' : NULL ;
   $titr=$request->titr;
-  return view('agahi.sargarmi',compact('liClass','city','codemeliC','menu','titr'));
+  return view('agahi.sargarmi',compact('liClass','city','codemeliC','menu','titr','collection'));
 }
 
 //مربوط به اجتماعی
@@ -849,10 +904,11 @@ public function ejtemaei(Request $request)
   Cookie::queue('picCookie','',time() - 3600);
   $liClass=$request->liClass;
   $menu=$request->menu;
+  $collection=$request->collection;
   $city=$this->city;
   $typeagahiC = (!empty($request->typeagahiC)) ? 'OK' : NULL ;
   $titr=$request->titr;
-  return view('agahi.ejtemaei',compact('liClass','city','typeagahiC','menu','titr'));
+  return view('agahi.ejtemaei',compact('liClass','city','typeagahiC','menu','titr','collection'));
 }
 
 //مربوط به برای کسب وکار
@@ -861,9 +917,10 @@ public function forkar(Request $request)
   Cookie::queue('picCookie','',time() - 3600);
   $liClass=$request->liClass;
   $menu=$request->menu;
+  $collection=$request->collection;
   $city=$this->city;
   $titr=$request->titr;
-  return view('agahi.forkar',compact('liClass','city','menu','titr'));
+  return view('agahi.forkar',compact('liClass','city','menu','titr','collection'));
 }
 
 //مربوط به استخدام وکاریابی
@@ -872,9 +929,10 @@ public function estekhdam(Request $request)
   Cookie::queue('picCookie','',time() - 3600);
   $liClass=$request->liClass;
   $menu=$request->menu;
+  $collection=$request->collection;
   $city=$this->city;
   $titr=$request->titr;
-  return view('agahi.estekhdam',compact('liClass','city','menu','titr'));
+  return view('agahi.estekhdam',compact('liClass','city','menu','titr','collection'));
 }
 
 

@@ -17,7 +17,7 @@
   	<li><i class='fas fa-gamepad nemad'></i><a href="#">سرگرمی وفراغت</a></li>
   	<li><i class='fas fa-people-carry nemad'></i><a href="#">اجتماعی</a></li>
     <li><i class='fas fa-bullhorn nemad'></i><a href="#">برای کسب وکار</a></li>
-  	<li><i class='fas fa-restroom nemad'></i><a href="#">استخدام وکاریابی</a></li>
+  	<li><i class='fas fa-street-view nemad'></i><a href="#">استخدام وکاریابی</a></li>
 </div>
 
 

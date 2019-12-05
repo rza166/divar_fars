@@ -15,6 +15,7 @@ class CreateElectricisTable extends Migration
     {
         Schema::create('electricis', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->integer('mainagahi_id')->unique();
             $table->string('city',20);
             $table->string('map',50)->nullable();
             $table->integer('price')->nullable();

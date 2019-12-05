@@ -22,6 +22,7 @@ class CreateMainagahisTable extends Migration
             $table->string('city',20);
             $table->string('map',50)->nullable();
             $table->string('tozihat',240);
+            $table->integer('price')->nullable();
             $table->integer('date');
            $table->boolean('show');
         });

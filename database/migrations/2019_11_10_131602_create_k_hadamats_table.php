@@ -15,13 +15,10 @@ class CreateKHadamatsTable extends Migration
     {
         Schema::create('k_hadamats', function (Blueprint $table) {
           $table->bigIncrements('id');
-          $table->string('city',20);
-          $table->string('map',50)->nullable();
+          $table->integer('mainagahi_id')->unique();
+           $table->string('typeagahi',10);
           $table->string('websayt',100)->nullable();
-          $table->string('mobile',13);
           $table->tinyInteger('chat')->nullable()->comment('چت');
-          $table->string('onvanagahi',50);
-          $table->string('tozihat',150);
           $table->string('menu');
         });
     }
