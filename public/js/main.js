@@ -14,6 +14,7 @@ function searchName() {
     }
   });
 }
+
 // مربوط به نوار  همه محله ها در index.blade.php
 function nsh() {
 $('.e27').css('display','none')

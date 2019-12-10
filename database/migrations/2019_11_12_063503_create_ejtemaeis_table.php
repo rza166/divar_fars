@@ -15,6 +15,7 @@ class CreateEjtemaeisTable extends Migration
     {
         Schema::create('ejtemaeis', function (Blueprint $table) {
           $table->bigIncrements('id');
+          $table->integer('mainagahi_id')->unique();
           $table->string('city',20);
           $table->string('map',50)->nullable();
           $table->string('typeagahi',10);

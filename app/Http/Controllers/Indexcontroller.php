@@ -76,6 +76,13 @@ public function searchName(Request $request)
   return view('searchName', compact('city','city1'));
 }
 
+public function searchAgahi(Request $request)
+{
+  $onvanagahi=$request->onvanagahi;
+  $onvanagahi=Mainagahi::where('onvanagahi','like',"%$onvanagahi%")->get();
+  return view('searchAgahi', compact('onvanagahi'));
+}
+
 public function pagei()
 {
   $agahi='ok';
@@ -214,6 +221,12 @@ public function Mainagahi(RequestMainAgahi  $request)
 if ($collection=='amlak') {
  $amlak=new Amlak();
  $amlak->mainagahi_id=$id;
+ $amlak->onvanagahi=$request->onvanagahi;
+ $amlak->mobile=$request->mobile;
+ // $amlak->ostan='فارس';
+ $amlak->city=$request->city;
+ $amlak->map=$request->map;
+ $amlak->tozihat=$request->tozihat;
  $amlak->price=$request->price;
  $amlak->moaveze=$request->moaveze;
  $amlak->typeagahi=$request->typeagahi;
@@ -233,6 +246,12 @@ if ($collection=='amlak') {
 } elseif($collection=='mashin') {
   $mashin=new Mashin();
   $mashin->mainagahi_id=$id;
+  $mashin->onvanagahi=$request->onvanagahi;
+  $mashin->mobile=$request->mobile;
+  // $mashin->ostan='فارس';
+  $mashin->city=$request->city;
+  $mashin->map=$request->map;
+  $mashin->tozihat=$request->tozihat;
   $mashin->price=$request->price;
   $mashin->moaveze=$request->moaveze;
   $mashin->typeagahi=$request->typeagahi;
@@ -252,6 +271,12 @@ if ($collection=='amlak') {
 elseif($collection=='electriki') {
   $electriki=new Electrici();
   $electriki->mainagahi_id=$id;
+  $electriki->onvanagahi=$request->onvanagahi;
+  $electriki->mobile=$request->mobile;
+  // $electriki->ostan='فارس';
+  $electriki->city=$request->city;
+  $electriki->map=$request->map;
+  $electriki->tozihat=$request->tozihat;
   $electriki->price=$request->price;
   $electriki->moaveze=$request->moaveze;
   $electriki->typeagahi=$request->typeagahi;
@@ -264,6 +289,12 @@ elseif($collection=='electriki') {
 elseif($collection=='khane') {
   $khane=new khane();
   $khane->mainagahi_id=$id;
+  $khane->onvanagahi=$request->onvanagahi;
+  $khane->mobile=$request->mobile;
+  // $khane->ostan='فارس';
+  $khane->city=$request->city;
+  $khane->map=$request->map;
+  $khane->tozihat=$request->tozihat;
   $khane->price=$request->price;
   $khane->moaveze=$request->moaveze;
   $khane->typeagahi=$request->typeagahi;
@@ -274,6 +305,13 @@ elseif($collection=='khane') {
 elseif($collection=='khadamat') {
   $khadamat=new KHadamat();
   $khadamat->mainagahi_id=$id;
+  $khadamat->onvanagahi=$request->onvanagahi;
+  $khadamat->mobile=$request->mobile;
+  // $khadamat->ostan='فارس';
+  $khadamat->city=$request->city;
+  $khadamat->map=$request->map;
+  $khadamat->tozihat=$request->tozihat;
+  $khadamat->price=$request->price;
   $khadamat->websayt=$request->websayt;
   $khadamat->typeagahi=$request->typeagahi;
   $khadamat->chat=$request->chat;
@@ -283,6 +321,12 @@ elseif($collection=='khadamat') {
 elseif($collection=='vasayel') {
   $vasayel=new vasayel();
   $vasayel->mainagahi_id=$id;
+  $vasayel->onvanagahi=$request->onvanagahi;
+  $vasayel->mobile=$request->mobile;
+  // $vasayel->ostan='فارس';
+  $vasayel->city=$request->city;
+  $vasayel->map=$request->map;
+  $vasayel->tozihat=$request->tozihat;
   $vasayel->price=$request->price;
   $vasayel->moaveze=$request->moaveze;
   $vasayel->typeagahi=$request->typeagahi;
@@ -299,7 +343,6 @@ elseif($collection=='sargarmi') {
   $sargarmi->city=$request->city;
   $sargarmi->map=$request->map;
   $sargarmi->tozihat=$request->tozihat;
-
   $sargarmi->mainagahi_id=$id;
   $sargarmi->price=$request->price;
   $sargarmi->moaveze=$request->moaveze;
@@ -309,14 +352,49 @@ elseif($collection=='sargarmi') {
   $sargarmi->menu=$request->menu;
   $sargarmi->save();
 }
-elseif($collection=='') {
-  // code...
+elseif($collection=='ejtemaei') {
+  $ejtemaei=new ejtemaei();
+  $ejtemaei->onvanagahi=$request->onvanagahi;
+  $ejtemaei->mobile=$request->mobile;
+  // $ejtemaei->ostan='فارس';
+  $ejtemaei->city=$request->city;
+  $ejtemaei->map=$request->map;
+  $ejtemaei->tozihat=$request->tozihat;
+  $ejtemaei->mainagahi_id=$id;
+  $ejtemaei->typeagahi=$request->typeagahi;
+  $ejtemaei->numbertel=$request->numbertel;
+  $ejtemaei->chat=$request->chat;
+  $ejtemaei->menu=$request->menu;
+  $ejtemaei->save();
 }
-elseif($collection=='') {
-  // code...
+elseif($collection=='forkar') {
+  $forkar=new Forkar();
+  $forkar->onvanagahi=$request->onvanagahi;
+  $forkar->mobile=$request->mobile;
+  // $forkar->ostan='فارس';
+  $forkar->city=$request->city;
+  $forkar->map=$request->map;
+  $forkar->tozihat=$request->tozihat;
+  $forkar->mainagahi_id=$id;
+  $forkar->price=$request->price;
+  $forkar->moaveze=$request->moaveze;
+  $forkar->typeagahi=$request->typeagahi;
+  $forkar->chat=$request->chat;
+  $forkar->menu=$request->menu;
+  $forkar->save();
 }
-elseif($collection=='') {
-  // code...
+elseif($collection=='estekhdam') {
+  $estekhdam=new Estejhdam();
+  $estekhdam->onvanagahi=$request->onvanagahi;
+  $estekhdam->mobile=$request->mobile;
+  // $estekhdam->ostan='فارس';
+  $estekhdam->city=$request->city;
+  $estekhdam->map=$request->map;
+  $estekhdam->tozihat=$request->tozihat;
+  $estekhdam->mainagahi_id=$id;
+  $estekhdam->chat=$request->chat;
+  $estekhdam->menu=$request->menu;
+  $estekhdam->save();
 }
 elseif($collection=='') {
   // code...

@@ -1103,3 +1103,21 @@ function validate(evt) {
     if(theEvent.preventDefault) theEvent.preventDefault();
   }
 }
+
+// مربوط به سرچ آگهی ها
+function searchAgahi() {
+// r=$('#onvanagahi').val();
+// alert(r)
+  $.ajaxSetup({ headers: {'X-CSRF-TOKEN': $('meta[name="_token"]').attr('content')}});
+  $.ajax({
+    type:'post',
+    url:'../searchAgahi',
+    data:{
+      onvanagahi:$('#onvanagahi').val(),
+    },
+    success:function(data){
+    $('#allagahi').html(data)
+
+    }
+  });
+}

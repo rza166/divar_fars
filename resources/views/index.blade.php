@@ -25,15 +25,18 @@
   <div class="e19">
 
 
-    <form >
+
       <div class=" e20">
-         <input type="text" class=" e22 e23 e22-1" placeholder="جستجو در همه آگهی ها" id="usr" name="username">
+         <input type="text"  class=" e22 e23 e22-1" placeholder="جستجو در همه آگهی ها" id="onvanagahi" name="username">
         <div class=" e21 e22-1">
-          <i class="material-icons">&#xe8b6;</i>
+          <i onclick="searchAgahi()" class="material-icons">&#xe8b6;</i>
+            {{-- <button type="button" onclick="searchAgahi()" class="e21 e22-1"  ></button> --}}
+  {{-- <button type="button" onclick="searchAgahi()" class="e14-1 "  ><i class="material-icons">&#xe8b6;</i></button> --}}
+           <div class="" id="searchName3">
+
+          </div >
+          </div >
         </div >
-
-
-      </div>
 
 
         {{-- <div class=" e20">
@@ -87,7 +90,7 @@
     </form>
 
 
-    <div class="allagahi">
+    <div class="allagahi" id="allagahi">
       <div class="khat2">
 
       </div>
@@ -98,7 +101,7 @@
                    {{$agahi2->onvanagahi}}
              </div>
              <div class="priceagahi">
-               {{$agahi2->price}}
+               {{$agahi2->price}} تومان
              </div>
              <div class="tarikh">
                {{-- {{date('y/m/d h:i:s',$agahi2->date)}} --}}
@@ -128,14 +131,29 @@
                @endphp
              {{$zaman}}
              <br>
-             {{time()}}
+             {{-- {{time()}} --}}
              </div>
            </div>
            <div class="aksagahi">
-             عکس
+             @php
+               $showimage=$imageAgahi->where('nameTable',$agahi2->tablename)->where('recordId',$agahi2->id)->first();
+             @endphp
+
+             {{$agahi2->ImageAgahi}}
+             @if (!empty($showimage->id))
+               <img width="135" height="135" src="../img_pro/" alt="">
+               @else
+                 <i class="fa fa-camera ia tarikh2" style="font-size:42px"></i>
+             @endif
+             </div>
+
+ {{-- <img src="../img_pro/1574349578agahi.jpg" alt=""> --}}
+           {{-- </div>
+
+        </div>
            </div>
         </div>
-      @endforeach
+
 
       {{-- @foreach ($agahi as $agahi2)
         <div class="oneagahi">
@@ -169,7 +187,7 @@
 
     </div>
 
-
+@endforeach
   </div>
 
 

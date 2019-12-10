@@ -41,4 +41,5 @@ Route::get('/sabtnahaei/{id}', 'IndexController@sabtnahaei' )->where('id', '[1-9
 Route::post('/uplod_img_pro', 'IndexController@uplod_img_pro');
 Route::get('/{city2?}','IndexController@view');
 Route::post('/searchName','IndexController@searchName');
+Route::post('/searchAgahi','IndexController@searchAgahi');
 Route::post('/modelshow','IndexController@modelshow');

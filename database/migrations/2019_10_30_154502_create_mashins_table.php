@@ -16,6 +16,12 @@ class CreateMashinsTable extends Migration
         Schema::create('mashins', function (Blueprint $table) {
           $table->bigIncrements('id');
           $table->integer('mainagahi_id')->unique();
+          $table->string('onvanagahi',50);
+          $table->string('mobile',13);
+          $table->string('ostan');
+          $table->string('city',20);
+          $table->string('map',50)->nullable();
+          $table->string('tozihat',240);
           $table->integer('price')->nullable();
           $table->tinyInteger('moaveze')->nullable()->comment('معاوضه');
           $table->string('typeagahi',10);
