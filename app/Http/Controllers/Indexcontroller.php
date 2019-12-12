@@ -216,8 +216,8 @@ public function Mainagahi(RequestMainAgahi  $request)
   $save->date=time();
   $save->show=1;
   $save->save();
-  $id= $save->id;
-
+  $id=$save->id;
+  global $idsabt;$idsabt=$id;
 if ($collection=='amlak') {
  $amlak=new Amlak();
  $amlak->mainagahi_id=$id;
@@ -242,6 +242,7 @@ if ($collection=='amlak') {
  $amlak->chat=$request->chat;
  $amlak->menu=$request->menu;
  $amlak->save();
+
 
 } elseif($collection=='mashin') {
   $mashin=new Mashin();
@@ -414,9 +415,10 @@ elseif($collection=='') {
     $picture->nameImage6 =  (!empty($nameImg[5])) ? $nameImg[5] : null  ;
     }
     $picture->save();
-    return $id;
-    });
 
+    });
+    global $idsabt;
+return  $idsabt;
   //
   // $save->chat=$chat;
   // $save->barand=$barand;
@@ -839,9 +841,42 @@ public function sabtnahaei(Request $request)
     $city="ارسنجان";
   }
 
-$city1=City::where('show',1)->orderby('bazdid', 'DESC')->get();  $id=$request->id;
- $esi=Mainagahi::find($id);
-return view('agahi.sabtnahaei',compact('esi','agahi','city','city1'));
+$city1=City::where('show',1)->orderby('bazdid', 'DESC')->get();
+$id=$request->id;
+ $mainagahi=Mainagahi::find($id);
+ $collection=$request->collection;
+ if ($collection=='amlak') {
+  $tableChild=Amlak::where('mainagahi_id',$id)->first();
+}
+elseif ($collection=='mashin') {
+ $tableChild=Mashin::where('mainagahi_id',$id)->first();
+}
+elseif ($collection=='electriki') {
+ $tableChild=Electrici::where('mainagahi_id',$id)->first();
+}
+elseif ($collection=='khane') {
+ $tableChild=khane::where('mainagahi_id',$id)->first();
+}
+elseif ($collection=='khadamat') {
+ $tableChild=KHadamat::where('mainagahi_id',$id)->first();
+}
+elseif ($collection=='vasayel') {
+ $tableChild=vasayel::where('mainagahi_id',$id)->first();
+}
+elseif ($collection=='sargarmi') {
+ $tableChild=Sargarmi::where('mainagahi_id',$id)->first();
+}
+elseif ($collection=='ejtema') {
+ $tableChild=ejtemaei::where('mainagahi_id',$id)->first();
+}
+elseif ($collection=='forkar') {
+ $tableChild=Forkar::where('mainagahi_id',$id)->first();
+}
+elseif ($collection=='estekhdam') {
+ $tableChild=Estejhdam::where('mainagahi_id',$id)->first();
+}
+
+return view('agahi.sabtnahaei',compact('mainagahi','tableChild','collection','agahi','city','city1'));
 }
 // مربوط به منوی املاک
 public function amlak(Request $request)

@@ -363,11 +363,12 @@ function saveAmlak(menu,collection) {
 
        },
     success:function(data){
+      alert(data);
       scroll_form('reset')
       // refresh()
       $('#error').html('<div class="alert alert-success"> ثبت با موفقیت انجام شد </div>')
       document.getElementById('reset').reset();
-      window.location.href = "/sabtnahaei/" + data;
+      window.location.href = "/sabtnahaei/" + data + '/' + collection;
     },
     error: function(xhr) {
       scroll_form('reset')
@@ -456,7 +457,7 @@ function saveMashin(menu,collection) {
       // refresh()
       $('#error').html('<div class="alert alert-success"> ثبت با موفقیت انجام شد </div>')
       document.getElementById('reset').reset();
-      window.location.href = "/sabtnahaei/" + data;
+      window.location.href = "/sabtnahaei/" + data  + '/' + collection;
     },
     error: function(xhr) {
       scroll_form('reset')
@@ -543,7 +544,7 @@ function savebarghi(menu,collection) {
       // refresh()
       $('#error').html('<div class="alert alert-success"> ثبت با موفقیت انجام شد </div>')
       document.getElementById('reset').reset();
-      window.location.href = "/sabtnahaei/" + data;
+      window.location.href = "/sabtnahaei/" + data + '/' + collection;
     },
     error: function(xhr) {
       scroll_form('reset')
@@ -601,7 +602,7 @@ function savehome(menu,collection) {
       // refresh()
       $('#error').html('<div class="alert alert-success"> ثبت با موفقیت انجام شد </div>')
       document.getElementById('reset').reset();
-      window.location.href = "/sabtnahaei/" + data;
+      window.location.href = "/sabtnahaei/" + data + '/' + collection;
     },
     error: function(xhr) {
       scroll_form('reset')
@@ -657,7 +658,7 @@ function savehelp(menu,collection) {
       // refresh()
       $('#error').html('<div class="alert alert-success"> ثبت با موفقیت انجام شد </div>')
       document.getElementById('reset').reset();
-      window.location.href = "/sabtnahaei/" + data ;
+      window.location.href = "/sabtnahaei/" + data + '/' + collection;
     },
     error: function(xhr) {
       scroll_form('reset')
@@ -707,7 +708,7 @@ function savevasile(menu,collection) {
       // refresh()
       $('#error').html('<div class="alert alert-success"> ثبت با موفقیت انجام شد </div>')
       document.getElementById('reset').reset();
-      window.location.href = "/sabtnahaei/" + data;
+      window.location.href = "/sabtnahaei/" + data + '/' + collection;
     },
     error: function(xhr) {
       scroll_form('reset')
@@ -768,7 +769,7 @@ function savegame(menu,collection) {
       // refresh()
       $('#error').html('<div class="alert alert-success"> ثبت با موفقیت انجام شد </div>')
       document.getElementById('reset').reset();
-      window.location.href = "/sabtnahaei/" + data;
+      window.location.href = "/sabtnahaei/" + data + '/' + collection;
     },
     error: function(xhr) {
       scroll_form('reset')
@@ -825,7 +826,7 @@ function saveejtema(menu,collection) {
       // refresh()
       $('#error').html('<div class="alert alert-success"> ثبت با موفقیت انجام شد </div>')
       document.getElementById('reset').reset();
-      window.location.href = "/sabtnahaei/" + data;
+      window.location.href = "/sabtnahaei/" + data + '/' + collection;
     },
     error: function(xhr) {
       scroll_form('reset')
@@ -859,7 +860,6 @@ $('#error').html('<div class="alert alert-danger">'+ error['tozihat'] + '</div>'
   });
 }
 
-
 // برای کسب وکار
 function savejob(menu,collection) {
       $.ajaxSetup({ headers: {'X-CSRF-TOKEN': $('meta[name="_token"]').attr('content')}});
@@ -884,7 +884,7 @@ function savejob(menu,collection) {
       // refresh()
       $('#error').html('<div class="alert alert-success"> ثبت با موفقیت انجام شد </div>')
       document.getElementById('reset').reset();
-      window.location.href = "/sabtnahaei/" + data;
+      window.location.href = "/sabtnahaei/" + data + '/' + collection;
     },
     error: function(xhr) {
       scroll_form('reset')
@@ -940,7 +940,7 @@ function saveestekhdam2(menu,collection) {
       // refresh()
       $('#error').html('<div class="alert alert-success"> ثبت با موفقیت انجام شد </div>')
       document.getElementById('reset').reset();
-      window.location.href = "/sabtnahaei/" + data ;
+      window.location.href = "/sabtnahaei/" + data+ '/' + collection ;
     },
     error: function(xhr) {
       scroll_form('reset')

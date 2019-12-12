@@ -37,7 +37,7 @@ Route::post('/Mainagahi','IndexController@Mainagahi');
 // Route::post('/job','IndexController@job');
 // Route::post('/estekhdam2','IndexController@estekhdam2');
 
-Route::get('/sabtnahaei/{id}', 'IndexController@sabtnahaei' )->where('id', '[1-9]+');
+Route::get('/sabtnahaei/{id}/{collection}', 'IndexController@sabtnahaei' )->where('id', '[1-9]+');
 Route::post('/uplod_img_pro', 'IndexController@uplod_img_pro');
 Route::get('/{city2?}','IndexController@view');
 Route::post('/searchName','IndexController@searchName');

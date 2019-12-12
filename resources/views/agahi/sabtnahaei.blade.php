@@ -19,18 +19,18 @@
   <form>
     <div class="a10" id="error2">
     </div>
-
-    <div class="a7">
-      <span class="input-group-text">شهر <input type="text" class="input-group-text a7-input" id="city2" disabled name=""  value="{{$esi->city}}"></span>
-      <span class="input-group-text">قیمت<input type="text" class="input-group-text a7-input" id="price2" name="" disabled value="{{$esi->price}}"></span>
-      <span class="input-group-text">نوع آگهی<input type="text" class="input-group-text a7-input" id="typeagahi2" name="" disabled @if ($esi->typeagahi==1)value="ارایه"@else value="درخواستی"@endif ></span>
-      <span class="input-group-text">آگهی دهنده<input type="text" class="input-group-text a7-input2" id="agahidahande2" name="" disabled value="{{$esi->agahidahande}}"></span>
-      <span class="input-group-text">متراژ<input type="text" class="input-group-text a7-input" id="meter2" name="" disabled value="{{$esi->meter}}"></span>
-      <span class="input-group-text">ودیعه<input type="text" class="input-group-text a7-input" id="vadie2" name="" disabled value="{{$esi->vadie}}"></span>
-      <span class="input-group-text">اجاره<input type="text" class="input-group-text a7-input" id="ejare2" name="" disabled value="{{$esi->ejare}}"></span>
-      <span class="input-group-text">تعداد اتاق<input type="text" class="input-group-text a7-input2" id="tedadotagh2" name="" disabled value="{{$esi->tedadotagh}}"></span>
-      <span class="input-group-text">سال ساخت<input type="text" class="input-group-text a7-input2" id="salesakht" name="" disabled value="{{$esi->salesakht}}"></span>
-      <span class="input-group-text">موبایل<input type="text" class="input-group-text a7-input2" id="mobile2" name="" disabled value="{{$esi->mobile}}"></span>
+      <div class="a7">
+        {{-- <label for="">شهر</label>{{$mainagahi->city}} --}}
+      <span class="input-group-text">شهر <input type="text" class="input-group-text a7-input" id="city2" disabled name=""  value="{{$mainagahi->city}}"></span>
+      <span class="input-group-text">قیمت<input type="text" class="input-group-text a7-input" id="price2" name="" disabled value="{{$mainagahi->price}}"></span>
+      <span class="input-group-text">نوع آگهی<input type="text" class="input-group-text a7-input" id="typeagahi2" name="" disabled @if ($tableChild->typeagahi==1)value="ارایه"@else value="درخواستی"@endif ></span>
+      <span class="input-group-text">آگهی دهنده<input type="text" class="input-group-text a7-input2" id="agahidahande2" name="" disabled value="{{$tableChild->agahidahande}}"></span>
+      <span class="input-group-text">متراژ<input type="text" class="input-group-text a7-input" id="meter2" name="" disabled value="{{$tableChild->meter}}"></span>
+      <span class="input-group-text">ودیعه<input type="text" class="input-group-text a7-input" id="vadie2" name="" disabled value="{{$tableChild->vadie}}"></span>
+      <span class="input-group-text">اجاره<input type="text" class="input-group-text a7-input" id="ejare2" name="" disabled value="{{$tableChild->ejare}}"></span>
+      <span class="input-group-text">تعداد اتاق<input type="text" class="input-group-text a7-input2" id="tedadotagh2" name="" disabled value="{{$tableChild->tedadotagh}}"></span>
+      <span class="input-group-text">سال ساخت<input type="text" class="input-group-text a7-input2" id="salesakht" name="" disabled value="{{$tableChild->salesakht}}"></span>
+      <span class="input-group-text">موبایل<input type="text" class="input-group-text a7-input2" id="mobile2" name="" disabled value="{{$mainagahi->mobile}}"></span>
     </div>
 
 

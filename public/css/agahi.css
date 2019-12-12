@@ -374,7 +374,7 @@ float: right;
   background-color: rgb(255, 255, 255);
   height: 50px;
 }
-.a7-input{
+ .a7-input{
   width: 95%;
   padding: 0 66% 0 0;
   border: none;
@@ -388,6 +388,7 @@ float: right;
   background-color: rgb(255, 255, 255);
   float: left;
 }
+
 
 .khat2{
   width: 96%;
