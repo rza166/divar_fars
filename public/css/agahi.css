@@ -363,32 +363,6 @@ float: right;
   margin:auto;
   margin-top: 20px;
 }
-.a7{
-  width: 35%;
-  margin: 0 4% 0 0;
-  float: right;
-  border-bottom: 1px solid rgb(235, 235, 235);
-
-}
-.a7 span{
-  background-color: rgb(255, 255, 255);
-  height: 50px;
-}
- .a7-input{
-  width: 95%;
-  padding: 0 66% 0 0;
-  border: none;
-  background-color: rgb(255, 255, 255);
-  float: left;
-}
-.a7-input2{
-  width: 95%;
-  padding: 0 55% 0 0;
-  border: none;
-  background-color: rgb(255, 255, 255);
-  float: left;
-}
-
 
 .khat2{
   width: 96%;
@@ -456,4 +430,112 @@ float: right;
 /* background-color: rgb(34, 17, 171); */
   border: none;
   border-radius:0px 2px 2px 0;
+}
+.a7{
+  width: 35%;
+  margin: 0 4% 0 0;
+  float: right;
+  border-bottom: 1px solid rgb(235, 235, 235);
+
+}
+.a7 span{
+  background-color: rgb(255, 255, 255);
+  height: 50px;
+}
+ .a7-input{
+  width: 95%;
+  padding: 0 66% 0 0;
+  border: none;
+  background-color: rgb(255, 255, 255);
+  float: left;
+}
+.a7-input2{
+  width: 95%;
+  padding: 0 55% 0 0;
+  border: none;
+  background-color: rgb(255, 255, 255);
+  float: left;
+}
+
+
+
+.sabt1{
+  width: calc(100% - 180px);;
+  height: 35px;
+  float: right;
+  color: rgb(94, 94, 94);
+  margin-top: 16px;
+  margin-right: 20px;
+  font-size: 18px;
+  text-align: right;
+  border-bottom: .2px solid rgb(189, 189, 189);
+}
+.sabt2{
+  width: 160px;
+  height: 35px;
+  margin-top: 16px;
+  float: right;
+  font-size: 18px;
+  border-bottom: .2px solid rgb(189, 189, 189);
+}
+.sabt3{
+  width: 100%;
+  float: right;
+  font-size: 24px;
+  text-align: right;
+  margin-right: 5px;
+  margin-top: 28px;
+}
+.sabt4{
+  width: 100%;
+  float: right;
+  font-size: 22px;
+  font-weight: bold;
+  text-align: right;
+  margin-right: 5px;
+  margin-top: 10px;
+}
+.sabt5{
+  width: 100%;
+  float: right;
+  font-size: 18px;
+  color: rgb(94, 94, 94);
+  text-align: right;
+  margin-right: 20px;
+  margin-top: 25px;
+}
+.sabt6{
+  width: 100%;
+  float: right;
+  font-size: 18px;
+  color: rgb(94, 94, 94);
+  text-align: right;
+  margin-right: 40px;
+  margin-top: 60px;
+  margin-bottom: 40px;
+}
+.amaragahi{
+  width: 96%;
+  height: 300px;
+  float: right;
+  margin: 0 2%;
+}
+.amaragahi1{
+  width: 44%;
+  float: right;
+  text-align: right;
+  font-size: 22px;
+  margin-right: 40px;
+}
+.amaragahi2{
+  text-align: right;
+  font-size: 16px;
+  margin-top: 10px;
+  margin-right: 40px;
+}
+.amaragahi3{
+  float: right;
+  text-align: right;
+  margin-right: 100px;
+  margin-top: 40px;
 }

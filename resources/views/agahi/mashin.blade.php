@@ -103,10 +103,10 @@
   <span class="labela4" for="">نوع آگهی</span>
   <div class="a2-4" >
     <label class="form-check-label a2-4input2a" for="radio1">
-            <input type="radio" id="typeagahi" class="form-check-input a2-4input11" id="radio1" name="optradio" value="فروشی">فروشی
+            <input type="radio" id="typeagahi" class="form-check-input a2-4input11" id="radio2" name="optradio" value="فروشی">فروشی
     </label>
     <label class="form-check-label a2-4input3" for="radio2">
-        <input type="radio" class="form-check-input a2-4input4" id="radio2" name="optradio" value="درخواستی">درخواستی
+        <input type="radio" class="form-check-input a2-4input4" id="radio1" name="optradio" value="درخواستی">درخواستی
     </label>
   </div>
   @endif
