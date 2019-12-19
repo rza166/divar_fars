@@ -845,6 +845,7 @@ $city1=City::where('show',1)->orderby('bazdid', 'DESC')->get();
 $id=$request->id;
  $mainagahi=Mainagahi::find($id);
  $collection=$request->collection;
+ $menu=$request->menu;
  if ($collection=='amlak') {
   $tableChild=Amlak::where('mainagahi_id',$id)->first();
 }
@@ -876,7 +877,7 @@ elseif ($collection=='estekhdam') {
  $tableChild=Estejhdam::where('mainagahi_id',$id)->first();
 }
 
-return view('agahi.sabtnahaei',compact('mainagahi','tableChild','collection','agahi','city','city1'));
+return view('agahi.sabtnahaei',compact('mainagahi','tableChild','collection','menu','agahi','city','city1'));
 }
 // مربوط به منوی املاک
 public function amlak(Request $request)

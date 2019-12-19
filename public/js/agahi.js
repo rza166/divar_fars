@@ -368,7 +368,7 @@ function saveAmlak(menu,collection) {
       // refresh()
       $('#error').html('<div class="alert alert-success"> ثبت با موفقیت انجام شد </div>')
       document.getElementById('reset').reset();
-      window.location.href = "/sabtnahaei/" + data + '/' + collection;
+      window.location.href = "/sabtnahaei/" + data + '/' + collection + menu;
     },
     error: function(xhr) {
       scroll_form('reset')

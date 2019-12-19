@@ -21,11 +21,48 @@
     </div>
 
 
+<div class="a7">
+  <label class="sabt4"for="">پیش نمایش آگهی </label>
+<label class="sabt3"for="">{{$mainagahi->onvanagahi}}</label>
+<label class="sabt5"for="">دقایقی پیش</label>
+<label class="sabt1" for="">موبایل</label> <label class="sabt2"for="">{{$mainagahi->mobile}}</label>
+<label class="sabt1" for="">شهر</label> <label class="sabt2"for="">{{$mainagahi->city}}</label>
+  <label class="sabt1" for="">قیمت</label> <label class="sabt2"for="">{{$mainagahi->price}}</label>
+  <label class="sabt1"for="">نوع آگهی</label><label class="sabt2"for="">{{$tableChild->typeagahi}}</label>
+  <label class="sabt1" for=""> آگهی دهنده</label> <label class="sabt2"for="">{{$tableChild->agahidahande}}</label>
+@if ($menu=111||$menu=112||$menu=113||$menu=121||$menu=122||$menu=123||$menu=124||$menu=131||$menu=132||$menu=133||$menu=134||$menu=141||$menu=142||$menu=143||$menu=144||$menu=151||$menu=152||$menu=153||$menu=154 ) {
+    <label class="sabt1" for="">متراژ</label> <label class="sabt2"for="">{{$tableChild->meter}}</label>
+      }
+@elseif ($menu=111||$menu=112||$menu=113||$menu=141||$menu=142||$menu=143||$menu=144 ) {
+          <label class="sabt1" for="">ودیعه</label> <label class="sabt2"for="">{{$tableChild->vadie}}</label>
+          <label class="sabt1" for="">اجاره</label> <label class="sabt2"for="">{{$tableChild->ejare}}</label>
+      }
+@elseif ($menu=111||$menu=112||$menu=113||$menu=121||$menu=122||$menu=131||$menu=132||$menu=133||$menu=141||$menu=142||$menu=143||$menu=151||$menu=152||$menu=153||$menu=154) {
+          <label class="sabt1" for="">تعداد اتاق</label> <label class="sabt2"for="">{{$tableChild->tedadotagh}}</label>
+      }
+@elseif ($menu=111||$menu=112||$menu=121||$menu=122||$menu=31||$menu=132||$menu=33||$menu=141||$menu=142||$menu=143|| ) {
+          <label class="sabt1" for="">سال ساخت</label> <label class="sabt2"for="">{{$tableChild->salesakht}}</label>
+      }
+@elseif ($menu=151||$menu=152||$menu=153||$menu=154) {
+          <label class="sabt1" for="">اجاره روزانه</label> <label class="sabt2"for="">{{$tableChild->ejareday}}</label>
+       }
 
+<label class="sabt6"for="">{{$mainagahi->tozihat}}</label>
 
-    @if ($collection=="amlak") {
-      <div class="a7">
-        <label class="sabt4"for="">پیش نمایش آگهی </label>
+       {{-- <span class="input-group-text">شهر <input type="text" class="input-group-text a7-input" id="city2" disabled name=""  value="{{$mainagahi->city}}"></span>
+       <span class="input-group-text">قیمت<input type="text" class="input-group-text a7-input" id="price2" name="" disabled value="{{$mainagahi->price}}"></span>
+       <span class="input-group-text">نوع آگهی<input type="text" class="input-group-text a7-input" id="typeagahi2" name="" disabled @if ($tableChild->typeagahi==1)value="ارایه"@else value="درخواستی"@endif ></span>
+      <span class="input-group-text">آگهی دهنده<input type="text" class="input-group-text a7-input2" id="agahidahande2" name="" disabled value="{{$tableChild->agahidahande}}"></span>
+       <span class="input-group-text">متراژ<input type="text" class="input-group-text a7-input" id="meter2" name="" disabled value="{{$tableChild->meter}}"></span>
+       <span class="input-group-text">ودیعه<input type="text" class="input-group-text a7-input" id="vadie2" name="" disabled value="{{$tableChild->vadie}}"></span>
+       <span class="input-group-text">اجاره<input type="text" class="input-group-text a7-input" id="ejare2" name="" disabled value="{{$tableChild->ejare}}"></span>
+       <span class="input-group-text">تعداد اتاق<input type="text" class="input-group-text a7-input2" id="tedadotagh2" name="" disabled value="{{$tableChild->tedadotagh}}"></span>
+       <span class="input-group-text">سال ساخت<input type="text" class="input-group-text a7-input2" id="salesakht" name="" disabled value="{{$tableChild->salesakht}}"></span>
+       <span class="input-group-text">موبایل<input type="text" class="input-group-text a7-input2" id="mobile2" name="" disabled value="{{$mainagahi->mobile}}"></span> --}}
+      {{-- @php
+      break;
+      case $menu=112: @endphp --}}
+        {{-- <label class="sabt4"for="">پیش نمایش آگهی </label>
         <label class="sabt3"for="">{{$mainagahi->onvanagahi}}</label>
         <label class="sabt5"for="">دقایقی پیش</label>
         <label class="sabt1" for="">موبایل</label> <label class="sabt2"for="">{{$mainagahi->mobile}}</label>
@@ -39,86 +76,100 @@
         <label class="sabt1" for="">اجاره</label> <label class="sabt2"for="">{{$tableChild->ejare}}</label>
         <label class="sabt1" for="">تعداد اتاق</label> <label class="sabt2"for="">{{$tableChild->tedadotagh}}</label>
         <label class="sabt6"for="">{{$mainagahi->tozihat}}</label>
-      {{-- <span class="input-group-text">شهر <input type="text" class="input-group-text a7-input" id="city2" disabled name=""  value="{{$mainagahi->city}}"></span>
-      <span class="input-group-text">قیمت<input type="text" class="input-group-text a7-input" id="price2" name="" disabled value="{{$mainagahi->price}}"></span>
-      <span class="input-group-text">نوع آگهی<input type="text" class="input-group-text a7-input" id="typeagahi2" name="" disabled @if ($tableChild->typeagahi==1)value="ارایه"@else value="درخواستی"@endif ></span>
-      <span class="input-group-text">آگهی دهنده<input type="text" class="input-group-text a7-input2" id="agahidahande2" name="" disabled value="{{$tableChild->agahidahande}}"></span>
-      <span class="input-group-text">متراژ<input type="text" class="input-group-text a7-input" id="meter2" name="" disabled value="{{$tableChild->meter}}"></span>
-      <span class="input-group-text">ودیعه<input type="text" class="input-group-text a7-input" id="vadie2" name="" disabled value="{{$tableChild->vadie}}"></span>
-      <span class="input-group-text">اجاره<input type="text" class="input-group-text a7-input" id="ejare2" name="" disabled value="{{$tableChild->ejare}}"></span>
-      <span class="input-group-text">تعداد اتاق<input type="text" class="input-group-text a7-input2" id="tedadotagh2" name="" disabled value="{{$tableChild->tedadotagh}}"></span>
-      <span class="input-group-text">سال ساخت<input type="text" class="input-group-text a7-input2" id="salesakht" name="" disabled value="{{$tableChild->salesakht}}"></span>
-      <span class="input-group-text">موبایل<input type="text" class="input-group-text a7-input2" id="mobile2" name="" disabled value="{{$mainagahi->mobile}}"></span> --}}
+        @php
+        break;
+        case $menu=111: @endphp
+          <label class="sabt4"for="">پیش نمایش آگهی </label>
+          <label class="sabt3"for="">{{$mainagahi->onvanagahi}}</label>
+          <label class="sabt5"for="">دقایقی پیش</label>
+          <label class="sabt1" for="">موبایل</label> <label class="sabt2"for="">{{$mainagahi->mobile}}</label>
+          <label class="sabt1" for="">شهر</label> <label class="sabt2"for="">{{$mainagahi->city}}</label>
+          <label class="sabt1" for="">قیمت</label> <label class="sabt2"for="">{{$mainagahi->price}}</label>
+          <label class="sabt1"for="">نوع گهی</label><label class="sabt2"for="">{{$tableChild->typeagahi}}</label>
+          <label class="sabt1" for=""> آگهی دهنده</label> <label class="sabt2"for="">{{$tableChild->agahidahande}}</label>
+          <label class="sabt1" for="">متراژ</label> <label class="sabt2"for="">{{$tableChild->meter}}</label>
+          <label class="sabt1" for="">سال ساخت</label> <label class="sabt2"for="">{{$tableChild->salesakht}}</label>
+          <label class="sabt1" for="">ودیعه</label> <label class="sabt2"for="">{{$tableChild->vadie}}</label>
+          <label class="sabt1" for="">اجاره</label> <label class="sabt2"for="">{{$tableChild->ejare}}</label>
+          <label class="sabt1" for="">تعداد اتاق</label> <label class="sabt2"for="">{{$tableChild->tedadotagh}}</label>
+          <label class="sabt6"for="">{{$mainagahi->tozihat}}</label>
+          @php
+          break;
+      default:
+      break;
+      @endphp
+  } --}}
+    {{-- } --}}
     </div>
-    }
-  @elseif ($collection=='mashin') {
-    <div class="a7">
-         <label class="sabt4"for="">پیش نمایش آگهی </label>
-         <label class="sabt3"for="">{{$tableChild->typeagahi}}</label>
-         <label class="sabt5"for="">دقایقی پیش</label>
-         <label class="sabt1" for="">موبایل</label> <label class="sabt2"for="">{{$mainagahi->mobile}}</label>
-         <label class="sabt1" for="">شهر</label> <label class="sabt2"for="">{{$mainagahi->city}}</label>
-         <label class="sabt1" for="">برند</label> <label class="sabt2"for="">{{$tableChild->barand}}</label>
-         <label class="sabt1" for="">قیمت</label> <label class="sabt2"for="">{{$mainagahi->price}}</label>
-         <label class="sabt1" for="">کارکرد</label> <label class="sabt2"for="">{{$tableChild->karkard}}</label>
-         <label class="sabt1" for="">سال ساخت</label> <label class="sabt2"for="">{{$tableChild->salesakht}}</label>
-         <label class="sabt1" for="">سند</label> <label class="sabt2"for="">{{$tableChild->sanad}}</label>
-         <label class="sabt1" for="">نحوه فروش</label> <label class="sabt2"for="">{{$tableChild->nahveforoush}}</label>
-         <label class="sabt1" for="">گیربکس</label> <label class="sabt2"for="">{{$tableChild->girbox}}</label>
-         <label class="sabt1" for="">بدنه</label> <label class="sabt2"for="">{{$tableChild->badane}}</label>
-         <label class="sabt1" for="">رنگ</label> <label class="sabt2"for="">{{$tableChild->rang}}</label>
-         <label class="sabt6"for="">{{$mainagahi->tozihat}}</label>
-    {{-- <label class="sabt1" for="">نوع آگهی<lable>@if ($tableChild->typeagahi==1)"فروشی"@else "اجاره ای"@endif ></label> --}}
-    {{-- <span class="input-group-text">موبایل<input type="text" class="input-group-text a7-input2" id="mobile2" name="" disabled value="{{$mainagahi->mobile}}"></span>
-    <span class="input-group-text">برند <input type="text" class="input-group-text a7-input" id="cbarand" disabled name=""  value="{{$tableChild->barand}}"></span>
-    <span class="input-group-text">قیمت<input type="text" class="input-group-text a7-input" id="price2" name="" disabled value="{{$mainagahi->price}}"></span>
-    <span class="input-group-text">کارکرد<input type="text" class="input-group-text a7-input2" id="karkard" name="" disabled value="{{$tableChild->karkard}}"></span>
-    <span class="input-group-text">سال ساخت <input type="text" class="input-group-text a7-input" id="salesakht" name="" disabled value="{{$tableChild->salesakht}}"></span>
-    <span class="input-group-text">سند<input type="text" class="input-group-text a7-input" id="sanad" name="" disabled value="{{$tableChild->sanad}}"></span>
-    <span class="input-group-text">نحوه فروش<input type="text" class="input-group-text a7-input" id="nahveforoush" name="" disabled value="{{$tableChild->nahveforoush}}"></span>
-    <span class="input-group-text">گیربکس<input type="text" class="input-group-text a7-input2" id="girbox" name="" disabled value="{{$tableChild->girbox}}"></span>
-    <span class="input-group-text">وضعیت بدنه<input type="text" class="input-group-text a7-input2" id="badane" name="" disabled value="{{$tableChild->badane}}"></span>
-    <span class="input-group-text">رنگ<input type="text" class="input-group-text a7-input2" id="rang" name="" disabled value="{{$mainagahi->rang}}"></span> --}}
+ @elseif ($collection=='mashin') {
+     <div class="a7">
+          <label class="sabt4"for="">پیش نمایش آگهی </label>
+          <label class="sabt3"for="">{{$tableChild->typeagahi}}</label>
+          <label class="sabt5"for="">دقایقی پیش</label>
+          <label class="sabt1" for="">موبایل</label> <label class="sabt2"for="">{{$mainagahi->mobile}}</label>
+          <label class="sabt1" for="">شهر</label> <label class="sabt2"for="">{{$mainagahi->city}}</label>
+          <label class="sabt1" for="">برند</label> <label class="sabt2"for="">{{$tableChild->barand}}</label>
+          <label class="sabt1" for="">قیمت</label> <label class="sabt2"for="">{{$mainagahi->price}}</label>
+          <label class="sabt1" for="">کارکرد</label> <label class="sabt2"for="">{{$tableChild->karkard}}</label>
+          <label class="sabt1" for="">سال ساخت</label> <label class="sabt2"for="">{{$tableChild->salesakht}}</label>
+          <label class="sabt1" for="">سند</label> <label class="sabt2"for="">{{$tableChild->sanad}}</label>
+          <label class="sabt1" for="">نحوه فروش</label> <label class="sabt2"for="">{{$tableChild->nahveforoush}}</label>
+          <label class="sabt1" for="">گیربکس</label> <label class="sabt2"for="">{{$tableChild->girbox}}</label>
+          <label class="sabt1" for="">بدنه</label> <label class="sabt2"for="">{{$tableChild->badane}}</label>
+          <label class="sabt1" for="">رنگ</label> <label class="sabt2"for="">{{$tableChild->rang}}</label>
+          <label class="sabt6"for="">{{$mainagahi->tozihat}}</label>
+  {{-- <label class="sabt1" for="">نوع آگهی<lable>@if ($tableChild->typeagahi==1)"فروشی"@else "اجاره ای"@endif ></label> --}}
+  {{-- <span class="input-group-text">موبایل<input type="text" class="input-group-text a7-input2" id="mobile2" name="" disabled value="{{$mainagahi->mobile}}"></span>
+   <span class="input-group-text">برند <input type="text" class="input-group-text a7-input" id="cbarand" disabled name=""  value="{{$tableChild->barand}}"></span>
+  <span class="input-group-text">قیمت<input type="text" class="input-group-text a7-input" id="price2" name="" disabled value="{{$mainagahi->price}}"></span>
+  <span class="input-group-text">کارکرد<input type="text" class="input-group-text a7-input2" id="karkard" name="" disabled value="{{$tableChild->karkard}}"></span>
+  <span class="input-group-text">سال ساخت <input type="text" class="input-group-text a7-input" id="salesakht" name="" disabled value="{{$tableChild->salesakht}}"></span>
+  <span class="input-group-text">سند<input type="text" class="input-group-text a7-input" id="sanad" name="" disabled value="{{$tableChild->sanad}}"></span>
+  <span class="input-group-text">نحوه فروش<input type="text" class="input-group-text a7-input" id="nahveforoush" name="" disabled value="{{$tableChild->nahveforoush}}"></span>
+  <span class="input-group-text">گیربکس<input type="text" class="input-group-text a7-input2" id="girbox" name="" disabled value="{{$tableChild->girbox}}"></span>
+  <span class="input-group-text">وضعیت بدنه<input type="text" class="input-group-text a7-input2" id="badane" name="" disabled value="{{$tableChild->badane}}"></span>
+  <span class="input-group-text">رنگ<input type="text" class="input-group-text a7-input2" id="rang" name="" disabled value="{{$mainagahi->rang}}"></span> --}}
   </div>
     }
   @elseif ($collection=='electriki') {
-    <label class="sabt4"for="">پیش نمایش آگهی </label>
-    <label class="sabt3"for="">{{$mainagahi->onvanagahi}}</label>
-    <label class="sabt5"for="">دقایقی پیش</label>
-    <label class="sabt1" for="">موبایل</label> <label class="sabt2"for="">{{$mainagahi->mobile}}</label>
-    <label class="sabt1" for="">شهر</label> <label class="sabt2"for="">{{$mainagahi->city}}</label>
-    <label class="sabt1" for="">قیمت</label> <label class="sabt2"for="">{{$mainagahi->price}}</label>
-    <label class="sabt1"for="">نوع گهی</label><label class="sabt2"for="">{{$tableChild->typeagahi}}</label>
-    <label class="sabt1" for=""> آگهی دهنده</label> <label class="sabt2"for="">{{$tableChild->agahidahande}}</label>
-    <label class="sabt1" for="">متراژ</label> <label class="sabt2"for="">{{$tableChild->meter}}</label>
-    <label class="sabt1" for="">سال ساخت</label> <label class="sabt2"for="">{{$tableChild->salesakht}}</label>
-    <label class="sabt1" for="">ودیعه</label> <label class="sabt2"for="">{{$tableChild->vadie}}</label>
-    <label class="sabt1" for="">اجاره</label> <label class="sabt2"for="">{{$tableChild->ejare}}</label>
-    <label class="sabt1" for="">تعداد اتاق</label> <label class="sabt2"for="">{{$tableChild->tedadotagh}}</label>
-    <label class="sabt6"for="">{{$mainagahi->tozihat}}</label>
-    }
-  @elseif ($collection=='khane') {
+   <label class="sabt3"for="">{{$mainagahi->onvanagahi}}</label>
+   <label class="sabt4"for="">پیش نمایش آگهی </label>
+   <label class="sabt5"for="">دقایقی پیش</label>
+   <label class="sabt1" for="">موبایل</label> <label class="sabt2"for="">{{$mainagahi->mobile}}</label>
+   <label class="sabt1" for="">شهر</label> <label class="sabt2"for="">{{$mainagahi->city}}</label>
+   <label class="sabt1" for="">قیمت</label> <label class="sabt2"for="">{{$mainagahi->price}}</label>
+   <label class="sabt1"for="">نوع گهی</label><label class="sabt2"for="">{{$tableChild->typeagahi}}</label>
+   <label class="sabt1" for=""> آگهی دهنده</label> <label class="sabt2"for="">{{$tableChild->agahidahande}}</label>
+   <label class="sabt1" for="">متراژ</label> <label class="sabt2"for="">{{$tableChild->meter}}</label>
+   <label class="sabt1" for="">سال ساخت</label> <label class="sabt2"for="">{{$tableChild->salesakht}}</label>
+   <label class="sabt1" for="">ودیعه</label> <label class="sabt2"for="">{{$tableChild->vadie}}</label>
+   <label class="sabt1" for="">اجاره</label> <label class="sabt2"for="">{{$tableChild->ejare}}</label>
+   <label class="sabt1" for="">تعداد اتاق</label> <label class="sabt2"for="">{{$tableChild->tedadotagh}}</label>
+   <label class="sabt6"for="">{{$mainagahi->tozihat}}</label>
+   }
+ @elseif ($collection=='khane') {
 
-    }
-  @elseif ($collection=='khadamat') {
+   }
+ @elseif ($collection=='khadamat') {
 
-    }
-  @elseif ($collection=='vasayel') {
+   }
+ @elseif ($collection=='vasayel') {
 
-    }
-  @elseif ($collection=='sargarmi') {
+   }
+ @elseif ($collection=='sargarmi') {
 
-    }
-  @elseif ($collection=='ejtema') {
+   }
+ @elseif ($collection=='ejtema') {
 
-    }
-  @elseif ($collection=='forkar') {
+   }
+ @elseif ($collection=='forkar') {
 
-    }
-  @elseif ($collection=='estekhdam') {
+   }
+ @elseif ($collection=='estekhdam') {
 
-    }
+   }
 @endif
+
 
 <div class="amaragahi">
   <div class="amaragahi1">
@@ -130,26 +181,14 @@
   </div>
 </div>
 
- {{-- <div class="input-group mb-3 a10">
-   <input type="text" class="form-control" id="tavalod2" name="" value="{{$esi->tavalod}}" >
-   <div class="input-group-append">
-     <span class="input-group-text">تاریخ تولد</span>
-   </div>
- </div>
-
- <div class="input-group mb-3 a10 edit"  action="index.html" method="post">
-   <input type="text" class="form-control" id="mobile2" name="" disabled value="{{$esi->mobile}}" >
-   <span class="input-group-text">شماره موبایل</span>
- </div>
+  {{-- <div class="input-group mb-3 a10">    <input type="text" class="form-control" id="tavalod2" name="" value="{{$esi->tavalod}}" >
+   <div class="input-group-append">      <span class="input-group-text">تاریخ تولد</span>    </div>  </div>  <div class="input-group mb-3 a10 edit"  action="index.html" method="post">
+   <input type="text" class="form-control" id="mobile2" name="" disabled value="{{$esi->mobile}}" >    <span class="input-group-text">شماره موبایل</span>  </div>
  <div class="input-group mb-3 a10 edit"  action="index.html" method="post">
    <input type="text" class="form-control" id="tel2" name="" value="{{$esi->tel}}" >
    <span class="input-group-text">شماره تلفن </span>
- </div>
-
- <div >
-   <button type="button" onclick="virayesh2({{$esi->id}})" class="btn btn-success a3"name="button"> ویرایش</button>
-   <button type="button" onclick="window.location='/'" class="btn btn-success a3"name="button"> بازگشت</button>
- </div> --}}
+ </div>  <div >    <button type="button" onclick="virayesh2({{$esi->id}})" class="btn btn-success a3"name="button"> ویرایش</button>
+   <button type="button" onclick="window.location='/'" class="btn btn-success a3"name="button"> بازگشت</button>  </div> --}}
 </form>
 
 @endsection
