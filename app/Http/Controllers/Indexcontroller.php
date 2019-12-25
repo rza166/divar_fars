@@ -844,40 +844,50 @@ public function sabtnahaei(Request $request)
 $city1=City::where('show',1)->orderby('bazdid', 'DESC')->get();
 $id=$request->id;
  $mainagahi=Mainagahi::find($id);
- $collection=$request->collection;
- $menu=$request->menu;
+ $collection=$mainagahi->collection;
+
  if ($collection=='amlak') {
   $tableChild=Amlak::where('mainagahi_id',$id)->first();
+  $menu=$tableChild->menu;
 }
 elseif ($collection=='mashin') {
  $tableChild=Mashin::where('mainagahi_id',$id)->first();
+ $menu=$tableChild->menu;
 }
 elseif ($collection=='electriki') {
  $tableChild=Electrici::where('mainagahi_id',$id)->first();
-}
+ $menu=$tableChild->menu;
+ }
 elseif ($collection=='khane') {
  $tableChild=khane::where('mainagahi_id',$id)->first();
-}
+ $menu=$tableChild->menu;
+ }
 elseif ($collection=='khadamat') {
  $tableChild=KHadamat::where('mainagahi_id',$id)->first();
+ $menu=$tableChild->menu;
 }
 elseif ($collection=='vasayel') {
  $tableChild=vasayel::where('mainagahi_id',$id)->first();
-}
+ $menu=$tableChild->menu;
+ }
 elseif ($collection=='sargarmi') {
  $tableChild=Sargarmi::where('mainagahi_id',$id)->first();
+ $menu=$tableChild->menu;
 }
 elseif ($collection=='ejtema') {
  $tableChild=ejtemaei::where('mainagahi_id',$id)->first();
+ $menu=$tableChild->menu;
 }
 elseif ($collection=='forkar') {
  $tableChild=Forkar::where('mainagahi_id',$id)->first();
+ $menu=$tableChild->menu;
 }
 elseif ($collection=='estekhdam') {
  $tableChild=Estejhdam::where('mainagahi_id',$id)->first();
+ $menu=$tableChild->menu;
 }
 
-return view('agahi.sabtnahaei',compact('mainagahi','tableChild','collection','menu','agahi','city','city1'));
+return view('agahi.sabtnahaei',compact('mainagahi','tableChild','menu','collection','agahi','city','city1'));
 }
 // مربوط به منوی املاک
 public function amlak(Request $request)
