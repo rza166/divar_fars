@@ -457,7 +457,7 @@ function saveMashin(menu,collection) {
       // refresh()
       $('#error').html('<div class="alert alert-success"> ثبت با موفقیت انجام شد </div>')
       document.getElementById('reset').reset();
-      window.location.href = "/sabtnahaei/" + data  + '/' + collection;
+      window.location.href = "/sabtnahaei/" + data;
     },
     error: function(xhr) {
       scroll_form('reset')
@@ -533,6 +533,7 @@ function savebarghi(menu,collection) {
          typeagahi:$('input[name=optradio]:checked').val(),
          price:$('#price').val(),
          mobile:$('#mobile').val(),
+         simkart:$('#simkart').val(),
          chat:$('#chat:checked').val(),
          onvanagahi:$('#onvanagahi').val(),
           tozihat:$('#tozihat').val(),
@@ -544,7 +545,7 @@ function savebarghi(menu,collection) {
       // refresh()
       $('#error').html('<div class="alert alert-success"> ثبت با موفقیت انجام شد </div>')
       document.getElementById('reset').reset();
-      window.location.href = "/sabtnahaei/" + data + '/' + collection;
+      window.location.href = "/sabtnahaei/" + data;
     },
     error: function(xhr) {
       scroll_form('reset')

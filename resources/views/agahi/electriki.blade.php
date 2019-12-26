@@ -50,11 +50,11 @@
 
   @if (!empty($simkartC))
     <span class="labela4" for="">نوع سیم کارت</span>
-   <select class="a2-3" id="tedadotagh">
+   <select class="a2-3" id="simkart">
      <option  value="" ></option>
-     <option value="100">همراه اول</option>
-     <option value="1">ایرانسل</option>
-     <option value="2">رایتل</option>
+     <option value="همراه اول">همراه اول</option>
+     <option value="ایرانسل">ایرانسل</option>
+     <option value="رایتل">رایتل</option>
      </select>
   @endif
 

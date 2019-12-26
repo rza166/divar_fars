@@ -21,7 +21,7 @@ class CreateElectricisTable extends Migration
             $table->integer('price')->nullable();
             $table->tinyInteger('moaveze')->nullable()->comment('معاوضه');
             $table->string('typeagahi',10);
-            $table->tinyInteger('simkart')->nullable();
+            $table->string('simkart')->nullable();
             $table->string('sazandeh')->nullable();
             $table->string('mobile',13);
             $table->tinyInteger('chat')->nullable()->comment('چت');

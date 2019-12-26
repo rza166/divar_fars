@@ -63,7 +63,7 @@
 
             <li class="li_5 lib4" data-show2="show"onclick="mashin('lib2','','','ok','ok','ok','','','ok','','','','','','ok',241,'قایق ولوازم جانبی')"> قایق ولوازم جانبی<i class='fas fa-chevron-left e43' style='font-size:21px'></i></li>
 
-            <li class="li_5 lib5" data-show2="show" onclick="mashin('lib2','','','ok','ok','ok','','','ok','','','','','','ok',216,'متفرقه')"> متفرقه<i class='fas fa-chevron-left e43' style='font-size:21px'></i></li>
+            <li class="li_5 lib5" data-show2="show" onclick="mashin('lib2','','','ok','ok','ok','','','ok','','','','','','ok',251,'متفرقه')"> متفرقه<i class='fas fa-chevron-left e43' style='font-size:21px'></i></li>
 
       </ul>
 
