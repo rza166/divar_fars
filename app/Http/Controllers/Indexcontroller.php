@@ -47,13 +47,14 @@ use App\Http\Requests\RequestMainAgahi;
 class Indexcontroller extends Controller
 {
   public $city;
-  public function __construct(Request $request)
+  public function __construct(Request $request )
   {
       $this->city=City::where('show',1)->orderby('bazdid', 'DESC')->get();
   }
 
-  public function view(Request $request)
+  public function view(Request $request  )
   {
+
     $agahi='ok';
  if ( !empty($request->city2)) {
    $city=$request->city2;
@@ -874,7 +875,7 @@ elseif ($collection=='sargarmi') {
  $tableChild=Sargarmi::where('mainagahi_id',$id)->first();
  $menu=$tableChild->menu;
 }
-elseif ($collection=='ejtema') {
+elseif ($collection=='ejtemaei') {
  $tableChild=ejtemaei::where('mainagahi_id',$id)->first();
  $menu=$tableChild->menu;
 }

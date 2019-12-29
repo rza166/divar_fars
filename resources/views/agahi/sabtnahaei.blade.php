@@ -162,49 +162,70 @@
        <label class="sabt1" for="">قیمت</label> <label class="sabt2"for="">{{$mainagahi->price}}</label>
        <label class="sabt1" for="">نوع سیم کارت</label> <label class="sabt2"for="">{{$tableChild->simkart}}</label>
        <label class="sabt6"for="">{{$mainagahi->tozihat}}</label>
-     @endif
-     </div>
 
-  {{-- @elseif ($collection=='electriki') {
-   <label class="sabt3"for="">{{$mainagahi->onvanagahi}}</label>
+@elseif ($collection=='khane')
    <label class="sabt4"for="">پیش نمایش آگهی </label>
+   <label class="sabt3"for="">{{$mainagahi->onvanagahi}}</label>
    <label class="sabt5"for="">دقایقی پیش</label>
    <label class="sabt1" for="">موبایل</label> <label class="sabt2"for="">{{$mainagahi->mobile}}</label>
    <label class="sabt1" for="">شهر</label> <label class="sabt2"for="">{{$mainagahi->city}}</label>
    <label class="sabt1" for="">قیمت</label> <label class="sabt2"for="">{{$mainagahi->price}}</label>
-   <label class="sabt1"for="">نوع گهی</label><label class="sabt2"for="">{{$tableChild->typeagahi}}</label>
-   <label class="sabt1" for=""> آگهی دهنده</label> <label class="sabt2"for="">{{$tableChild->agahidahande}}</label>
-   <label class="sabt1" for="">متراژ</label> <label class="sabt2"for="">{{$tableChild->meter}}</label>
-   <label class="sabt1" for="">سال ساخت</label> <label class="sabt2"for="">{{$tableChild->salesakht}}</label>
-   <label class="sabt1" for="">ودیعه</label> <label class="sabt2"for="">{{$tableChild->vadie}}</label>
-   <label class="sabt1" for="">اجاره</label> <label class="sabt2"for="">{{$tableChild->ejare}}</label>
-   <label class="sabt1" for="">تعداد اتاق</label> <label class="sabt2"for="">{{$tableChild->tedadotagh}}</label>
    <label class="sabt6"for="">{{$mainagahi->tozihat}}</label>
-   }
+
+@elseif ($collection=='khadamat')
+   <label class="sabt4"for="">پیش نمایش آگهی </label>
+   <label class="sabt3"for="">{{$mainagahi->onvanagahi}}</label>
+   <label class="sabt5"for="">دقایقی پیش</label>
+   <label class="sabt1" for="">موبایل</label> <label class="sabt2"for="">{{$mainagahi->mobile}}</label>
+   <label class="sabt1" for="">شهر</label> <label class="sabt2"for="">{{$mainagahi->city}}</label>
+   <label class="sabt6"for="">{{$mainagahi->tozihat}}</label>
+
+ @elseif ($collection=='vasayel')
+   <label class="sabt4"for="">پیش نمایش آگهی </label>
+   <label class="sabt3"for="">{{$mainagahi->onvanagahi}}</label>
+   <label class="sabt5"for="">دقایقی پیش</label>
+   <label class="sabt1" for="">موبایل</label> <label class="sabt2"for="">{{$mainagahi->mobile}}</label>
+   <label class="sabt1" for="">شهر</label> <label class="sabt2"for="">{{$mainagahi->city}}</label>
+   <label class="sabt6"for="">{{$mainagahi->tozihat}}</label>
 
 
- @elseif ($collection=='khane') {
+ @elseif ($collection=='sargarmi')
+   <label class="sabt4"for="">پیش نمایش آگهی </label>
+   <label class="sabt3"for="">{{$mainagahi->onvanagahi}}</label>
+   <label class="sabt5"for="">دقایقی پیش</label>
+   <label class="sabt1" for="">موبایل</label> <label class="sabt2"for="">{{$mainagahi->mobile}}</label>
+   <label class="sabt1" for="">شهر</label> <label class="sabt2"for="">{{$mainagahi->city}}</label>
+   <label class="sabt1" for="">قیمت</label> <label class="sabt2"for="">{{$mainagahi->price}}</label>
+   <label class="sabt6"for="">{{$mainagahi->tozihat}}</label>
 
-   }
- @elseif ($collection=='khadamat') {
 
-   }
- @elseif ($collection=='vasayel') {
+ @elseif ($collection=='ejtemaei')
+   <label class="sabt4"for="">پیش نمایش آگهی </label>
+   <label class="sabt3"for="">{{$mainagahi->onvanagahi}}</label>
+   <label class="sabt5"for="">دقایقی پیش</label>
+   <label class="sabt1" for="">موبایل</label> <label class="sabt2"for="">{{$mainagahi->mobile}}</label>
+   <label class="sabt1" for="">شهر</label> <label class="sabt2"for="">{{$mainagahi->city}}</label>
+   <label class="sabt6"for="">{{$mainagahi->tozihat}}</label>
 
-   }
- @elseif ($collection=='sargarmi') {
+ @elseif ($collection=='forkar')
+   <label class="sabt4"for="">پیش نمایش آگهی </label>
+   <label class="sabt3"for="">{{$mainagahi->onvanagahi}}</label>
+   <label class="sabt5"for="">دقایقی پیش</label>
+   <label class="sabt1" for="">موبایل</label> <label class="sabt2"for="">{{$mainagahi->mobile}}</label>
+   <label class="sabt1" for="">شهر</label> <label class="sabt2"for="">{{$mainagahi->city}}</label>
+   <label class="sabt6"for="">{{$mainagahi->tozihat}}</label>
 
-   }
- @elseif ($collection=='ejtema') {
+ @elseif ($collection=='estekhdam')
+   <label class="sabt4"for="">پیش نمایش آگهی </label>
+   <label class="sabt3"for="">{{$mainagahi->onvanagahi}}</label>
+   <label class="sabt5"for="">دقایقی پیش</label>
+   <label class="sabt1" for="">موبایل</label> <label class="sabt2"for="">{{$mainagahi->mobile}}</label>
+   <label class="sabt1" for="">شهر</label> <label class="sabt2"for="">{{$mainagahi->city}}</label>
+   <label class="sabt6"for="">{{$mainagahi->tozihat}}</label>
+ @endif
+ </div>
 
-   }
- @elseif ($collection=='forkar') {
 
-   }
- @elseif ($collection=='estekhdam') {
-
-   }
-@endif  --}}
 
 
 <div class="amaragahi">

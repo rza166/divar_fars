@@ -136,12 +136,12 @@
            </div>
            <div class="aksagahi">
              @php
-               $showimage=$imageAgahi->where('nameTable',$agahi2->tablename)->where('recordId',$agahi2->id)->first();
+               $showimage=$imageAgahi->where('recordId',$agahi2->id)->first();
              @endphp
 
-             {{$agahi2->ImageAgahi}}
-             @if (!empty($showimage->id))
-               <img width="135" height="135" src="../img_pro/" alt="">
+
+             @if (!empty($showimage->nameImage1))
+               <img width="135" height="135" src="/img_pro/{{$showimage->nameImage1}}" alt="">
                @else
                  <i class="fa fa-camera ia tarikh2" style="font-size:42px"></i>
              @endif

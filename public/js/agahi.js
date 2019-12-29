@@ -603,7 +603,7 @@ function savehome(menu,collection) {
       // refresh()
       $('#error').html('<div class="alert alert-success"> ثبت با موفقیت انجام شد </div>')
       document.getElementById('reset').reset();
-      window.location.href = "/sabtnahaei/" + data + '/' + collection;
+      window.location.href = "/sabtnahaei/" + data;
     },
     error: function(xhr) {
       scroll_form('reset')
@@ -659,7 +659,7 @@ function savehelp(menu,collection) {
       // refresh()
       $('#error').html('<div class="alert alert-success"> ثبت با موفقیت انجام شد </div>')
       document.getElementById('reset').reset();
-      window.location.href = "/sabtnahaei/" + data + '/' + collection;
+      window.location.href = "/sabtnahaei/" + data ;
     },
     error: function(xhr) {
       scroll_form('reset')
@@ -709,7 +709,7 @@ function savevasile(menu,collection) {
       // refresh()
       $('#error').html('<div class="alert alert-success"> ثبت با موفقیت انجام شد </div>')
       document.getElementById('reset').reset();
-      window.location.href = "/sabtnahaei/" + data + '/' + collection;
+      window.location.href = "/sabtnahaei/" + data ;
     },
     error: function(xhr) {
       scroll_form('reset')
@@ -770,7 +770,7 @@ function savegame(menu,collection) {
       // refresh()
       $('#error').html('<div class="alert alert-success"> ثبت با موفقیت انجام شد </div>')
       document.getElementById('reset').reset();
-      window.location.href = "/sabtnahaei/" + data + '/' + collection;
+      window.location.href = "/sabtnahaei/" + data ;
     },
     error: function(xhr) {
       scroll_form('reset')
@@ -827,7 +827,7 @@ function saveejtema(menu,collection) {
       // refresh()
       $('#error').html('<div class="alert alert-success"> ثبت با موفقیت انجام شد </div>')
       document.getElementById('reset').reset();
-      window.location.href = "/sabtnahaei/" + data + '/' + collection;
+      window.location.href = "/sabtnahaei/" + data ;
     },
     error: function(xhr) {
       scroll_form('reset')
@@ -885,7 +885,7 @@ function savejob(menu,collection) {
       // refresh()
       $('#error').html('<div class="alert alert-success"> ثبت با موفقیت انجام شد </div>')
       document.getElementById('reset').reset();
-      window.location.href = "/sabtnahaei/" + data + '/' + collection;
+      window.location.href = "/sabtnahaei/" + data ;
     },
     error: function(xhr) {
       scroll_form('reset')
@@ -941,7 +941,7 @@ function saveestekhdam2(menu,collection) {
       // refresh()
       $('#error').html('<div class="alert alert-success"> ثبت با موفقیت انجام شد </div>')
       document.getElementById('reset').reset();
-      window.location.href = "/sabtnahaei/" + data+ '/' + collection ;
+      window.location.href =` /sabtnahaei/ ${data}` ;
     },
     error: function(xhr) {
       scroll_form('reset')
